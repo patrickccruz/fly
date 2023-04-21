@@ -238,9 +238,9 @@
 
             <aside id="inputBackup">
                 <p><abbr title="Marcar como SIM para preencher formulário para o Backup">Backup?</abbr></p>
-                <input type="radio" name="btnBackup" id="simBackup" onchange="pergBackup()">
+                <input type="radio" name="btnBackup" id="simBackup" value="yes" onchange="pergBackup()">
                 <label for="btnBackup">Sim</label>
-                <input type="radio" name="btnBackup" id="naoBackup" checked onchange="pergBackup()">
+                <input type="radio" name="btnBackup" id="naoBackup" value="no" checked onchange="pergBackup()">
                 <label for="btnBackup">Não</label>
             </aside>
         </p>
@@ -265,7 +265,7 @@
 
         <div id="respostas">
             <fieldset>
-                <legend id="legenda">Consultoria <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy" onclick="copResp()"></abbr></legend>
+                <legend id="legenda">Consultoria <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy" onclick="copResp2()"></abbr></legend>
                 <p id="geralResp0"></p>
                 <p id="geralResp1"></p>
                 <p id="geralResp2"></p>
@@ -275,11 +275,11 @@
                 <p id="geralResp6"></p>
                 <p id="geralResp7"></p>
                 <p id="geralResp8"></p>
-                <p id="geralResp13"></p>
                 <p id="geralResp9"></p>
                 <p id="geralResp10"></p>
                 <p id="geralResp11"></p>
-                <p id="geralResp12"></p>           
+                <p id="geralResp12"></p>   
+                <p id="geralResp13"></p>          
             </fieldset>
         </div>
 

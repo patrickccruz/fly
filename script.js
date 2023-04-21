@@ -87,17 +87,49 @@ function copResp() {
   document.execCommand("copy");
 }
 
-function infoGeral() {
-  document.getElementById("etapa").onclick = function () {
-    var value = document.getElementsByName("etapa");
-    for (var radio of value) {
-      if (radio.checked) {
-        let resp0 = radio.value;
-        console.log(resp0);
-        document.getElementById("geralResp0").innerHTML = `${resp0}`;
+function copResp2() {
+  let resp0 = document.getElementById("geralResp0").textContent;
+  let resp1 = document.getElementById("geralResp1").textContent;
+  let resp2 = document.getElementById("geralResp2").textContent;
+  let resp3 = document.getElementById("geralResp3").textContent;
+  let resp4 = document.getElementById("geralResp4").textContent;
+  let resp5 = document.getElementById("geralResp5").textContent;
+  let resp6 = document.getElementById("geralResp6").textContent;
+  let resp7 = document.getElementById("geralResp7").textContent;
+  let resp8 = document.getElementById("geralResp8").textContent;
+  let resp9 = document.getElementById("geralResp9").textContent;
+  let resp10 = document.getElementById("geralResp10").textContent;
+  let resp11 = document.getElementById("geralResp11").textContent;
+  let resp12 = document.getElementById("geralResp12").textContent;
+  let resp13 = document.getElementById("geralResp13").textContent;
+  var value = document.getElementsByName("btnBackup");
+  let textToCopy = "";
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}`;
+      } else {
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}`;
       }
     }
-  };
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
+
+function infoGeral() {
+  var value = document.getElementsByName("etapa");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp0 = radio.value;
+      console.log(resp0);
+      document.getElementById("geralResp0").innerHTML = `${resp0}`;
+    }
+  }
 
   let resp1 = document.getElementById("uso").value;
   document.getElementById(
@@ -109,24 +141,132 @@ function infoGeral() {
     "geralResp2"
   ).innerHTML = `- Quem participou da consultoria/departamento: ${resp2}`;
 
-  document.getElementById("pergTempo").onclick = function () {
-    var value = document.getElementsByName("horario");
-    for (var radio of value) {
-      if (radio.checked) {
-        let resp3 = radio.value;
-        document.getElementById("geralResp3").innerHTML = `-  ${resp3} `;
+  var value = document.getElementsByName("horario");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp3 = radio.value;
+      document.getElementById(
+        "geralResp3"
+      ).innerHTML = `- Atrasaram: ${resp3} `;
+    }
+  }
+
+  var value = document.getElementsByName("atividades");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp4 = radio.value;
+      document.getElementById(
+        "geralResp4"
+      ).innerHTML = `- Realizaram as atividades anteriores: ${resp4} `;
+    }
+  }
+
+  var value = document.getElementsByName("duvidas");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp5 = radio.value;
+      document.getElementById(
+        "geralResp5"
+      ).innerHTML = `- Dúvidas/Dificuldades da etapa anterior: ${resp5} `;
+    }
+  }
+
+  var value = document.getElementsByName("participativos");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp6 = radio.value;
+      document.getElementById(
+        "geralResp6"
+      ).innerHTML = `- Participativos: ${resp6} `;
+    }
+  }
+
+  var value = document.getElementsByName("problema");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp7 = radio.value;
+      document.getElementById(
+        "geralResp7"
+      ).innerHTML = `- Algum problema: ${resp7} `;
+    }
+  }
+
+  var value = document.getElementsByName("nota");
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp8 = radio.value;
+      document.getElementById(
+        "geralResp8"
+      ).innerHTML = `- Nota para a consultoria:  ${resp8} `;
+    }
+  }
+
+  let resp9 = document.getElementById("ticketConsult").value;
+  document.getElementById(
+    "geralResp9"
+  ).innerHTML = `- Ticket da consultoria: ${resp9}`;
+
+  let resp10 = document.getElementById("geralObs").value;
+  document.getElementById(
+    "geralResp10"
+  ).innerHTML = `- Informações Adicionais: ${resp10}`;
+
+  document.getElementById("falta").style.display = "none";
+
+  var value = document.getElementsByName("btnBackup");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        let resp11 = document.getElementById("comprometido").value;
+        document.getElementById(
+          "geralResp11"
+        ).innerHTML = `- Cliente comprometido: ${resp11}`;
+
+        let resp12 = document.getElementById("tecnologico").value;
+        document.getElementById(
+          "geralResp12"
+        ).innerHTML = `- Cliente tecnológico: ${resp12}`;
+
+        let resp13 = document.getElementById("etapaBackup").value;
+        document.getElementById(
+          "geralResp13"
+        ).innerHTML = `Informacoes para o consultoria de backup: ${resp13}`;
       }
     }
-  };
+  }
 }
 
 function faltou() {
   document.getElementById("falta").style.display = "block";
 }
 
-function copRespFalta() {}
+function copRespFalta() {
+  let falta = document.getElementById("faltaCliente").value;
+  console.log(falta);
+  const textToCopy = `${falta}`;
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
 
-function pergBackup() {}
+function pergBackup() {
+  var value = document.getElementsByName("btnBackup");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        document.getElementById("telaBackup").style.display = "block";
+      } else {
+        document.getElementById("telaBackup").style.display = "none";
+        document.getElementById("geralResp11").innerHTML = ``;
+        document.getElementById("geralResp12").innerHTML = ``;
+        document.getElementById("geralResp13").innerHTML = ``;
+      }
+    }
+  }
+}
 
 function textoMigra() {}
 
