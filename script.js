@@ -384,6 +384,93 @@ function copResp3() {
   textarea.remove();
 }
 
-function acompTexto() {}
+function acompTexto() {
+  let Aresp1 = document.getElementById("contato").value;
+  document.getElementById("Aresp1").innerHTML = `- Contato com: ${Aresp1}`;
 
-function pergBackup2() {}
+  let Aresp2 = document.getElementById("ticketAcomp").value;
+  document.getElementById("Aresp2").innerHTML = `- Ticket: ${Aresp2}`;
+
+  let Aresp3 = document.getElementById("AregUso").value;
+  document.getElementById("Aresp3").innerHTML = `- Uso: ${Aresp3}`;
+
+  let Aresp4 = document.getElementById("Aacesso").value;
+  document.getElementById("Aresp4").innerHTML = `- Acesso: ${Aresp4}`;
+
+  let Aresp5 = document.getElementById("Aentregas").value;
+  document.getElementById("Aresp5").innerHTML = `- Entregas: ${Aresp5}`;
+
+  let Aresp6 = document.getElementById("Arobo").value;
+  document.getElementById("Aresp6").innerHTML = `- Robô: ${Aresp6}`;
+
+  let Aresp7 = document.getElementById("tratativa").value;
+  document.getElementById("Aresp7").innerHTML = `- Tratativa: ${Aresp7}`;
+
+  var value = document.getElementsByName("btnBackup2");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        let Aresp8 = document.getElementById("comprometido2").value;
+        document.getElementById(
+          "Aresp8"
+        ).innerHTML = `- Cliente comprometido: ${Aresp8}`;
+
+        let Aresp9 = document.getElementById("tecnologico2").value;
+        document.getElementById(
+          "Aresp9"
+        ).innerHTML = `- Cliente tecnológico: ${Aresp9}`;
+
+        let Aresp10 = document.getElementById("etapaBackup2").value;
+        document.getElementById(
+          "Aresp10"
+        ).innerHTML = `Informacoes para o consultoria de backup: ${Aresp10}`;
+      }
+    }
+  }
+}
+
+function pergBackup2() {
+  var value = document.getElementsByName("btnBackup2");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        document.getElementById("telaBackup2").style.display = "block";
+      } else {
+        document.getElementById("telaBackup2").style.display = "none";
+        document.getElementById("Aresp8").innerHTML = ``;
+        document.getElementById("Aresp9").innerHTML = ``;
+        document.getElementById("Aresp10").innerHTML = ``;
+      }
+    }
+  }
+}
+
+function copResp4() {
+  let resp0 = document.getElementById("Aresp1").textContent;
+  let resp1 = document.getElementById("Aresp2").textContent;
+  let resp2 = document.getElementById("Aresp3").textContent;
+  let resp3 = document.getElementById("Aresp4").textContent;
+  let resp4 = document.getElementById("Aresp5").textContent;
+  let resp5 = document.getElementById("Aresp6").textContent;
+  let resp6 = document.getElementById("Aresp7").textContent;
+  let resp7 = document.getElementById("Aresp8").textContent;
+  let resp8 = document.getElementById("Aresp9").textContent;
+  let resp9 = document.getElementById("Aresp10").textContent;
+  var value = document.getElementsByName("btnBackup2");
+  let textToCopy = "";
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n\n** Informaoces para o Backup **\n${resp7}\n${resp8}\n${resp9}`;
+      } else {
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}`;
+      }
+    }
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
