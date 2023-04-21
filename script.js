@@ -103,6 +103,21 @@ function infoGeral() {
   document.getElementById(
     "geralResp1"
   ).innerHTML = `- Porcentagem de uso: ${resp1}%`;
+
+  let resp2 = document.getElementById("parcicipantes").value;
+  document.getElementById(
+    "geralResp2"
+  ).innerHTML = `- Quem participou da consultoria/departamento: ${resp2}`;
+
+  document.getElementById("pergTempo").onclick = function () {
+    var value = document.getElementsByName("horario");
+    for (var radio of value) {
+      if (radio.checked) {
+        let resp3 = radio.value;
+        document.getElementById("geralResp3").innerHTML = `-  ${resp3} `;
+      }
+    }
+  };
 }
 
 function faltou() {
