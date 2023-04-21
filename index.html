@@ -1,442 +1,740 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fly Acessórias</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <ul>
-      <abbr title="https://app.acessorias.com/">
-        <a href="https://app.acessorias.com/" target="_blank">
-          <p>Fly Acessórias</p>
-        </a>
-      </abbr>
-      <li id="confIni" onclick="confIni()">Configurações Iniciais</li>
-      <li id="geral" onclick="geral()">Etapas Gerais</li>
-      <li id="migra" onclick="migra()">Migração</li>
-      <li id="acpt" onclick="acpt()">Acompanhamento</li>
-    </ul>
-    <article id="etapa1">
-      <h3>Introdução ao Cliente</h3>
 
-      <p>
-        Dono do escritório :
-        <input type="text" id="dono" oninput="teste()" />
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fly Acessórias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</head>
 
-      <p>
-        Responsavel Técnico :
-        <input type="text" id="resp" oninput="teste()" />
-      </p>
-
-      <p>
-        Quem participou da consultoria :
-        <input type="text" id="quem" oninput="teste()" />
-      </p>
-
-      <p>
-        Usuários aprox:
-        <input
-          type="number"
-          id="usuario"
-          style="width: 60px"
-          oninput="teste()"
-        />
-      </p>
-
-      <p>
-        Empresas aprox:
-        <input
-          type="number"
-          id="empresas"
-          style="width: 60px"
-          oninput="teste()"
-        />
-      </p>
-
-      <p>
-        Sistema Contábil:
-        <input type="text" id="sistemaContabil" oninput="teste()" />
-      </p>
-
-      <p>
-        Ja usaram sistema de gestão:
-        <input type="text" id="jaUsaram" oninput="teste()" />
-      </p>
-
-      <p>
-        Forma de entrega:  (se recebem por email, wpp ou físico):
-        <input type="text" id="formas" oninput="teste()" />
-      </p>
-
-      <p>
-        Qual a maioria dos regimes tributários:
-        <input type="text" id="maioriaRegimes" oninput="teste()" />
-      </p>
-
-      <p>
-        Valor da Acessórias mais chamou atenção:
-        <input type="text" id="valor" size="35" oninput="teste()" />
-      </p>
-
-      <p>
-        TicketApp: <input type="text" id="ticket" size="15" oninput="teste()" />
-      </p>
-
-      <p>
-        Informações Adicionais: <br />
-        <textarea
-          name="obs"
-          id="obs"
-          cols="95"
-          rows="10"
-          oninput="teste()"
-        ></textarea>
-      </p>
-
-      <div id="respostas">
-        <fieldset>
-          <legend>
-            Configurações Iniciais
-            <abbr title="Copiar"
-              ><img
-                height="30px"
-                src="images/copy.png"
-                alt="copiar"
-                id="imgCopy"
-                onclick="copResp()"
-            /></abbr>
-          </legend>
-          <p id="etapa1resp1"></p>
-          <p id="etapa1resp2"></p>
-          <p id="etapa1resp3"></p>
-          <p id="etapa1resp4"></p>
-          <p id="etapa1resp5"></p>
-          <p id="etapa1resp6"></p>
-          <p id="etapa1resp7"></p>
-          <p id="etapa1resp8"></p>
-          <p id="etapa1resp9"></p>
-          <p id="etapa1resp10"></p>
-          <p id="etapa1resp11"></p>
-          <p id="etapa1resp12"></p>
-        </fieldset>
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color: #005c9a; margin-bottom: 20px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://app.acessorias.com/" target="_blank" style="color: #fff; font-weight: 600;">
+        <img src="images/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
+        Fly Acessórias
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" id="confIni" onclick="confIni()">Configurações Iniciais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="geral" onclick="geral()">Etapas Gerais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="migra" onclick="migra()">Migração</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="acpt" onclick="acpt()">Acompanhamento</a>
+          </li>
+        </ul>
       </div>
-    </article>
+    </div>
+  </nav>
 
-<!-------------------------------------- Etapas gerais --------->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article id="etapa1">
 
-    <article id="menuGeral">
-        <h3>
-            Etapas Gerais
-        </h3>
+          <div class="row mb-3">
+            <h3>Introdução ao Cliente</h3>
+          </div>
 
-        <p id="etapa">
-            <input type="radio" name="etapa" id="Lista de Entregas" value="Lista de Entregas" oninput="infoGeral()">Lista de Entregas
-            
-            <input type="radio" name="etapa" id="Robô" value="Robô" oninput="infoGeral()">Robô
-            
-            <input type="radio" name="etapa" id="Lista/Robô" value="Lista/Robô" oninput="infoGeral()">Lista/Robô
+          <div class="mb-3 row">
+            <label for="dono" class="col-sm-3 col-form-label">Dono do escritório:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="dono" oninput="teste()">
+            </div>
+          </div>
 
-            <input type="radio" name="etapa" id="Gestão de Processos" value="Gestão de Processos" oninput="infoGeral()">Gestão de Processos
+          <div class="mb-3 row">
+            <label for="resp" class="col-sm-3 col-form-label">Responsavel Técnico:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="resp" oninput="teste()">
+            </div>
+          </div>
 
-            <input type="radio" name="etapa" id="APP" value="APP" oninput="infoGeral()">APP
-        
-            <input type="radio" name="etapa" id="Departamentos" value="Departamentos" oninput="infoGeral()">Departamentos
-            
-            <input type="radio" name="etapa" id="Revisão/Tira Dúvidas" value="Revisão/Tira Dúvidas" oninput="infoGeral()">Revisão/Tira Dúvidas
+          <div class="mb-3 row">
+            <label for="quem" class="col-sm-3 col-form-label">Quem participou da consultoria:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="quem" oninput="teste()">
+            </div>
+          </div>
 
-            <input type="radio" name="etapa" id="Retomada" value="Retomada" oninput="infoGeral()">Retomada
-           
-        </p>
+          <div class="mb-3 row">
+            <label for="usuario" class="col-sm-3 col-form-label">Usuários aprox:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="usuario" oninput="teste()">
+            </div>
+          </div>
 
-        <p>
-            Porcentagem de uso: <input type="number" id="uso" value="" style="width: 60px" placeholder="%" oninput="infoGeral()">
-        </p>
-        <p>
-            Quem participou da consultoria/departamento: <input type="text" name="parcicipantes" id="parcicipantes" size="70" oninput="infoGeral()">
-        </p>
-        <h3>
-            Observações sobre a consultoria
-        </h3>
-        <p id="pergTempo">
-            Atrasaram? <br>
-            <input type="radio" name="horario" value="Não"  oninput="infoGeral()"> Não
-            <input type="radio" name="horario" value="10 minutos atrasados"   oninput="infoGeral()"> 10 min atrasados
-            <input type="radio" name="horario" value="15 minutos atrasados"  oninput="infoGeral()"> 15 min atrasados
-            <input type="radio" name="horario" value="20 minutos atrasados"  oninput="infoGeral()"> 20 min atrasados
-            <input type="radio" name="horario" value="Faltou" onchange="faltou()"> Faltou!
-        </p>
+          <div class="mb-3 row">
+            <label for="empresas" class="col-sm-3 col-form-label">Empresas aprox:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="empresas" oninput="teste()">
+            </div>
+          </div>
 
-        <div id="falta" style="display: none;">
-            <h3>
-            Informações sobre a Falta do cliente
-            </h3>
-            <textarea name="faltaCliente" id="faltaCliente" cols="55" rows="6" placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"></textarea> 
-            <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy" onclick="copRespFalta()"></abbr>
-        </div>
-        <p>
-            Realizaram as atividades anteriores? <br>
-            <input type="radio" name="atividades" id="" value="Sim, a maioria" oninput="infoGeral()">Sim, a maioria
-        
-            <input type="radio" name="atividades" id="" value="Em partes" oninput="infoGeral()">Em partes
-        
-            <input type="radio" name="atividades" id="" value="Pouco" oninput="infoGeral()">Pouco
-        
-            <input type="radio" name="atividades" id="" value="Nada" oninput="infoGeral()">Nada
-        </p>
-        <p>
-            Dúvidas/Dificuldades da etapa anterior? <br>
-            <input type="radio" name="duvidas" id="" value="Não, entenderam bem" oninput="infoGeral()">Não, entenderam bem
-        
-            <input type="radio" name="duvidas" id="" value="Algumas dúvidas" oninput="infoGeral()">Algumas dúvidas
-        
-            <input type="radio" name="duvidas" id="" value="Bastante dificuldade" oninput="infoGeral()">Bastante dificuldade
-        </p>
-        <p>
-            Participativos? <br>
-            <input type="radio" name="participativos" id="" value="Bem Participativos" oninput="infoGeral()">Bem Participativos
-        
-            <input type="radio" name="participativos" id="" value="Participativos" oninput="infoGeral()">Participativos
-        
-            <input type="radio" name="participativos" id="" value="Pouco Participativos" oninput="infoGeral()">Pouco Participativos
-        
-            <input type="radio" name="participativos" id="" value="Sem Participação" oninput="infoGeral()">Sem Participação
-        </p>
-        <p>
-            Algum problema? <br>
-            <input type="radio" name="problema" id="" value="Não" oninput="infoGeral()">Não
-        
-            <input type="radio" name="problema" id="" value="Dificuldade de Aprendizagem" oninput="infoGeral()">Dificuldade de Aprendizagem
-        
-            <input type="radio" name="problema" id="" value="Insatisfação com o que viu " oninput="infoGeral()">Insatisfação com o que viu
-        
-        </p>
+          <div class="mb-3 row">
+            <label for="sistemaContabil" class="col-sm-3 col-form-label">Sistema Contábil:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="sistemaContabil" oninput="teste()">
+            </div>
+          </div>
 
-        <p id="nota">
-            Nota para a consultoria: 
-            <input type="radio" name="nota" id="" value="1" oninput="infoGeral()">1
-            <input type="radio" name="nota" id="" value="2" oninput="infoGeral()">2
-            <input type="radio" name="nota" id="" value="3" oninput="infoGeral()">3
-            <input type="radio" name="nota" id="" value="4" oninput="infoGeral()">4
-            <input type="radio" name="nota" id="" value="5" oninput="infoGeral()">5
-            <input type="radio" name="nota" id="" value="6" oninput="infoGeral()">6
-            <input type="radio" name="nota" id="" value="7" oninput="infoGeral()">7
-            <input type="radio" name="nota" id="" value="8" oninput="infoGeral()">8
-            <input type="radio" name="nota" id="" value="9" oninput="infoGeral()">9
-            <input type="radio" name="nota" id="" value="10" oninput="infoGeral()">10
-        </p>
+          <div class="mb-3 row">
+            <label for="jaUsaram" class="col-sm-3 col-form-label">Ja usaram sistema de gestão:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="jaUsaram" oninput="teste()">
+            </div>
+          </div>
 
-        <p>
-            Ticket da consultoria: <input type="text" name="ticketConsult" id="ticketConsult" size="13" oninput="infoGeral()">
-        </p>
+          <div class="mb-3 row">
+            <label for="formas" class="col-sm-3 col-form-label">Forma de entrega: (se recebem por email, wpp ou
+              físico):</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="formas" oninput="teste()">
+            </div>
+          </div>
 
-        <p id="infoGerais"> Informações Adicionais: <br>
-            <textarea name="geralObs" id="geralObs" cols="54" rows="3" oninput="infoGeral()"></textarea> 
+          <div class="mb-3 row">
+            <label for="maioriaRegimes" class="col-sm-3 col-form-label">Qual a maioria dos regimes tributários:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="maioriaRegimes" oninput="teste()">
+            </div>
+          </div>
 
-            <aside id="inputBackup">
-                <p><abbr title="Marcar como SIM para preencher formulário para o Backup">Backup?</abbr></p>
-                <input type="radio" name="btnBackup" id="simBackup" value="yes" onchange="pergBackup()">
-                <label for="btnBackup">Sim</label>
-                <input type="radio" name="btnBackup" id="naoBackup" value="no" checked onchange="pergBackup()">
-                <label for="btnBackup">Não</label>
-            </aside>
-        </p>
+          <div class="mb-3 row">
+            <label for="valor" class="col-sm-3 col-form-label">Valor da Acessórias mais chamou atenção:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="valor" oninput="teste()">
+            </div>
+          </div>
 
-        <div id="telaBackup" style="display: none;">
-            <h3>Informações para o Backup</h3>
-            <p>
-                <label for="comprometido">Cliente comprometido?</label>
-                <input type="range" name="comprometido" id="comprometido" min="0" max="10" oninput="iComp.innerHTML=Number(comprometido.value)" onchange="infoGeral()">
-                <output id="iComp">5</output>
-            </p>
+          <div class="mb-3 row">
+            <label for="ticket" class="col-sm-3 col-form-label">TicketApp:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticket" oninput="teste()">
+            </div>
+          </div>
 
-            <p>
-                <label for="tecnologico">Cliente tecnológico?</label>
-                <input type="range" name="tecnologico" id="tecnologico" min="0" max="10" oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="infoGeral()">
-                <output id="iTec">5</output>
-            </p><br>
+          <div class="mb-3 row">
+            <label for="obs" class="form-label">Informações Adicionais:</label>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="obs" id="obs" rows="5" oninput="teste()"></textarea>
+            </div>
+          </div>
 
-            <textarea name="etapaBackup" id="etapaBackup" cols="60" rows="7" placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade." oninput="infoGeral()"></textarea><br><br>
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Copiar Texto
+            </button>
+          </div>
 
-        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Texto Copiado</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="etapa1resp1"></p>
+                  <p id="etapa1resp2"></p>
+                  <p id="etapa1resp3"></p>
+                  <p id="etapa1resp4"></p>
+                  <p id="etapa1resp5"></p>
+                  <p id="etapa1resp6"></p>
+                  <p id="etapa1resp7"></p>
+                  <p id="etapa1resp8"></p>
+                  <p id="etapa1resp9"></p>
+                  <p id="etapa1resp10"></p>
+                  <p id="etapa1resp11"></p>
+                  <p id="etapa1resp12"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div id="respostas">
-            <fieldset>
-                <legend id="legenda">Consultoria <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy" onclick="copResp2()"></abbr></legend>
-                <p id="geralResp0"></p>
-                <p id="geralResp1"></p>
-                <p id="geralResp2"></p>
-                <p id="geralResp3"></p>
-                <p id="geralResp4"></p>
-                <p id="geralResp5"></p>
-                <p id="geralResp6"></p>
-                <p id="geralResp7"></p>
-                <p id="geralResp8"></p>
-                <p id="geralResp9"></p>
-                <p id="geralResp10"></p>
-                <p id="geralResp11"></p>
-                <p id="geralResp12"></p>   
-                <p id="geralResp13"></p>          
-            </fieldset>
-        </div>
+        </article>
+      </div>
+    </div>
+  </div>
 
-    </article>
+  <!-------------------------------------- Etapas gerais --------->
 
-    <article id="migração">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article id="menuGeral">
 
-        <h3>
-            Migração
-        </h3>
+          <div class="row mb-3">
+            <h3>Etapas Gerais</h3>
+          </div>
 
-        <p>Valor do Acessórias:
-            <input type="text" name="valorMigra" id="valorMigra" style="width: 385px" oninput="textoMigra()">
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="Lista de Entregas"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Lista de Entregas</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="Robô"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Robô</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio3" value="Lista/Robô"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio3">Lista/Robô</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="Gestão de Processos"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Gestão de Processos</label>
+            </div>
+          </div>
 
-        <p>Referencia técnica e seu departamento:
-            <input type="text" name="referenciaMigra" id="referenciaMigra" style="width: 265px" oninput="textoMigra()">
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="APP"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">APP</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio3" value="Departamentos"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio3">Departamentos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="Revisão/Tira Dúvidas"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Revisão/Tira Dúvidas</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="Retomada"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Retomada</label>
+            </div>
+          </div>
 
-        <p>Melhor forma de contato: 
-            <input type="text" name="formaContato" id="formaContato" style="width: 350px" oninput="textoMigra()">
-        </p>
+          <div class="mb-3 row">
+            <label for="uso" class="col-sm-3 col-form-label">Porcentagem de uso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="uso" oninput="infoGeral()">
+            </div>
+          </div>
 
-        <p>Equipe engajada? Quais?:
-            <input type="text" name="equipeEngajada" id="equipeEngajada" style="width: 350px" oninput="textoMigra()">
-        </p>
+          <div class="mb-3 row">
+            <label for="parcicipantes" class="col-sm-3 col-form-label">Quem participou da
+              consultoria/departamento:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="parcicipantes" oninput="infoGeral()">
+            </div>
+          </div>
 
-        <p>Dispensa em massa?
-            <input type="text" name="dispensaMassa" id="dispensaMassa" style="width: 70px" oninput="textoMigra()">
-        </p>
+          <div class="row mb-3">
+            <h3>Observações sobre a consultoria</h3>
+          </div>
 
-        <p>ERP:
-            <input type="text" name="erp" id="erp" oninput="textoMigra()">
-        </p>
+          <div class="row mb-3">
+            <h5>Atrasaram?</h5>
+          </div>
 
-        <p>SMTP Ativo:
-            <input type="text" name="smtp" id="smtp" style="width: 115px" oninput="textoMigra()">
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio1" value="Não"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Não</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="10 minutos atrasados"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">10 min atrasados</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio3" value="15 minutos atrasados"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio3">15 min atrasados</label>
+            </div>
+          </div>
 
-        <h3>Registro de uso</h3>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio1" value="20 minutos atrasados"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">20 min atrasados</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="Faltou"
+                oninput="faltou()">
+              <label class="form-check-label" for="inlineRadio2">Faltou!</label>
+            </div>
+          </div>
 
-        <p> 
-            Uso:<input type="number" name="regUso" id="regUso" style="width: 60px" placeholder="%" oninput="textoMigra()">
-            Acesso:<input type="number" name="acesso" id="acesso" style="width: 60px" placeholder="%" oninput="textoMigra()">
-            Entregas:<input type="number" name="entregas" id="entregas" style="width: 60px" placeholder="%" oninput="textoMigra()">
-            Robô:<input type="number" name="robo" id="robo" style="width: 60px" placeholder="%" oninput="textoMigra()">
-        </p>
+          <div id="falta" style="display: none;">
+            <h3>Informações sobre a Falta do cliente</h3>
+            <textarea name="faltaCliente" id="faltaCliente" cols="55" rows="6"
+              placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"></textarea>
+            <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy"
+                onclick="copRespFalta()"></abbr>
+          </div>
 
-        <p>
-            Gestão:<input type="text" name="gestao" id="gestao" style="width: 130px" oninput="textoMigra()">
-            APP:<input type="text" name="app" id="app" style="width: 130px" oninput="textoMigra()">
-            APLA:<input type="text" name="apla" id="apla" style="width: 130px" oninput="textoMigra()">
-        </p>
+          <div class="row mb-3">
+            <h5>Realizaram as atividades anteriores?</h5>
+          </div>
 
-        <p>
-            Número do Ticket de Finalização dos treinamentos: <input type="text" name="ticketFinal" id="ticketFinal" oninput="textoMigra()">
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio1" value="Sim, a maioria"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Sim, a maioria</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio2" value="Em partes"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Em partes</label>
+            </div>
+          </div>
 
-        <p>
-            Houve dispensa de treinamento ?Se sim, qual numero do ticket?: <input type="text" name="dispensaTicket" id="dispensaTicket" oninput="textoMigra()" style="width: 130px">
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio1" value="Pouco"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Pouco</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio2" value="Nada"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Nada</label>
+            </div>
+          </div>
 
-        <p> Informações Adicionais: <br>
-            <textarea name="Minfo" id="Minfo" cols="70" rows="3" oninput="textoMigra()"></textarea>
-        </p>
+          <div class="row mb-3">
+            <h5>Dúvidas/Dificuldades da etapa anterior?</h5>
+          </div>
 
-        <div id="respostas">
-            <fieldset>
-                <legend>Migração <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy" onclick="copResp3()"></abbr></legend>
-                <p id="Mresp1"></p>
-                <p id="Mresp2"></p>
-                <p id="Mresp3"></p>
-                <p id="Mresp4"></p>
-                <p id="Mresp5"></p>
-                <p id="Mresp6"></p>
-                <p id="Mresp7"></p>
-                <p id="Mresp8"></p>
-                <p id="Mresp9"></p>
-                <p id="Mresp10"></p>
-                <p id="Mresp11"></p>
-                <p id="Mresp12"></p>
-                <p id="Mresp13"></p>
-                <p id="Mresp14"></p>
-                <p id="Mresp15"></p>
-                <p id="Mresp16"></p>
-                <p id="Mresp17"></p>
-            </fieldset>
-        </div>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="duvidas" id="inlineRadio1" value="Não, entenderam bem"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Não, entenderam bem</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="duvidas" id="inlineRadio2" value="Algumas dúvidas"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Algumas dúvidas</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="duvidas" id="inlineRadio2" value="Bastante dificuldade"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Bastante dificuldade</label>
+            </div>
+          </div>
 
-    </article>
+          <div class="row mb-3">
+            <h5>Participativos?</h5>
+          </div>
 
-    <article id="acomp">
-        <h3>Acompanhamento</h3>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio1"
+                value="Bem Participativos" oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Bem Participativos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio2"
+                value="Participativos" oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Participativos</label>
+            </div>
+          </div>
 
-        <p>
-            Contato com: <input type="text" name="contato" id="contato" oninput="acompTexto()">
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio1"
+                value="Pouco Participativos" oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Pouco Participativos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio2"
+                value="Sem Participação" oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Sem Participação</label>
+            </div>
+          </div>
 
-            Ticket: <input type="text" name="ticketAcomp" id="ticketAcomp" placeholder="Justificar se não tiver" oninput="acompTexto()" size="14">
-        </p>
+          <div class="row mb-3">
+            <h5>Algum problema?</h5>
+          </div>
 
-        <p> 
-            Uso:<input type="number" name="regUso" id="AregUso" style="width: 60px" placeholder="%" oninput="acompTexto()">
-            Acesso:<input type="number" name="acesso" id="Aacesso" style="width: 60px" placeholder="%" oninput="acompTexto()">
-            Entregas:<input type="number" name="entregas" id="Aentregas" style="width: 60px" placeholder="%" oninput="acompTexto()">
-            Robô:<input type="number" name="Arobo" id="Arobo" style="width: 60px" placeholder="%" oninput="acompTexto()">
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="problema" id="inlineRadio1" value="Não"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">Não</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="problema" id="inlineRadio2"
+                value="Dificuldade de Aprendizagem" oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Dificuldade de Aprendizagem</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="problema" id="inlineRadio2"
+                value="Insatisfação com o que viu" oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">Insatisfação com o que viu</label>
+            </div>
+          </div>
 
-        <p style="display: inline;"> Tratativa: <br>
-            <textarea name="tratativa" id="tratativa" cols="53" rows="5" oninput="acompTexto()"></textarea>
+          <div class="row mb-3">
+            <h5>Nota para a consultoria: </h5>
+          </div>
 
-            <aside id="inputBackup2">
-                <p><abbr title="Marcar como SIM para preencher formulário para o Backup">Backup?</abbr></p>
-                <input type="radio" name="btnBackup2" id="simBackup2" value="yes" onchange="pergBackup2()">
-                <label for="btnBackup2">Sim</label>
-                <input type="radio" name="btnBackup2" id="naoBackup2" value="no" checked onchange="pergBackup2()">
-                <label for="btnBackup2">Não</label>
-            </aside>
-        </p>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="1"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="2"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="3"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="4"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="5"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">5</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="6"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">6</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="7"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio1">7</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="8"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">8</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="9"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">9</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="1-"
+                oninput="infoGeral()">
+              <label class="form-check-label" for="inlineRadio2">10</label>
+            </div>
+          </div>
 
-        <div id="telaBackup2" style="display: none;">
-            <h3>Informações para o Backup</h3>
-            <p> Cliente Comprometido?
-                <input type="range" name="comprometido2" id="comprometido2" min="0" max="10" oninput="comp2.innerHTML=Number(comprometido2.value)" onchange="acompTexto()">
-                <output id="comp2">5</output>
-            </p>
+          <div class="mb-3 row">
+            <label for="ticketConsult" class="col-sm-3 col-form-label">Ticket da consultoria:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticketConsult" oninput="infoGeral()">
+            </div>
+          </div>
 
-            <p> Cliente Tecnológico?
-                <input type="range" name="tecnologico2" id="tecnologico2" min="0" max="10" oninput="tecno2.innerHTML=Number(tecnologico2.value)" onchange="acompTexto()">
-                <output id="tecno2">5</output>
-            </p><br>
+          <div class="mb-3 row">
+            <label for="geralObs" class="form-label">Informações Adicionais:</label>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="geralObs" id="geralObs" rows="5" oninput="infoGeral()"></textarea>
+            </div>
+          </div>
 
-            <textarea name="etapaBackup2" id="etapaBackup2" cols="60" rows="7" placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade." oninput="acompTexto()"></textarea><br><br>
+          <div class="row mb-3">
+            <h5>Backup?</h5>
+          </div>
 
-        </div>
+          <div class="mb-4">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup" type="radio" name="simBackup" id="inlineRadio1"
+                value="yes" oninput="pergBackup()">
+              <label class="form-check-label" for="inlineRadio1">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup" type="radio" name="naoBackup" id="inlineRadio2"
+                value="no" oninput="pergBackup()" checked>
+              <label class="form-check-label" for="inlineRadio2">Não</label>
+            </div>
+          </div>
 
-        <div id="respostas">
-            <fieldset>
-                <legend>Acompanhamento <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy" onclick="copResp4()"></abbr></legend>
-                <p id="Aresp1"></p>
-                <p id="Aresp2"></p>
-                <p id="Aresp3"></p>
-                <p id="Aresp4"></p>
-                <p id="Aresp5"></p>
-                <p id="Aresp6"></p>
-                <p id="Aresp7"></p>
-                <p id="Aresp8"></p>
-                <p id="Aresp9"></p>
-                <p id="Aresp10"></p>
-                
-            </fieldset>
-        </div>
-    </article>
+          <div id="telaBackup" style="display: none;">
+            <div class="card col-sm-12 col-md-11">
+              <div class="card-header">
+                <h5>Informações para o Backup</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente comprometido?</label>
+                  <input type="range" class="form-range" id="comprometido" min="0" max="10"
+                    oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="infoGeral()">
+                </div>
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente tecnológico?</label>
+                  <input type="range" class="form-range" id="tecnologico" min="0" max="10"
+                    oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="infoGeral()">
+                </div>
+                <div class="mb-3 row">
+                  <label for="obs" class="form-label">Informações Adicionais:</label>
+                  <div class="col-sm-11">
+                    <textarea class="form-control" name="etapaBackup" id="etapaBackup" rows="5"
+                      placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                      oninput="infoGeral()"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div id="resp" style="display: none;">
-        <textarea name="respCopy" id="respCopy" cols="30" rows="10"></textarea>
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp2()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal2">
+              Copiar Texto
+            </button>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Texto Copiado</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="geralResp0"></p>
+                  <p id="geralResp1"></p>
+                  <p id="geralResp2"></p>
+                  <p id="geralResp3"></p>
+                  <p id="geralResp4"></p>
+                  <p id="geralResp5"></p>
+                  <p id="geralResp6"></p>
+                  <p id="geralResp7"></p>
+                  <p id="geralResp8"></p>
+                  <p id="geralResp9"></p>
+                  <p id="geralResp10"></p>
+                  <p id="geralResp11"></p>
+                  <p id="geralResp12"></p>
+                  <p id="geralResp13"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <article id="migração">
+
+    <h3>
+      Migração
+    </h3>
+
+    <p>Valor do Acessórias:
+      <input type="text" name="valorMigra" id="valorMigra" style="width: 385px" oninput="textoMigra()">
+    </p>
+
+    <p>Referencia técnica e seu departamento:
+      <input type="text" name="referenciaMigra" id="referenciaMigra" style="width: 265px" oninput="textoMigra()">
+    </p>
+
+    <p>Melhor forma de contato:
+      <input type="text" name="formaContato" id="formaContato" style="width: 350px" oninput="textoMigra()">
+    </p>
+
+    <p>Equipe engajada? Quais?:
+      <input type="text" name="equipeEngajada" id="equipeEngajada" style="width: 350px" oninput="textoMigra()">
+    </p>
+
+    <p>Dispensa em massa?
+      <input type="text" name="dispensaMassa" id="dispensaMassa" style="width: 70px" oninput="textoMigra()">
+    </p>
+
+    <p>ERP:
+      <input type="text" name="erp" id="erp" oninput="textoMigra()">
+    </p>
+
+    <p>SMTP Ativo:
+      <input type="text" name="smtp" id="smtp" style="width: 115px" oninput="textoMigra()">
+    </p>
+
+    <h3>Registro de uso</h3>
+
+    <p>
+      Uso:<input type="number" name="regUso" id="regUso" style="width: 60px" placeholder="%" oninput="textoMigra()">
+      Acesso:<input type="number" name="acesso" id="acesso" style="width: 60px" placeholder="%" oninput="textoMigra()">
+      Entregas:<input type="number" name="entregas" id="entregas" style="width: 60px" placeholder="%"
+        oninput="textoMigra()">
+      Robô:<input type="number" name="robo" id="robo" style="width: 60px" placeholder="%" oninput="textoMigra()">
+    </p>
+
+    <p>
+      Gestão:<input type="text" name="gestao" id="gestao" style="width: 130px" oninput="textoMigra()">
+      APP:<input type="text" name="app" id="app" style="width: 130px" oninput="textoMigra()">
+      APLA:<input type="text" name="apla" id="apla" style="width: 130px" oninput="textoMigra()">
+    </p>
+
+    <p>
+      Número do Ticket de Finalização dos treinamentos: <input type="text" name="ticketFinal" id="ticketFinal"
+        oninput="textoMigra()">
+    </p>
+
+    <p>
+      Houve dispensa de treinamento ?Se sim, qual numero do ticket?: <input type="text" name="dispensaTicket"
+        id="dispensaTicket" oninput="textoMigra()" style="width: 130px">
+    </p>
+
+    <p> Informações Adicionais: <br>
+      <textarea name="Minfo" id="Minfo" cols="70" rows="3" oninput="textoMigra()"></textarea>
+    </p>
+
+    <div id="respostas">
+      <fieldset>
+        <legend>Migração <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy"
+              onclick="copResp3()"></abbr></legend>
+        <p id="Mresp1"></p>
+        <p id="Mresp2"></p>
+        <p id="Mresp3"></p>
+        <p id="Mresp4"></p>
+        <p id="Mresp5"></p>
+        <p id="Mresp6"></p>
+        <p id="Mresp7"></p>
+        <p id="Mresp8"></p>
+        <p id="Mresp9"></p>
+        <p id="Mresp10"></p>
+        <p id="Mresp11"></p>
+        <p id="Mresp12"></p>
+        <p id="Mresp13"></p>
+        <p id="Mresp14"></p>
+        <p id="Mresp15"></p>
+        <p id="Mresp16"></p>
+        <p id="Mresp17"></p>
+      </fieldset>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+  </article>
+
+  <article id="acomp">
+    <h3>Acompanhamento</h3>
+
+    <p>
+      Contato com: <input type="text" name="contato" id="contato" oninput="acompTexto()">
+
+      Ticket: <input type="text" name="ticketAcomp" id="ticketAcomp" placeholder="Justificar se não tiver"
+        oninput="acompTexto()" size="14">
+    </p>
+
+    <p>
+      Uso:<input type="number" name="regUso" id="AregUso" style="width: 60px" placeholder="%" oninput="acompTexto()">
+      Acesso:<input type="number" name="acesso" id="Aacesso" style="width: 60px" placeholder="%" oninput="acompTexto()">
+      Entregas:<input type="number" name="entregas" id="Aentregas" style="width: 60px" placeholder="%"
+        oninput="acompTexto()">
+      Robô:<input type="number" name="Arobo" id="Arobo" style="width: 60px" placeholder="%" oninput="acompTexto()">
+    </p>
+
+    <p style="display: inline;"> Tratativa: <br>
+      <textarea name="tratativa" id="tratativa" cols="53" rows="5" oninput="acompTexto()"></textarea>
+
+    <aside id="inputBackup2">
+      <p><abbr title="Marcar como SIM para preencher formulário para o Backup">Backup?</abbr></p>
+      <input type="radio" name="btnBackup2" id="simBackup2" value="yes" onchange="pergBackup2()">
+      <label for="btnBackup2">Sim</label>
+      <input type="radio" name="btnBackup2" id="naoBackup2" value="no" checked onchange="pergBackup2()">
+      <label for="btnBackup2">Não</label>
+    </aside>
+    </p>
+
+    <div id="telaBackup2" style="display: none;">
+      <h3>Informações para o Backup</h3>
+      <p> Cliente Comprometido?
+        <input type="range" name="comprometido2" id="comprometido2" min="0" max="10"
+          oninput="comp2.innerHTML=Number(comprometido2.value)" onchange="acompTexto()">
+        <output id="comp2">5</output>
+      </p>
+
+      <p> Cliente Tecnológico?
+        <input type="range" name="tecnologico2" id="tecnologico2" min="0" max="10"
+          oninput="tecno2.innerHTML=Number(tecnologico2.value)" onchange="acompTexto()">
+        <output id="tecno2">5</output>
+      </p><br>
+
+      <textarea name="etapaBackup2" id="etapaBackup2" cols="60" rows="7"
+        placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+        oninput="acompTexto()"></textarea><br><br>
+
+    </div>
+
+    <div id="respostas">
+      <fieldset>
+        <legend>Acompanhamento <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy"
+              onclick="copResp4()"></abbr></legend>
+        <p id="Aresp1"></p>
+        <p id="Aresp2"></p>
+        <p id="Aresp3"></p>
+        <p id="Aresp4"></p>
+        <p id="Aresp5"></p>
+        <p id="Aresp6"></p>
+        <p id="Aresp7"></p>
+        <p id="Aresp8"></p>
+        <p id="Aresp9"></p>
+        <p id="Aresp10"></p>
+
+      </fieldset>
+    </div>
+  </article>
+
+  <div id="resp" style="display: none;">
+    <textarea name="respCopy" id="respCopy" cols="30" rows="10"></textarea>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -2,9 +2,9 @@
   display: none;
 }
 
-#menuGeral {
+/* #menuGeral {
   display: none;
-}
+} */
 
 #migração {
   display: none;
@@ -16,4 +16,18 @@
 
 fieldset {
   width: 55%;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #dcb678;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #c1c1c1;
 }

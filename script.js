@@ -31,6 +31,7 @@ function teste() {
   document.getElementById(
     "etapa1resp1"
   ).innerHTML = `- Dono do escritorio: ${etapa1}`;
+  console.log(etapa1);
 
   let etapa2 = document.getElementById("resp").value;
   document.getElementById(
@@ -45,7 +46,7 @@ function teste() {
   let etapa4 = document.getElementById("usuario").value;
   document.getElementById(
     "etapa1resp4"
-  ).innerHTML = `- Usuários aprox:: ${etapa4}`;
+  ).innerHTML = `- Usuários aprox: ${etapa4}`;
 
   let etapa5 = document.getElementById("empresas").value;
   document.getElementById(
@@ -105,6 +106,7 @@ function copResp() {
   document.body.appendChild(textarea);
   textarea.select();
   document.execCommand("copy");
+  textarea.remove();
 }
 
 function copResp2() {
