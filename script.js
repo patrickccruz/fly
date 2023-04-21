@@ -288,7 +288,108 @@ function pergBackup() {
   }
 }
 
-function textoMigra() {}
+function textoMigra() {
+  let Aresp1 = document.getElementById("valorMigra").value;
+  document.getElementById(
+    "Mresp1"
+  ).innerHTML = `- Valor do Acessórias: ${Aresp1}`;
+
+  let Aresp2 = document.getElementById("referenciaMigra").value;
+  document.getElementById(
+    "Mresp2"
+  ).innerHTML = `- Referencia técnica e seu departamento: ${Aresp2}`;
+
+  let Aresp3 = document.getElementById("formaContato").value;
+  document.getElementById(
+    "Mresp3"
+  ).innerHTML = `- Melhor forma de contato: ${Aresp3}`;
+
+  let Aresp4 = document.getElementById("equipeEngajada").value;
+  document.getElementById(
+    "Mresp4"
+  ).innerHTML = `- Equipe engajada? Quais?: ${Aresp4}`;
+
+  let Aresp5 = document.getElementById("dispensaMassa").value;
+  document.getElementById(
+    "Mresp5"
+  ).innerHTML = `- Dispensa em massa? ${Aresp5}`;
+
+  let Aresp6 = document.getElementById("erp").value;
+  document.getElementById("Mresp6").innerHTML = `- ERP: ${Aresp6}`;
+
+  let Aresp7 = document.getElementById("smtp").value;
+  document.getElementById("Mresp7").innerHTML = `- SMTP Ativo: ${Aresp7}`;
+
+  let Aresp8 = document.getElementById("regUso").value;
+  document.getElementById("Mresp8").innerHTML = `- Uso: ${Aresp8}`;
+
+  let Aresp9 = document.getElementById("acesso").value;
+  document.getElementById("Mresp9").innerHTML = `- Acesso: ${Aresp9}`;
+
+  let Aresp10 = document.getElementById("entregas").value;
+  document.getElementById("Mresp10").innerHTML = `- Entregas: ${Aresp10}`;
+
+  let Aresp11 = document.getElementById("robo").value;
+  document.getElementById("Mresp11").innerHTML = `- Robô: ${Aresp11}`;
+
+  let Aresp12 = document.getElementById("gestao").value;
+  document.getElementById("Mresp12").innerHTML = `- Gestão:: ${Aresp12}`;
+
+  let Aresp13 = document.getElementById("app").value;
+  document.getElementById("Mresp13").innerHTML = `- APP: ${Aresp13}`;
+
+  let Aresp14 = document.getElementById("apla").value;
+  document.getElementById("Mresp14").innerHTML = `- APLA: ${Aresp14}`;
+
+  let Aresp15 = document.getElementById("ticketFinal").value;
+  document.getElementById(
+    "Mresp15"
+  ).innerHTML = `- Número do Ticket de Finalização dos treinamentos: ${Aresp15}`;
+
+  let Aresp16 = document.getElementById("dispensaTicket").value;
+  document.getElementById(
+    "Mresp16"
+  ).innerHTML = `- Houve dispensa de treinamento ?Se sim, qual numero do ticket?: ${Aresp16}`;
+
+  let Aresp17 = document.getElementById("Minfo").value;
+  document.getElementById(
+    "Mresp17"
+  ).innerHTML = `- Informações Adicionais ${Aresp17}`;
+
+  function copResp3() {
+    let resp0 = document.getElementById("Mresp1").textContent;
+    let resp1 = document.getElementById("Mresp2").textContent;
+    let resp2 = document.getElementById("Mresp3").textContent;
+    let resp3 = document.getElementById("Mresp4").textContent;
+    let resp4 = document.getElementById("Mresp5").textContent;
+    let resp5 = document.getElementById("Mresp6").textContent;
+    let resp6 = document.getElementById("Mresp7").textContent;
+    let resp7 = document.getElementById("Mresp8").textContent;
+    let resp8 = document.getElementById("Mresp9").textContent;
+    let resp9 = document.getElementById("Mresp10").textContent;
+    let resp10 = document.getElementById("Mresp11").textContent;
+    let resp11 = document.getElementById("Mresp12").textContent;
+    let resp12 = document.getElementById("Mresp13").textContent;
+    let resp13 = document.getElementById("Mresp14").textContent;
+    let resp14 = document.getElementById("Mresp15").textContent;
+    let resp15 = document.getElementById("Mresp16").textContent;
+    let resp16 = document.getElementById("Mresp17").textContent;
+    let textToCopy = "";
+    for (var radio of value) {
+      if (radio.checked) {
+        if (radio.value == "yes") {
+          textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
+        }
+      }
+    }
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
 
 function acompTexto() {}
 
