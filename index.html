@@ -181,7 +181,7 @@
     </div>
   </div>
 
-  <!-------------------------------------- Etapas gerais --------->
+  <!------------------------------------------------ Etapas gerais -------------------------------------------------------------------->
 
   <div class="container-fluid">
     <div class="row">
@@ -523,13 +523,13 @@
           <!-- Button trigger modal -->
           <div class="mb-3">
             <button type="button" class="btn btn-outline-primary" onclick="copResp2()" data-bs-toggle="modal"
-              data-bs-target="#exampleModal2">
+              data-bs-target="#exampleModal3">
               Copiar Texto
             </button>
           </div>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-xl">
               <div class="modal-content">
@@ -564,118 +564,247 @@
       </div>
     </div>
   </div>
+ <!------------------------------------------------ Migração -------------------------------------------------------------------->
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <article id="migração">
 
-  <article id="migração">
+        <div class="row mb-3">
+          <h3>Migração</h3>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="valorMigra" class="col-sm-3 col-form-label">Valor do Acessórias:</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="valorMigra" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="referenciaMigra" class="col-sm-3 col-form-label">Referencia técnica e seu departamento: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="referenciaMigra" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="formaContato" class="col-sm-3 col-form-label">Melhor forma de contato: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="formaContato" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="equipeEngajada" class="col-sm-3 col-form-label">Equipe engajada? Quais? : </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="equipeEngajada" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="dispensaMassa" class="col-sm-3 col-form-label">Dispensa em massa? : </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="dispensaMassa" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="erp" class="col-sm-3 col-form-label">ERP: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="erp" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="smtp" class="col-sm-3 col-form-label">SMTP Ativo: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="smtp" oninput="textoMigra()">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
 
-    <h3>
-      Migração
-    </h3>
-
-    <p>Valor do Acessórias:
-      <input type="text" name="valorMigra" id="valorMigra" style="width: 385px" oninput="textoMigra()">
-    </p>
-
-    <p>Referencia técnica e seu departamento:
-      <input type="text" name="referenciaMigra" id="referenciaMigra" style="width: 265px" oninput="textoMigra()">
-    </p>
-
-    <p>Melhor forma de contato:
-      <input type="text" name="formaContato" id="formaContato" style="width: 350px" oninput="textoMigra()">
-    </p>
-
-    <p>Equipe engajada? Quais?:
-      <input type="text" name="equipeEngajada" id="equipeEngajada" style="width: 350px" oninput="textoMigra()">
-    </p>
-
-    <p>Dispensa em massa?
-      <input type="text" name="dispensaMassa" id="dispensaMassa" style="width: 70px" oninput="textoMigra()">
-    </p>
-
-    <p>ERP:
-      <input type="text" name="erp" id="erp" oninput="textoMigra()">
-    </p>
-
-    <p>SMTP Ativo:
-      <input type="text" name="smtp" id="smtp" style="width: 115px" oninput="textoMigra()">
-    </p>
-
-    <h3>Registro de uso</h3>
-
-    <p>
-      Uso:<input type="number" name="regUso" id="regUso" style="width: 60px" placeholder="%" oninput="textoMigra()">
-      Acesso:<input type="number" name="acesso" id="acesso" style="width: 60px" placeholder="%" oninput="textoMigra()">
-      Entregas:<input type="number" name="entregas" id="entregas" style="width: 60px" placeholder="%"
-        oninput="textoMigra()">
-      Robô:<input type="number" name="robo" id="robo" style="width: 60px" placeholder="%" oninput="textoMigra()">
-    </p>
-
-    <p>
-      Gestão:<input type="text" name="gestao" id="gestao" style="width: 130px" oninput="textoMigra()">
-      APP:<input type="text" name="app" id="app" style="width: 130px" oninput="textoMigra()">
-      APLA:<input type="text" name="apla" id="apla" style="width: 130px" oninput="textoMigra()">
-    </p>
-
-    <p>
-      Número do Ticket de Finalização dos treinamentos: <input type="text" name="ticketFinal" id="ticketFinal"
-        oninput="textoMigra()">
-    </p>
-
-    <p>
-      Houve dispensa de treinamento ?Se sim, qual numero do ticket?: <input type="text" name="dispensaTicket"
-        id="dispensaTicket" oninput="textoMigra()" style="width: 130px">
-    </p>
-
-    <p> Informações Adicionais: <br>
-      <textarea name="Minfo" id="Minfo" cols="70" rows="3" oninput="textoMigra()"></textarea>
-    </p>
-
-    <div id="respostas">
-      <fieldset>
-        <legend>Migração <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy"
-              onclick="copResp3()"></abbr></legend>
-        <p id="Mresp1"></p>
-        <p id="Mresp2"></p>
-        <p id="Mresp3"></p>
-        <p id="Mresp4"></p>
-        <p id="Mresp5"></p>
-        <p id="Mresp6"></p>
-        <p id="Mresp7"></p>
-        <p id="Mresp8"></p>
-        <p id="Mresp9"></p>
-        <p id="Mresp10"></p>
-        <p id="Mresp11"></p>
-        <p id="Mresp12"></p>
-        <p id="Mresp13"></p>
-        <p id="Mresp14"></p>
-        <p id="Mresp15"></p>
-        <p id="Mresp16"></p>
-        <p id="Mresp17"></p>
-      </fieldset>
-    </div>
-
+        <div class="row mb-3">
+          <h3>Registro de uso</h3>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="regUso" oninput="textoMigra()" placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="acesso" oninput="textoMigra()" placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="entregas" oninput="textoMigra() " placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="robo" class="col-sm-3 col-form-label">Robô:</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="robo" oninput="textoMigra() " placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="gestao" class="col-sm-3 col-form-label">Gestão:</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="gestao" oninput="textoMigra() " placeholder="Digite...">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="app" class="col-sm-3 col-form-label">APP:</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="app" oninput="textoMigra() " placeholder="Digite...">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="apla" class="col-sm-3 col-form-label">APLA:</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="apla" oninput="textoMigra() " placeholder="Digite...">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="ticketFinal" class="col-sm-3 col-form-label">Número do Ticket de Finalização dos treinamentos:</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="ticketFinal" oninput="textoMigra() " placeholder="Digite...">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="dispensaTicket" class="col-sm-3 col-form-label">Houve dispensa de treinamento ?Se sim, qual numero do ticket?:</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="dispensaTicket" oninput="textoMigra() " placeholder="Digite...">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
+          <div class="col-sm-11">
+            <textarea class="form-control" name="geralObs" id="Minfo" rows="5" oninput="infoGeral()"></textarea>
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <!-- Button trigger modal -->
+        <div class="mb-3">
+          <button type="button" class="btn btn-outline-primary" onclick="copResp3()" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">
+            Copiar Texto
+          </button>
+        </div>
+        <!-- =============================================================================================================== -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Texto Copiado</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="Mresp1"></p>
+              <p id="Mresp2"></p>
+              <p id="Mresp3"></p>
+              <p id="Mresp4"></p>
+              <p id="Mresp5"></p>
+              <p id="Mresp6"></p>
+              <p id="Mresp7"></p>
+              <p id="Mresp8"></p>
+              <p id="Mresp9"></p>
+              <p id="Mresp10"></p>
+              <p id="Mresp11"></p>
+              <p id="Mresp12"></p>
+              <p id="Mresp13"></p>
+              <p id="Mresp14"></p>
+              <p id="Mresp15"></p>
+              <p id="Mresp16"></p>
+              <p id="Mresp17"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </article>
+<!-- =================================================Aconpanhamento============================================================== -->
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-sm-12 col-md-6">
+       <article id="acomp">
 
-  <article id="acomp">
-    <h3>Acompanhamento</h3>
+          <div class="row mb-3">
+            <h3>Acompanhamento</h3>
+          </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="contato" class="col-sm-3 col-form-label">Contato com: </label>
+           <div class="col-sm-8">
+              <input type="text" class="form-control" id="contato" oninput="acompTexto() " placeholder="Digite...">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="ticketAcomp" class="col-sm-3 col-form-label">Ticket:</label>
+           <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticketAcomp" oninput="acompTexto() " placeholder="Justificar se não tiver">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
+           <div class="col-sm-8">
+              <input type="text" class="form-control" id="AregUso" oninput="acompTexto() " placeholder="Justificar se não tiver">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
+           <div class="col-sm-8">
+              <input type="number" class="form-control" id="Aacesso" oninput="acompTexto() " placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
+           <div class="col-sm-8">
+              <input type="number" class="form-control" id="Aentregas" oninput="acompTexto() " placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <label for="Arobo" class="col-sm-3 col-form-label">Robô:</label>
+           <div class="col-sm-8">
+              <input type="number" class="form-control" id="Arobo" oninput="acompTexto() " placeholder="%">
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
+        <div class="mb-3 row">
+          <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
+          <div class="col-sm-11">
+            <textarea class="form-control" name="tratativa" id="tratativa" rows="5" oninput="infoGeral()"></textarea>
+          </div>
+        </div>
+        <!-- =============================================================================================================== -->
 
-    <p>
-      Contato com: <input type="text" name="contato" id="contato" oninput="acompTexto()">
-
-      Ticket: <input type="text" name="ticketAcomp" id="ticketAcomp" placeholder="Justificar se não tiver"
-        oninput="acompTexto()" size="14">
-    </p>
-
-    <p>
-      Uso:<input type="number" name="regUso" id="AregUso" style="width: 60px" placeholder="%" oninput="acompTexto()">
-      Acesso:<input type="number" name="acesso" id="Aacesso" style="width: 60px" placeholder="%" oninput="acompTexto()">
-      Entregas:<input type="number" name="entregas" id="Aentregas" style="width: 60px" placeholder="%"
-        oninput="acompTexto()">
-      Robô:<input type="number" name="Arobo" id="Arobo" style="width: 60px" placeholder="%" oninput="acompTexto()">
-    </p>
-
-    <p style="display: inline;"> Tratativa: <br>
-      <textarea name="tratativa" id="tratativa" cols="53" rows="5" oninput="acompTexto()"></textarea>
-
+        <div class="row mb-3">
+          <h5>Backup?</h5>
+        </div>
+        
     <aside id="inputBackup2">
       <p><abbr title="Marcar como SIM para preencher formulário para o Backup">Backup?</abbr></p>
       <input type="radio" name="btnBackup2" id="simBackup2" value="yes" onchange="pergBackup2()">
