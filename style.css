@@ -1,16 +1,19 @@
 #etapa1 {
-    display: none;
-  }
-  
-  #menuGeral {
-    display: none;
-  }
-  
-  #migração {
-    display: none;
-  }
-  
-  #acomp {
-    display: none;
-  }
-  
+  display: none;
+}
+
+#menuGeral {
+  display: none;
+}
+
+#migração {
+  display: none;
+}
+
+#acomp {
+  display: none;
+}
+
+fieldset {
+  width: 55%;
+}
