@@ -355,34 +355,27 @@ function textoMigra() {
   document.getElementById(
     "Mresp17"
   ).innerHTML = `- Informações Adicionais ${Aresp17}`;
+}
 
-  function copResp3() {
-    let resp0 = document.getElementById("Mresp1").textContent;
-    let resp1 = document.getElementById("Mresp2").textContent;
-    let resp2 = document.getElementById("Mresp3").textContent;
-    let resp3 = document.getElementById("Mresp4").textContent;
-    let resp4 = document.getElementById("Mresp5").textContent;
-    let resp5 = document.getElementById("Mresp6").textContent;
-    let resp6 = document.getElementById("Mresp7").textContent;
-    let resp7 = document.getElementById("Mresp8").textContent;
-    let resp8 = document.getElementById("Mresp9").textContent;
-    let resp9 = document.getElementById("Mresp10").textContent;
-    let resp10 = document.getElementById("Mresp11").textContent;
-    let resp11 = document.getElementById("Mresp12").textContent;
-    let resp12 = document.getElementById("Mresp13").textContent;
-    let resp13 = document.getElementById("Mresp14").textContent;
-    let resp14 = document.getElementById("Mresp15").textContent;
-    let resp15 = document.getElementById("Mresp16").textContent;
-    let resp16 = document.getElementById("Mresp17").textContent;
-    let textToCopy = "";
-    for (var radio of value) {
-      if (radio.checked) {
-        if (radio.value == "yes") {
-          textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
-        }
-      }
-    }
-  }
+function copResp3() {
+  let resp0 = document.getElementById("Mresp1").textContent;
+  let resp1 = document.getElementById("Mresp2").textContent;
+  let resp2 = document.getElementById("Mresp3").textContent;
+  let resp3 = document.getElementById("Mresp4").textContent;
+  let resp4 = document.getElementById("Mresp5").textContent;
+  let resp5 = document.getElementById("Mresp6").textContent;
+  let resp6 = document.getElementById("Mresp7").textContent;
+  let resp7 = document.getElementById("Mresp8").textContent;
+  let resp8 = document.getElementById("Mresp9").textContent;
+  let resp9 = document.getElementById("Mresp10").textContent;
+  let resp10 = document.getElementById("Mresp11").textContent;
+  let resp11 = document.getElementById("Mresp12").textContent;
+  let resp12 = document.getElementById("Mresp13").textContent;
+  let resp13 = document.getElementById("Mresp14").textContent;
+  let resp14 = document.getElementById("Mresp15").textContent;
+  let resp15 = document.getElementById("Mresp16").textContent;
+  let resp16 = document.getElementById("Mresp17").textContent;
+  const textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
