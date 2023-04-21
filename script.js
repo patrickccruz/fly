@@ -1,10 +1,30 @@
-function confIni() {}
+function confIni() {
+  document.getElementById("etapa1").style.display = "block";
+  document.getElementById("menuGeral").style.display = "none";
+  document.getElementById("migração").style.display = "none";
+  document.getElementById("acomp").style.display = "none";
+}
 
-function geral() {}
+function geral() {
+  document.getElementById("etapa1").style.display = "none";
+  document.getElementById("menuGeral").style.display = "block";
+  document.getElementById("migração").style.display = "none";
+  document.getElementById("acomp").style.display = "none";
+}
 
-function migra() {}
+function migra() {
+  document.getElementById("etapa1").style.display = "none";
+  document.getElementById("menuGeral").style.display = "none";
+  document.getElementById("migração").style.display = "block";
+  document.getElementById("acomp").style.display = "none";
+}
 
-function acpt() {}
+function acpt() {
+  document.getElementById("etapa1").style.display = "none";
+  document.getElementById("menuGeral").style.display = "none";
+  document.getElementById("migração").style.display = "none";
+  document.getElementById("acomp").style.display = "block";
+}
 
 function teste() {
   let etapa1 = document.getElementById("dono").value;
