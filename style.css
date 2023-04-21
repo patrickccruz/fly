@@ -31,3 +31,7 @@ fieldset {
 .nav-link:hover {
   color: #c1c1c1;
 }
+
+body {
+  background-color: #000;
+}
