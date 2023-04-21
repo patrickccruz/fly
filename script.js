@@ -433,6 +433,7 @@ function acompTexto() {
 
 function pergBackup2() {
   var value = document.getElementsByName("btnBackup2");
+  console.log(value);
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
