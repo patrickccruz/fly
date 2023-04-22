@@ -1,2 +1,2 @@
 # fly Acessorias
-Projeto feito para o prenchimento de de relatorios gerai
+Projeto feito para o prenchimento de relatorios gerai
