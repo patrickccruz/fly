@@ -51,22 +51,22 @@ const darkMode = document.querySelector("#toggle_checkbox");
 
 function darkOn() {
   const nav = document.querySelector(".navbar");
-  const footer = document.querySelector(".footer-pro");
+  const footer = document.querySelector("#footer");
   document.body.style.backgroundColor = "rgb(50 50 50)";
   document.body.style.color = "white";
-  document.querySelector(".text-home").style.color = "#000";
   nav.style.backgroundColor = "#003050";
   footer.style.backgroundColor = "#003050";
+  footer.style.color = "white";
 }
 
 function sunOn() {
   const nav = document.querySelector(".navbar");
-  const footer = document.querySelector(".footer-pro");
+  const footer = document.querySelector("#footer");
   document.body.style.backgroundColor = "#e2e2e2";
   document.body.style.color = "#000000";
   nav.style.backgroundColor = "#005c9a";
-  document.querySelector(".text-home").style.color = "#000";
-  footer.style.backgroundColor = "#005c9a";
+  footer.style.backgroundColor = "white";
+  footer.style.color = "#000";
 }
 
 darkMode.addEventListener("click", function () {
