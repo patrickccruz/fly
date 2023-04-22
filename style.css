@@ -44,26 +44,12 @@ textarea {
 #tecnologico-value {
   font-size: 25px;
   margin-left: 24%;
-  font-weight: 900;
-  color: #008080;
-  text-shadow:
-    -1px -1px 0px #000,
-    -1px 1px 0px #000,
-    1px -1px 0px #000,
-    1px 0px 0px #000;
   letter-spacing: 3px;
 }
 
 #comprometido-value {
   font-size: 25px;
   margin-left: 21%;
-  font-weight: 900;
-  color: #008080;
-  text-shadow:
-    -1px -1px 0px #000,
-    -1px 1px 0px #000,
-    1px -1px 0px #000,
-    1px 0px 0px #000;
   letter-spacing: 3px;
 }
 
@@ -121,7 +107,8 @@ body {
   background-color: #fafd0f;
   transform: scale(1);
   border-radius: 50%;
-  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform,
+    0.3s ease background-color;
   z-index: 1;
 }
 
@@ -164,36 +151,32 @@ body {
   background-color: #03a9f4;
   border-radius: 50%;
   transition: 0.3s ease background-color;
-
 }
 
-#toggle_checkbox:checked+.label-darkmode-add {
+#toggle_checkbox:checked + .label-darkmode-add {
   background-color: #000;
 }
 
-#toggle_checkbox:checked+.label-darkmode-add #star {
+#toggle_checkbox:checked + .label-darkmode-add #star {
   top: 3px;
   left: 66px;
   transform: scale(0.3);
   background-color: yellow;
 }
 
-#toggle_checkbox:checked+.label-darkmode-add .star {
+#toggle_checkbox:checked + .label-darkmode-add .star {
   color: yellow;
 }
 
-#toggle_checkbox:checked+.label-darkmode-add #moon {
+#toggle_checkbox:checked + .label-darkmode-add #moon {
   bottom: 3px;
 }
 
-#toggle_checkbox:checked+.label-darkmode-add #moon:before {
+#toggle_checkbox:checked + .label-darkmode-add #moon:before {
   background-color: #000;
 }
 
-
-
-
-.robot {
+/* .robot {
   background: url(./images/robot_cloud.png) no-repeat;
   background-size: 500px;
   width: 100%;
@@ -204,9 +187,9 @@ body {
   position: fixed;
   top: 180px;
   left: 53.7vw;
-}
+} */
 
-.text-robot {
+/* .text-robot {
   width: 277px;
   height: 109px;
 
@@ -216,17 +199,15 @@ body {
   position: absolute;
   top: 90px;
   left: 131px;
-}
+} */
 
-
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .robot {
     display: none;
   }
-}
+} */
 
-
-.line {
+/* .line {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   color: #000;
   font-family: "Special Elite", monospace;
@@ -235,10 +216,11 @@ body {
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
-}
+} */
 
-.typing-animation {
-  animation: blinkCursor 500ms steps(20) infinite normal, typing 4s steps(20) 1s normal both;
+/* .typing-animation {
+  animation: blinkCursor 500ms steps(20) infinite normal,
+    typing 4s steps(20) 1s normal both;
 }
 
 @keyframes typing {
@@ -259,38 +241,15 @@ body {
   to {
     border-right-color: transparent;
   }
-}
+} */
 
-.img-back img {
+/* .img-back img {
   filter: blur(4px);
   z-index: -999;
-}
+} */
 
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: #005c9a;
-  z-index: 999;
-}
-
-.footer-pro {
-  padding-top: 10px;
-  color: white;
-  font-weight: 600;
-  height: 50px;
-  width: 100%;
+/* .text-home h1 {
   text-align: center;
-}
-
-.footer-pro a {
-  color: #cb985b;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.text-home h1 {
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .text-home {
@@ -301,6 +260,7 @@ footer {
   height: 90vh;
   z-index: 1;
   text-align: left;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-}
+} */

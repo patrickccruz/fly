@@ -3,13 +3,11 @@ function confIni() {
   document.getElementById("menuGeral").style.display = "none";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
-
   document.querySelector("#confIni").classList.add("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.remove("active");
   document.querySelector("#acpt").classList.remove("active");
-
-  document.querySelector(".img-back").style.display = "none";
+  document.querySelector(".bg-image").style.display = "none";
 }
 
 function geral() {
@@ -17,13 +15,11 @@ function geral() {
   document.getElementById("menuGeral").style.display = "block";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
-
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.add("active");
   document.querySelector("#migra").classList.remove("active");
   document.querySelector("#acpt").classList.remove("active");
-
-  document.querySelector(".img-back").style.display = "none";
+  document.querySelector(".bg-image").style.display = "none";
 }
 
 function migra() {
@@ -36,8 +32,7 @@ function migra() {
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.add("active");
   document.querySelector("#acpt").classList.remove("active");
-
-  document.querySelector(".img-back").style.display = "none";
+  document.querySelector(".bg-image").style.display = "none";
 }
 
 function acpt() {
@@ -45,37 +40,33 @@ function acpt() {
   document.getElementById("menuGeral").style.display = "none";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "block";
-
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.remove("active");
   document.querySelector("#acpt").classList.add("active");
-
-  document.querySelector(".img-back").style.display = "none";
+  document.querySelector(".bg-image").style.display = "none";
 }
 
-const darkMode = document.querySelector("#toggle_checkbox")
-
-
+const darkMode = document.querySelector("#toggle_checkbox");
 
 function darkOn() {
-  const nav = document.querySelector(".navbar")
-  const footer = document.querySelector(".footer-pro")
-  document.body.style.backgroundColor = 'rgb(50 50 50)'
-  document.body.style.color = 'white'
-  document.querySelector(".text-home").style.color = '#000'
-  nav.style.backgroundColor = '#003050'
-  footer.style.backgroundColor = '#003050'
+  const nav = document.querySelector(".navbar");
+  const footer = document.querySelector(".footer-pro");
+  document.body.style.backgroundColor = "rgb(50 50 50)";
+  document.body.style.color = "white";
+  document.querySelector(".text-home").style.color = "#000";
+  nav.style.backgroundColor = "#003050";
+  footer.style.backgroundColor = "#003050";
 }
 
 function sunOn() {
-  const nav = document.querySelector(".navbar")
-  const footer = document.querySelector(".footer-pro")
-  document.body.style.backgroundColor = '#e2e2e2'
-  document.body.style.color = '#000000'
-  nav.style.backgroundColor = '#005c9a'
-  document.querySelector(".text-home").style.color = '#000'
-  footer.style.backgroundColor = '#005c9a'
+  const nav = document.querySelector(".navbar");
+  const footer = document.querySelector(".footer-pro");
+  document.body.style.backgroundColor = "#e2e2e2";
+  document.body.style.color = "#000000";
+  nav.style.backgroundColor = "#005c9a";
+  document.querySelector(".text-home").style.color = "#000";
+  footer.style.backgroundColor = "#005c9a";
 }
 
 darkMode.addEventListener("click", function () {
@@ -84,55 +75,17 @@ darkMode.addEventListener("click", function () {
   } else {
     sunOn();
   }
-})
+});
 
-document.querySelector('#comprometido').addEventListener('input', function () {
-
-  const valor = document.querySelector('#comprometido-value')
+document.querySelector("#comprometido").addEventListener("input", function () {
+  const valor = document.querySelector("#comprometido-value");
   valor.innerHTML = `Nota: ${this.value}`;
-
-  if (this.value <= 2) {
-    valor.style.color = '#FF0000'
-  } else if (this.value > 2 && this.value <= 4) {
-    valor.style.color = '#FF7F50'
-  } else if (this.value > 4 && this.value <= 6) {
-    valor.style.color = '#008080'
-  } else if (this.value > 6 && this.value <= 8) {
-    valor.style.color = '#008000'
-  } else if (this.value > 8 && this.value <= 9) {
-    valor.style.color = '#9ACD32'
-  } else {
-    valor.style.color = '#32CD32'
-  }
-
 });
 
-
-setInterval(() => {
-  const scrollY = window.pageYOffset;
-  console.log(scrollY)
-}, 1000);
-
-document.querySelector('#tecnologico').addEventListener('input', function () {
-
-  const valor2 = document.querySelector('#tecnologico-value')
+document.querySelector("#tecnologico").addEventListener("input", function () {
+  const valor2 = document.querySelector("#tecnologico-value");
   valor2.innerHTML = `Nota: ${this.value}`;
-
-  if (this.value <= 2) {
-    valor2.style.color = '#FF0000'
-  } else if (this.value > 2 && this.value <= 4) {
-    valor2.style.color = '#FF7F50'
-  } else if (this.value > 4 && this.value <= 6) {
-    valor2.style.color = '#008080'
-  } else if (this.value > 6 && this.value <= 8) {
-    valor2.style.color = '#008000'
-  } else if (this.value > 8 && this.value <= 9) {
-    valor2.style.color = '#9ACD32'
-  } else {
-    valor2.style.color = '#32CD32'
-  }
 });
-
 
 function teste() {
   let etapa1 = document.getElementById("dono").value;
