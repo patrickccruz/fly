@@ -92,7 +92,6 @@ function teste() {
   document.getElementById(
     "etapa1resp1"
   ).innerHTML = `- Dono do escritorio: ${etapa1}`;
-  console.log(etapa1);
 
   let etapa2 = document.getElementById("resp").value;
   document.getElementById(
@@ -209,7 +208,6 @@ function infoGeral() {
   for (var radio of value) {
     if (radio.checked) {
       let resp0 = radio.value;
-      console.log(resp0);
       document.getElementById("geralResp0").innerHTML = `${resp0}`;
     }
   }
@@ -325,7 +323,6 @@ function faltou() {
 
 function copRespFalta() {
   let falta = document.getElementById("faltaCliente").value;
-  console.log(falta);
   const textToCopy = `${falta}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
@@ -494,7 +491,6 @@ function acompTexto() {
 
 function pergBackup2() {
   var value = document.getElementsByName("btnBackup2");
-  console.log(value);
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
