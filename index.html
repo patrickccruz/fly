@@ -1,333 +1,203 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fly Acessórias</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="shortcut icon" type="imagex/png" href="./images/logo.png" />
-  </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #005c9a">
-      <div class="container-fluid">
-        <a
-          class="navbar-brand"
-          href="https://app.acessorias.com/"
-          target="_blank"
-          style="color: #fff; font-weight: 600"
-        >
-          <img
-            src="images/logo.png"
-            alt="Logo"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          Fly Acessórias
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" id="confIni" onclick="confIni()"
-                >Configurações Iniciais</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="geral" onclick="geral()">Etapas Gerais</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="migra" onclick="migra()">Migração</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="acpt" onclick="acpt()">Acompanhamento</a>
-            </li>
-            <li class="nav-item toogle-sun-moon">
-              <input type="checkbox" id="toggle_checkbox" />
-              <label class="label-darkmode-add" for="toggle_checkbox">
-                <div id="star">
-                  <div class="star" id="star-1">★</div>
-                  <div class="star" id="star-2">★</div>
-                </div>
-                <div id="moon"></div>
-              </label>
-            </li>
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fly Acessórias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="imagex/png" href="./images/logo.png" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color: #005c9a">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://app.acessorias.com/" target="_blank" style="color: #fff; font-weight: 600">
+        <img src="images/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top" />
+        Fly Acessórias
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="confIni" onclick="confIni()">Configurações Iniciais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="geral" onclick="geral()">Etapas Gerais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="migra" onclick="migra()">Migração</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="acpt" onclick="acpt()">Acompanhamento</a>
+          </li>
+          <li class="nav-item toogle-sun-moon">
+            <input type="checkbox" id="toggle_checkbox" />
+            <label class="label-darkmode-add" for="toggle_checkbox">
+              <div id="star">
+                <div class="star" id="star-1">★</div>
+                <div class="star" id="star-2">★</div>
+              </div>
+              <div id="moon"></div>
+            </label>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div
-      class="bg-image"
-      style="
+  <div class="bg-image" style="
         background-image: url('images/background.png');
         height: 86.5vh;
         background-size: cover;
-      "
-    ></div>
+      "></div>
 
-    <div class="container-fluid mt-3" id="etapa1">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <article>
-            <div class="row mb-3">
-              <h3>Introdução ao Cliente</h3>
+  <div class="container-fluid mt-3" id="etapa1">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Introdução ao Cliente</h3>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="dono" class="col-sm-3 col-form-label">Dono do escritório:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="dono" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="dono" class="col-sm-3 col-form-label"
-                >Dono do escritório:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="dono"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="resp" class="col-sm-3 col-form-label">Responsavel Técnico:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="resp" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="resp" class="col-sm-3 col-form-label"
-                >Responsavel Técnico:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="resp"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="quem" class="col-sm-3 col-form-label">Quem participou da consultoria:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="quem" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="quem" class="col-sm-3 col-form-label"
-                >Quem participou da consultoria:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="quem"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="usuario" class="col-sm-3 col-form-label">Usuários aprox:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="usuario" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="usuario" class="col-sm-3 col-form-label"
-                >Usuários aprox:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="usuario"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="empresas" class="col-sm-3 col-form-label">Empresas aprox:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="empresas" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="empresas" class="col-sm-3 col-form-label"
-                >Empresas aprox:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="empresas"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="sistemaContabil" class="col-sm-3 col-form-label">Sistema Contábil:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="sistemaContabil" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="sistemaContabil" class="col-sm-3 col-form-label"
-                >Sistema Contábil:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="sistemaContabil"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="jaUsaram" class="col-sm-3 col-form-label">Ja usaram sistema de gestão:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="jaUsaram" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="jaUsaram" class="col-sm-3 col-form-label"
-                >Ja usaram sistema de gestão:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="jaUsaram"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="formas" class="col-sm-3 col-form-label">Forma de entrega: (se recebem por email, wpp ou
+              físico):</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="formas" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="formas" class="col-sm-3 col-form-label"
-                >Forma de entrega: (se recebem por email, wpp ou físico):</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="formas"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="maioriaRegimes" class="col-sm-3 col-form-label">Qual a maioria dos regimes tributários:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="maioriaRegimes" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="maioriaRegimes" class="col-sm-3 col-form-label"
-                >Qual a maioria dos regimes tributários:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="maioriaRegimes"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="valor" class="col-sm-3 col-form-label">Valor da Acessórias mais chamou atenção:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="valor" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="valor" class="col-sm-3 col-form-label"
-                >Valor da Acessórias mais chamou atenção:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="valor"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="ticket" class="col-sm-3 col-form-label">TicketApp:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticket" oninput="teste()" />
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="ticket" class="col-sm-3 col-form-label"
-                >TicketApp:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="ticket"
-                  oninput="teste()"
-                />
-              </div>
+          <div class="mb-3 row">
+            <label for="obs" class="form-label">Informações Adicionais:</label>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="obs" id="obs" rows="5" oninput="teste()"></textarea>
             </div>
+          </div>
 
-            <div class="mb-3 row">
-              <label for="obs" class="form-label"
-                >Informações Adicionais:</label
-              >
-              <div class="col-sm-11">
-                <textarea
-                  class="form-control"
-                  name="obs"
-                  id="obs"
-                  rows="5"
-                  oninput="teste()"
-                ></textarea>
-              </div>
-            </div>
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Copiar Texto
+            </button>
+          </div>
 
-            <!-- Button trigger modal -->
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="copResp()"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Copiar Texto
-              </button>
-            </div>
-
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Texto Copiado
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p id="etapa1resp1"></p>
-                    <p id="etapa1resp2"></p>
-                    <p id="etapa1resp3"></p>
-                    <p id="etapa1resp4"></p>
-                    <p id="etapa1resp5"></p>
-                    <p id="etapa1resp6"></p>
-                    <p id="etapa1resp7"></p>
-                    <p id="etapa1resp8"></p>
-                    <p id="etapa1resp9"></p>
-                    <p id="etapa1resp10"></p>
-                    <p id="etapa1resp11"></p>
-                    <p id="etapa1resp12"></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-danger"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="etapa1resp1"></p>
+                  <p id="etapa1resp2"></p>
+                  <p id="etapa1resp3"></p>
+                  <p id="etapa1resp4"></p>
+                  <p id="etapa1resp5"></p>
+                  <p id="etapa1resp6"></p>
+                  <p id="etapa1resp7"></p>
+                  <p id="etapa1resp8"></p>
+                  <p id="etapa1resp9"></p>
+                  <p id="etapa1resp10"></p>
+                  <p id="etapa1resp11"></p>
+                  <p id="etapa1resp12"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
                 </div>
               </div>
             </div>
-          </article>
-        </div>
-        <!-- <div class="col-md-6">
+          </div>
+        </article>
+      </div>
+      <!-- <div class="col-md-6">
           <div class="align-middle" style="margin-top: 25%">
             <img
               class="img-fluid d-block"
@@ -337,1375 +207,765 @@
             />
           </div>
         </div> -->
+    </div>
+  </div>
+
+  <!------------------------------------------------ Etapas gerais -------------------------------------------------------------------->
+
+  <div class="container-fluid mt-3" id="menuGeral">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Etapas Gerais</h3>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="Lista de Entregas"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Lista de Entregas</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="Robô"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Robô</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio3" value="Lista/Robô"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio3">Lista/Robô</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="Gestão de Processos"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Gestão de Processos</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="APP"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">APP</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio3" value="Departamentos"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio3">Departamentos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="Revisão/Tira Dúvidas"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Revisão/Tira Dúvidas</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="Retomada"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Retomada</label>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="uso" class="col-sm-3 col-form-label">Porcentagem de uso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="uso" oninput="infoGeral()" />
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="parcicipantes" class="col-sm-3 col-form-label">Quem participou da
+              consultoria/departamento:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="parcicipantes" oninput="infoGeral()" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h3>Observações sobre a consultoria</h3>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Atrasaram?</h5>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio1" value="Não"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Não</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="10 minutos atrasados"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">10 min atrasados</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio3" value="15 minutos atrasados"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio3">15 min atrasados</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio1" value="20 minutos atrasados"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">20 min atrasados</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="Faltou"
+                oninput="faltou()" />
+              <label class="form-check-label" for="inlineRadio2">Faltou!</label>
+            </div>
+          </div>
+
+          <div class="col-sm-11">
+            <textarea class="form-control" name="etapaBackup2" id="falta" rows="5"
+              placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"
+              oninput="acompTexto()"></textarea>
+          </div>
+
+          <!-- <div id="falta" style="display: none">
+            <h3>Informações sobre a Falta do cliente</h3>
+            <textarea name="faltaCliente" id="faltaCliente" cols="55" rows="6"
+              placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"></textarea>
+            <abbr title="Copiar"><img height="30px" src="images/copy.png" alt="copiar" id="imgCopy"
+                onclick="copRespFalta()" /></abbr>
+          </div> -->
+
+          <div class="row mb-3">
+            <h5>Realizaram as atividades anteriores?</h5>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio1" value="Sim, a maioria"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Sim, a maioria</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio2" value="Em partes"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Em partes</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio1" value="Pouco"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Pouco</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="atividades" id="inlineRadio2" value="Nada"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Nada</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Dúvidas/Dificuldades da etapa anterior?</h5>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="duvidas" id="inlineRadio1" value="Não, entenderam bem"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Não, entenderam bem</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="duvidas" id="inlineRadio2" value="Algumas dúvidas"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Algumas dúvidas</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="duvidas" id="inlineRadio2" value="Bastante dificuldade"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Bastante dificuldade</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Participativos?</h5>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio1"
+                value="Bem Participativos" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Bem Participativos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio2"
+                value="Participativos" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Participativos</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio1"
+                value="Pouco Participativos" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Pouco Participativos</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="participativos" id="inlineRadio2"
+                value="Sem Participação" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Sem Participação</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Algum problema?</h5>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="problema" id="inlineRadio1" value="Não"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Não</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="problema" id="inlineRadio2"
+                value="Dificuldade de Aprendizagem" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Dificuldade de Aprendizagem</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="problema" id="inlineRadio2"
+                value="Insatisfação com o que viu" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">Insatisfação com o que viu</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Nota para a consultoria:</h5>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="1"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="2"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="3"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="4"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="5"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">5</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="6"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">6</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio1" value="7"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">7</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="8"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">8</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="9"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">9</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="nota" id="inlineRadio2" value="1-"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">10</label>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="ticketConsult" class="col-sm-3 col-form-label">Ticket da consultoria:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticketConsult" oninput="infoGeral()" />
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="geralObs" class="form-label">Informações Adicionais:</label>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="geralObs" id="geralObs" rows="5" oninput="infoGeral()"></textarea>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Backup?</h5>
+          </div>
+
+          <div class="mb-4">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup" type="radio" name="simBackup" id="inlineRadio1"
+                value="yes" oninput="pergBackup()" />
+              <label class="form-check-label" for="inlineRadio1">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup" type="radio" name="naoBackup" id="inlineRadio2"
+                value="no" oninput="pergBackup()" checked />
+              <label class="form-check-label" for="inlineRadio2">Não</label>
+            </div>
+          </div>
+
+          <div id="telaBackup" style="display: none">
+            <div class="card col-sm-12 col-md-11">
+              <div class="card-header">
+                <h5>Informações para o Backup</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente comprometido?&nbsp;<span
+                      id="comprometido-value">Nota: 5</span></label>
+                  <input type="range" class="form-range" id="comprometido" min="0" max="10" step="1"
+                    oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="infoGeral()" />
+                </div>
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente tecnológico?&nbsp;<span
+                      id="tecnologico-value">Nota: 5</span></label>
+                  <input type="range" class="form-range" id="tecnologico" min="0" max="10" step="1"
+                    oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="infoGeral()" />
+                </div>
+                <div class="mb-3 row">
+                  <label for="obs" class="form-label">Informações Adicionais:</label>
+                  <div class="col-sm-11">
+                    <textarea class="form-control" name="etapaBackup" id="etapaBackup" rows="5"
+                      placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                      oninput="infoGeral()"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp2()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal3">
+              Copiar Texto
+            </button>
+          </div>
+
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="geralResp0"></p>
+                  <p id="geralResp1"></p>
+                  <p id="geralResp2"></p>
+                  <p id="geralResp3"></p>
+                  <p id="geralResp4"></p>
+                  <p id="geralResp5"></p>
+                  <p id="geralResp6"></p>
+                  <p id="geralResp7"></p>
+                  <p id="geralResp8"></p>
+                  <p id="geralResp9"></p>
+                  <p id="geralResp10"></p>
+                  <p id="geralResp11"></p>
+                  <p id="geralResp12"></p>
+                  <p id="geralResp13"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-
-    <!------------------------------------------------ Etapas gerais -------------------------------------------------------------------->
-
-    <div class="container-fluid mt-3" id="menuGeral">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <article>
-            <div class="row mb-3">
-              <h3>Etapas Gerais</h3>
+  </div>
+  <!------------------------------------------------ Migração -------------------------------------------------------------------->
+  <div class="container-fluid mt-3" id="migração">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Migração</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="valorMigra" class="col-sm-3 col-form-label">Valor do Acessórias:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="valorMigra" oninput="textoMigra()" />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio1"
-                  value="Lista de Entregas"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Lista de Entregas</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio2"
-                  value="Robô"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">Robô</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio3"
-                  value="Lista/Robô"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio3"
-                  >Lista/Robô</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio1"
-                  value="Gestão de Processos"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Gestão de Processos</label
-                >
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="referenciaMigra" class="col-sm-3 col-form-label">Referencia técnica e seu departamento:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="referenciaMigra" oninput="textoMigra()" />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio2"
-                  value="APP"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">APP</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio3"
-                  value="Departamentos"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio3"
-                  >Departamentos</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio1"
-                  value="Revisão/Tira Dúvidas"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Revisão/Tira Dúvidas</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="etapa"
-                  id="inlineRadio2"
-                  value="Retomada"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Retomada</label
-                >
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="formaContato" class="col-sm-3 col-form-label">Melhor forma de contato:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="formaContato" oninput="textoMigra()" />
             </div>
-
-            <div class="mb-3 row">
-              <label for="uso" class="col-sm-3 col-form-label"
-                >Porcentagem de uso:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="uso"
-                  oninput="infoGeral()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="equipeEngajada" class="col-sm-3 col-form-label">Equipe engajada? Quais? :
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="equipeEngajada" oninput="textoMigra()" />
             </div>
-
-            <div class="mb-3 row">
-              <label for="parcicipantes" class="col-sm-3 col-form-label"
-                >Quem participou da consultoria/departamento:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="parcicipantes"
-                  oninput="infoGeral()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="dispensaMassa" class="col-sm-3 col-form-label">Dispensa em massa? :
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="dispensaMassa" oninput="textoMigra()" />
             </div>
-
-            <div class="row mb-3">
-              <h3>Observações sobre a consultoria</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="erp" class="col-sm-3 col-form-label">ERP: </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="erp" oninput="textoMigra()" />
             </div>
-
-            <div class="row mb-3">
-              <h5>Atrasaram?</h5>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="smtp" class="col-sm-3 col-form-label">SMTP Ativo:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="smtp" oninput="textoMigra()" />
             </div>
+          </div>
+          <!-- =============================================================================================================== -->
 
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="horario"
-                  id="inlineRadio1"
-                  value="Não"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1">Não</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="horario"
-                  id="inlineRadio2"
-                  value="10 minutos atrasados"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >10 min atrasados</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="horario"
-                  id="inlineRadio3"
-                  value="15 minutos atrasados"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio3"
-                  >15 min atrasados</label
-                >
-              </div>
+          <div class="row mb-3">
+            <h3>Registro de uso</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="regUso" oninput="textoMigra()" placeholder="%" />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="horario"
-                  id="inlineRadio1"
-                  value="20 minutos atrasados"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >20 min atrasados</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="horario"
-                  id="inlineRadio2"
-                  value="Faltou"
-                  oninput="faltou()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Faltou!</label
-                >
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="acesso" oninput="textoMigra()" placeholder="%" />
             </div>
-
-            <div id="falta" style="display: none">
-              <h3>Informações sobre a Falta do cliente</h3>
-              <textarea
-                name="faltaCliente"
-                id="faltaCliente"
-                cols="55"
-                rows="6"
-                placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"
-              ></textarea>
-              <abbr title="Copiar"
-                ><img
-                  height="30px"
-                  src="images/copy.png"
-                  alt="copiar"
-                  id="imgCopy"
-                  onclick="copRespFalta()"
-              /></abbr>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="entregas" oninput="textoMigra() " placeholder="%" />
             </div>
-
-            <div class="row mb-3">
-              <h5>Realizaram as atividades anteriores?</h5>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="robo" class="col-sm-3 col-form-label">Robô:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="robo" oninput="textoMigra() " placeholder="%" />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="atividades"
-                  id="inlineRadio1"
-                  value="Sim, a maioria"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Sim, a maioria</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="atividades"
-                  id="inlineRadio2"
-                  value="Em partes"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Em partes</label
-                >
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="gestao" class="col-sm-3 col-form-label">Gestão:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="gestao" oninput="textoMigra() " placeholder="Digite..." />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="atividades"
-                  id="inlineRadio1"
-                  value="Pouco"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1">Pouco</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="atividades"
-                  id="inlineRadio2"
-                  value="Nada"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">Nada</label>
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="app" class="col-sm-3 col-form-label">APP:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="app" oninput="textoMigra() " placeholder="Digite..." />
             </div>
-
-            <div class="row mb-3">
-              <h5>Dúvidas/Dificuldades da etapa anterior?</h5>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="apla" class="col-sm-3 col-form-label">APLA:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="apla" oninput="textoMigra() " placeholder="Digite..." />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="duvidas"
-                  id="inlineRadio1"
-                  value="Não, entenderam bem"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Não, entenderam bem</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="duvidas"
-                  id="inlineRadio2"
-                  value="Algumas dúvidas"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Algumas dúvidas</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="duvidas"
-                  id="inlineRadio2"
-                  value="Bastante dificuldade"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Bastante dificuldade</label
-                >
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="ticketFinal" class="col-sm-3 col-form-label">Número do Ticket de Finalização dos
+              treinamentos:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="ticketFinal" oninput="textoMigra() "
+                placeholder="Digite..." />
             </div>
-
-            <div class="row mb-3">
-              <h5>Participativos?</h5>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="dispensaTicket" class="col-sm-3 col-form-label">Houve dispensa de treinamento ?Se sim, qual
+              numero do
+              ticket?:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="dispensaTicket" oninput="textoMigra() "
+                placeholder="Digite..." />
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="participativos"
-                  id="inlineRadio1"
-                  value="Bem Participativos"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Bem Participativos</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="participativos"
-                  id="inlineRadio2"
-                  value="Participativos"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Participativos</label
-                >
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="geralObs" id="Minfo" rows="5" oninput="infoGeral()"></textarea>
             </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="participativos"
-                  id="inlineRadio1"
-                  value="Pouco Participativos"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Pouco Participativos</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="participativos"
-                  id="inlineRadio2"
-                  value="Sem Participação"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Sem Participação</label
-                >
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <h5>Algum problema?</h5>
-            </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="problema"
-                  id="inlineRadio1"
-                  value="Não"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1">Não</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="problema"
-                  id="inlineRadio2"
-                  value="Dificuldade de Aprendizagem"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Dificuldade de Aprendizagem</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="problema"
-                  id="inlineRadio2"
-                  value="Insatisfação com o que viu"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Insatisfação com o que viu</label
-                >
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <h5>Nota para a consultoria:</h5>
-            </div>
-
-            <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio1"
-                  value="1"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1">1</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="2"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">2</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="3"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">3</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio1"
-                  value="4"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1">4</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="5"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">5</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="6"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">6</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio1"
-                  value="7"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio1">7</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="8"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">8</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="9"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">9</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="nota"
-                  id="inlineRadio2"
-                  value="1-"
-                  oninput="infoGeral()"
-                />
-                <label class="form-check-label" for="inlineRadio2">10</label>
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="ticketConsult" class="col-sm-3 col-form-label"
-                >Ticket da consultoria:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="ticketConsult"
-                  oninput="infoGeral()"
-                />
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="geralObs" class="form-label"
-                >Informações Adicionais:</label
-              >
-              <div class="col-sm-11">
-                <textarea
-                  class="form-control"
-                  name="geralObs"
-                  id="geralObs"
-                  rows="5"
-                  oninput="infoGeral()"
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <h5>Backup?</h5>
-            </div>
-
-            <div class="mb-4">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  name="btnBackup"
-                  type="radio"
-                  name="simBackup"
-                  id="inlineRadio1"
-                  value="yes"
-                  oninput="pergBackup()"
-                />
-                <label class="form-check-label" for="inlineRadio1">Sim</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  name="btnBackup"
-                  type="radio"
-                  name="naoBackup"
-                  id="inlineRadio2"
-                  value="no"
-                  oninput="pergBackup()"
-                  checked
-                />
-                <label class="form-check-label" for="inlineRadio2">Não</label>
-              </div>
-            </div>
-
-            <div id="telaBackup" style="display: none">
-              <div class="card col-sm-12 col-md-11">
-                <div class="card-header">
-                  <h5>Informações para o Backup</h5>
+          </div>
+          <!-- =============================================================================================================== -->
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp3()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal2">
+              Copiar Texto
+            </button>
+          </div>
+          <!-- =============================================================================================================== -->
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="card-body">
-                  <div class="mb-3 row">
-                    <label for="customRange1" class="form-label"
-                      >Cliente comprometido?&nbsp;<span id="comprometido-value"
-                        >Nota: 5</span
-                      ></label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="comprometido"
-                      min="0"
-                      max="10"
-                      step="1"
-                      oninput="iTec.innerHTML=Number(tecnologico.value)"
-                      onchange="infoGeral()"
-                    />
-                  </div>
-                  <div class="mb-3 row">
-                    <label for="customRange1" class="form-label"
-                      >Cliente tecnológico?&nbsp;<span id="tecnologico-value"
-                        >Nota: 5</span
-                      ></label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="tecnologico"
-                      min="0"
-                      max="10"
-                      step="1"
-                      oninput="iTec.innerHTML=Number(tecnologico.value)"
-                      onchange="infoGeral()"
-                    />
-                  </div>
-                  <div class="mb-3 row">
-                    <label for="obs" class="form-label"
-                      >Informações Adicionais:</label
-                    >
-                    <div class="col-sm-11">
-                      <textarea
-                        class="form-control"
-                        name="etapaBackup"
-                        id="etapaBackup"
-                        rows="5"
-                        placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
-                        oninput="infoGeral()"
-                      ></textarea>
-                    </div>
-                  </div>
+                <div class="modal-body">
+                  <p id="Mresp1"></p>
+                  <p id="Mresp2"></p>
+                  <p id="Mresp3"></p>
+                  <p id="Mresp4"></p>
+                  <p id="Mresp5"></p>
+                  <p id="Mresp6"></p>
+                  <p id="Mresp7"></p>
+                  <p id="Mresp8"></p>
+                  <p id="Mresp9"></p>
+                  <p id="Mresp10"></p>
+                  <p id="Mresp11"></p>
+                  <p id="Mresp12"></p>
+                  <p id="Mresp13"></p>
+                  <p id="Mresp14"></p>
+                  <p id="Mresp15"></p>
+                  <p id="Mresp16"></p>
+                  <p id="Mresp17"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
                 </div>
               </div>
             </div>
-
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="copResp2()"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal3"
-              >
-                Copiar Texto
-              </button>
-            </div>
-
-            <div
-              class="modal fade"
-              id="exampleModal3"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Texto Copiado
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p id="geralResp0"></p>
-                    <p id="geralResp1"></p>
-                    <p id="geralResp2"></p>
-                    <p id="geralResp3"></p>
-                    <p id="geralResp4"></p>
-                    <p id="geralResp5"></p>
-                    <p id="geralResp6"></p>
-                    <p id="geralResp7"></p>
-                    <p id="geralResp8"></p>
-                    <p id="geralResp9"></p>
-                    <p id="geralResp10"></p>
-                    <p id="geralResp11"></p>
-                    <p id="geralResp12"></p>
-                    <p id="geralResp13"></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-danger"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </div>
-    <!------------------------------------------------ Migração -------------------------------------------------------------------->
-    <div class="container-fluid mt-3" id="migração">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <article>
-            <div class="row mb-3">
-              <h3>Migração</h3>
+  </div>
+  <!-- =================================================Aconpanhamento============================================================== -->
+  <div class="container-fluid mt-3" id="acomp">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Acompanhamento</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="contato" class="col-sm-3 col-form-label">Contato com:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="contato" oninput="acompTexto() " placeholder="Digite..." />
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="valorMigra" class="col-sm-3 col-form-label"
-                >Valor do Acessórias:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="valorMigra"
-                  oninput="textoMigra()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="ticketAcomp" class="col-sm-3 col-form-label">Ticket:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticketAcomp" oninput="acompTexto() "
+                placeholder="Justificar se não tiver" />
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="referenciaMigra" class="col-sm-3 col-form-label"
-                >Referencia técnica e seu departamento:
-              </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="referenciaMigra"
-                  oninput="textoMigra()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="AregUso" oninput="acompTexto() "
+                placeholder="Justificar se não tiver" />
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="formaContato" class="col-sm-3 col-form-label"
-                >Melhor forma de contato:
-              </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="formaContato"
-                  oninput="textoMigra()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="Aacesso" oninput="acompTexto() " placeholder="%" />
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="equipeEngajada" class="col-sm-3 col-form-label"
-                >Equipe engajada? Quais? :
-              </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="equipeEngajada"
-                  oninput="textoMigra()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="Aentregas" oninput="acompTexto() " placeholder="%" />
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="dispensaMassa" class="col-sm-3 col-form-label"
-                >Dispensa em massa? :
-              </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="dispensaMassa"
-                  oninput="textoMigra()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="Arobo" class="col-sm-3 col-form-label">Robô:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="Arobo" oninput="acompTexto() " placeholder="%" />
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="erp" class="col-sm-3 col-form-label">ERP: </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="erp"
-                  oninput="textoMigra()"
-                />
-              </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="tratativa" id="tratativa" rows="5" oninput="infoGeral()"></textarea>
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="smtp" class="col-sm-3 col-form-label"
-                >SMTP Ativo:
-              </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="smtp"
-                  oninput="textoMigra()"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
+          </div>
+          <!-- =============================================================================================================== -->
 
-            <div class="row mb-3">
-              <h3>Registro de uso</h3>
+          <div class="row mb-3">
+            <h5>Backup?</h5>
+          </div>
+
+          <div class="mb-4">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup2" type="radio" id="simBackup2" value="yes"
+                oninput="pergBackup2()" />
+              <label class="form-check-label" for="simBackup2">Sim</label>
             </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="regUso"
-                  oninput="textoMigra()"
-                  placeholder="%"
-                />
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup2" type="radio" id="naoBackup2" value="no"
+                oninput="pergBackup2()" checked />
+              <label class="form-check-label" for="naoBackup2">Não</label>
+            </div>
+          </div>
+
+          <div id="telaBackup2" style="display: none" class="mb-3">
+            <div class="card col-sm-12 col-md-11">
+              <div class="card-header">
+                <h5>Informações para o Backup</h5>
               </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="acesso" class="col-sm-3 col-form-label"
-                >Acesso:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="acesso"
-                  oninput="textoMigra()"
-                  placeholder="%"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="entregas" class="col-sm-3 col-form-label"
-                >Entregas:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="entregas"
-                  oninput="textoMigra() "
-                  placeholder="%"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="robo" class="col-sm-3 col-form-label">Robô:</label>
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="robo"
-                  oninput="textoMigra() "
-                  placeholder="%"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="gestao" class="col-sm-3 col-form-label"
-                >Gestão:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="gestao"
-                  oninput="textoMigra() "
-                  placeholder="Digite..."
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="app" class="col-sm-3 col-form-label">APP:</label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="app"
-                  oninput="textoMigra() "
-                  placeholder="Digite..."
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="apla" class="col-sm-3 col-form-label">APLA:</label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="apla"
-                  oninput="textoMigra() "
-                  placeholder="Digite..."
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="ticketFinal" class="col-sm-3 col-form-label"
-                >Número do Ticket de Finalização dos treinamentos:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="ticketFinal"
-                  oninput="textoMigra() "
-                  placeholder="Digite..."
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="dispensaTicket" class="col-sm-3 col-form-label"
-                >Houve dispensa de treinamento ?Se sim, qual numero do
-                ticket?:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="dispensaTicket"
-                  oninput="textoMigra() "
-                  placeholder="Digite..."
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
-              <div class="col-sm-11">
-                <textarea
-                  class="form-control"
-                  name="geralObs"
-                  id="Minfo"
-                  rows="5"
-                  oninput="infoGeral()"
-                ></textarea>
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <!-- Button trigger modal -->
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="copResp3()"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal2"
-              >
-                Copiar Texto
-              </button>
-            </div>
-            <!-- =============================================================================================================== -->
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="exampleModal2"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Texto Copiado
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p id="Mresp1"></p>
-                    <p id="Mresp2"></p>
-                    <p id="Mresp3"></p>
-                    <p id="Mresp4"></p>
-                    <p id="Mresp5"></p>
-                    <p id="Mresp6"></p>
-                    <p id="Mresp7"></p>
-                    <p id="Mresp8"></p>
-                    <p id="Mresp9"></p>
-                    <p id="Mresp10"></p>
-                    <p id="Mresp11"></p>
-                    <p id="Mresp12"></p>
-                    <p id="Mresp13"></p>
-                    <p id="Mresp14"></p>
-                    <p id="Mresp15"></p>
-                    <p id="Mresp16"></p>
-                    <p id="Mresp17"></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-danger"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
+              <div class="card-body">
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente comprometido?</label>
+                  <input type="range" class="form-range" id="comprometido2" min="0" max="10"
+                    oninput="iTec.innerHTML=Number(comprometido2.value)" onchange="acompTexto()" />
+                </div>
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente tecnológico?</label>
+                  <input type="range" class="form-range" id="tecnologico2" min="0" max="10"
+                    oninput="iTec.innerHTML=Number(tecnologico2.value)" onchange="acompTexto()" />
+                </div>
+                <div class="mb-3 row">
+                  <label for="obs" class="form-label">Informações Adicionais:</label>
+                  <div class="col-sm-11">
+                    <textarea class="form-control" name="etapaBackup2" id="etapaBackup2" rows="5"
+                      placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                      oninput="acompTexto()"></textarea>
                   </div>
                 </div>
               </div>
             </div>
-          </article>
-        </div>
+          </div>
+
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp4()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal4">
+              Copiar Texto
+            </button>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="Aresp1"></p>
+                  <p id="Aresp2"></p>
+                  <p id="Aresp3"></p>
+                  <p id="Aresp4"></p>
+                  <p id="Aresp5"></p>
+                  <p id="Aresp6"></p>
+                  <p id="Aresp7"></p>
+                  <p id="Aresp8"></p>
+                  <p id="Aresp9"></p>
+                  <p id="Aresp10"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-    <!-- =================================================Aconpanhamento============================================================== -->
-    <div class="container-fluid mt-3" id="acomp">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <article>
-            <div class="row mb-3">
-              <h3>Acompanhamento</h3>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="contato" class="col-sm-3 col-form-label"
-                >Contato com:
-              </label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="contato"
-                  oninput="acompTexto() "
-                  placeholder="Digite..."
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="ticketAcomp" class="col-sm-3 col-form-label"
-                >Ticket:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="ticketAcomp"
-                  oninput="acompTexto() "
-                  placeholder="Justificar se não tiver"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="AregUso"
-                  oninput="acompTexto() "
-                  placeholder="Justificar se não tiver"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="acesso" class="col-sm-3 col-form-label"
-                >Acesso:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="Aacesso"
-                  oninput="acompTexto() "
-                  placeholder="%"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="entregas" class="col-sm-3 col-form-label"
-                >Entregas:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="Aentregas"
-                  oninput="acompTexto() "
-                  placeholder="%"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <label for="Arobo" class="col-sm-3 col-form-label">Robô:</label>
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="Arobo"
-                  oninput="acompTexto() "
-                  placeholder="%"
-                />
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
-            <div class="mb-3 row">
-              <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
-              <div class="col-sm-11">
-                <textarea
-                  class="form-control"
-                  name="tratativa"
-                  id="tratativa"
-                  rows="5"
-                  oninput="infoGeral()"
-                ></textarea>
-              </div>
-            </div>
-            <!-- =============================================================================================================== -->
+  </div>
 
-            <div class="row mb-3">
-              <h5>Backup?</h5>
-            </div>
-
-            <div class="mb-4">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  name="btnBackup2"
-                  type="radio"
-                  id="simBackup2"
-                  value="yes"
-                  oninput="pergBackup2()"
-                />
-                <label class="form-check-label" for="simBackup2">Sim</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  name="btnBackup2"
-                  type="radio"
-                  id="naoBackup2"
-                  value="no"
-                  oninput="pergBackup2()"
-                  checked
-                />
-                <label class="form-check-label" for="naoBackup2">Não</label>
-              </div>
-            </div>
-
-            <div id="telaBackup2" style="display: none" class="mb-3">
-              <div class="card col-sm-12 col-md-11">
-                <div class="card-header">
-                  <h5>Informações para o Backup</h5>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3 row">
-                    <label for="customRange1" class="form-label"
-                      >Cliente comprometido?</label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="comprometido2"
-                      min="0"
-                      max="10"
-                      oninput="iTec.innerHTML=Number(comprometido2.value)"
-                      onchange="acompTexto()"
-                    />
-                  </div>
-                  <div class="mb-3 row">
-                    <label for="customRange1" class="form-label"
-                      >Cliente tecnológico?</label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="tecnologico2"
-                      min="0"
-                      max="10"
-                      oninput="iTec.innerHTML=Number(tecnologico2.value)"
-                      onchange="acompTexto()"
-                    />
-                  </div>
-                  <div class="mb-3 row">
-                    <label for="obs" class="form-label"
-                      >Informações Adicionais:</label
-                    >
-                    <div class="col-sm-11">
-                      <textarea
-                        class="form-control"
-                        name="etapaBackup2"
-                        id="etapaBackup2"
-                        rows="5"
-                        placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
-                        oninput="acompTexto()"
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Button trigger modal -->
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="copResp4()"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal4"
-              >
-                Copiar Texto
-              </button>
-            </div>
-
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="exampleModal4"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Texto Copiado
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p id="Aresp1"></p>
-                    <p id="Aresp2"></p>
-                    <p id="Aresp3"></p>
-                    <p id="Aresp4"></p>
-                    <p id="Aresp5"></p>
-                    <p id="Aresp6"></p>
-                    <p id="Aresp7"></p>
-                    <p id="Aresp8"></p>
-                    <p id="Aresp9"></p>
-                    <p id="Aresp10"></p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-danger"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <footer id="footer" class="text-center text-lg-start">
-      <div
-        class="text-center p-4"
-        style="background-color: rgba(0, 0, 0, 0.05)"
-      >
-        Todos os Direitos Reservados -
-        <a class="text-reset fw-bold" href="https://app.acessorias.com/"
-          >Acessórias</a
-        >&reg;2023 | Sistema Desenvolvido por
-        <a
-        href="https://www.linkedin.com/in/matheus-ricci-228a06182/"
-        target="_blank"
-        >Matheus Ricci</a
-      >
+  <footer id="footer" class="text-center text-lg-start">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+      Todos os Direitos Reservados -
+      <a class="text-reset fw-bold" href="https://app.acessorias.com/">Acessórias</a>&reg;2023 | Sistema Desenvolvido
+      por
+      <a href="https://www.linkedin.com/in/matheus-ricci-228a06182/" target="_blank">Matheus Ricci</a>
       &
-        <a
-          href="https://www.linkedin.com/in/patrick-da-costa-cruz-08493212a/"
-          target="_blank"
-          >Patrick C. Cruz</a
-        >
-        &
-        <a
-          href="https://www.linkedin.com/in/luiz-henrique-092653197/"
-          target="_blank"
-          >Luiz Henrique</a
-        >
-        clique e Saiba Mais!
-      </div>
-    </footer>
+      <a href="https://www.linkedin.com/in/patrick-da-costa-cruz-08493212a/" target="_blank">Patrick C. Cruz</a>
+      &
+      <a href="https://www.linkedin.com/in/luiz-henrique-092653197/" target="_blank">Luiz Henrique</a>
+      clique e Saiba Mais!
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
