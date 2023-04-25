@@ -292,8 +292,6 @@ function infoGeral() {
     "geralResp10"
   ).innerHTML = `- Informações Adicionais: ${resp10}`;
 
-  document.getElementById("falta").style.display = "none";
-
   var value = document.getElementsByName("btnBackup");
   for (var radio of value) {
     if (radio.checked) {
@@ -319,11 +317,41 @@ function infoGeral() {
 
 function faltou() {
   document.getElementById("falta").style.display = "block";
+  document.getElementById("naoFaltou").style.display = "none";
+}
+
+function falta() {
+  document.getElementById("falta").style.display = "none";
+  document.getElementById("naoFaltou").style.display = "block";
 }
 
 function copRespFalta() {
+  var value = document.getElementsByName("etapa");
+  let resp0 = "";
+  for (var radio of value) {
+    if (radio.checked) {
+      let resp0 = radio.value;
+      document.getElementById("respFaltou").innerHTML = `${resp0}`;
+    }
+  }
+
+  let resp1 = document.getElementById("uso").value;
+  document.getElementById(
+    "respFaltou1"
+  ).innerHTML = `- Porcentagem de uso: ${resp1}%`;
+  let respFalta1 = `Porcentagem de uso: ${resp1}%`;
+
+  let resp2 = document.getElementById("parcicipantes").value;
+  document.getElementById(
+    "respFaltou2"
+  ).innerHTML = `- Quem participou da consultoria/departamento: ${resp2}`;
+  let respFalta2 = `Quem participou da consultoria/departamento: ${resp2}`;
+
   let falta = document.getElementById("faltaCliente").value;
-  const textToCopy = `${falta}`;
+  let respFalta3 = `Atrasaram: ${falta}`;
+  document.getElementById("respFaltou3").innerHTML = `Falta: ${falta}`;
+
+  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta2}\n${respFalta3}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
