@@ -169,40 +169,6 @@ function copResp() {
   textarea.remove();
 }
 
-function copResp2() {
-  let resp0 = document.getElementById("geralResp0").textContent;
-  let resp1 = document.getElementById("geralResp1").textContent;
-  let resp2 = document.getElementById("geralResp2").textContent;
-  let resp3 = document.getElementById("geralResp3").textContent;
-  let resp4 = document.getElementById("geralResp4").textContent;
-  let resp5 = document.getElementById("geralResp5").textContent;
-  let resp6 = document.getElementById("geralResp6").textContent;
-  let resp7 = document.getElementById("geralResp7").textContent;
-  let resp8 = document.getElementById("geralResp8").textContent;
-  let resp9 = document.getElementById("geralResp9").textContent;
-  let resp10 = document.getElementById("geralResp10").textContent;
-  let resp11 = document.getElementById("geralResp11").textContent;
-  let resp12 = document.getElementById("geralResp12").textContent;
-  let resp13 = document.getElementById("geralResp13").textContent;
-  var value = document.getElementsByName("btnBackup");
-  let textToCopy = "";
-  for (var radio of value) {
-    if (radio.checked) {
-      if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}`;
-      } else {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}`;
-      }
-    }
-  }
-  const textarea = document.createElement("textarea");
-  textarea.value = textToCopy;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  textarea.remove();
-}
-
 function infoGeral() {
   var value = document.getElementsByName("etapa");
   for (var radio of value) {
@@ -242,15 +208,15 @@ function infoGeral() {
     }
   }
 
-  var value = document.getElementsByName("duvidas");
-  for (var radio of value) {
-    if (radio.checked) {
-      let resp5 = radio.value;
-      document.getElementById(
-        "geralResp5"
-      ).innerHTML = `- Dúvidas/Dificuldades da etapa anterior: ${resp5} `;
-    }
-  }
+  // var value = document.getElementsByName("duvidas");
+  // for (var radio of value) {
+  //   if (radio.checked) {
+  //     let resp5 = radio.value;
+  //     document.getElementById(
+  //       "geralResp5"
+  //     ).innerHTML = `- Dúvidas/Dificuldades da etapa anterior: ${resp5} `;
+  //   }
+  // }
 
   var value = document.getElementsByName("participativos");
   for (var radio of value) {
@@ -315,6 +281,55 @@ function infoGeral() {
   }
 }
 
+function copResp2() {
+  let resp0 = document.getElementById("geralResp0").textContent;
+  let resp1 = document.getElementById("geralResp1").textContent;
+  let resp2 = document.getElementById("geralResp2").textContent;
+  let resp3 = document.getElementById("geralResp3").textContent;
+  let resp4 = document.getElementById("geralResp4").textContent;
+  let resp5 = document.getElementById("geralResp5").textContent;
+  var value = document.getElementsByName("duvidas");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "Bastante dificuldade") {
+        var value = document.getElementsByName("etapa2");
+        for (var radio of value) {
+          if (radio.checked) {
+            let resp55 = `- Em qual etapa tiveram dúvidas/dificuldades? ${radio.value}`;
+            document.getElementById("geralResp55").innerHTML = `${resp55}`;
+            resp5 = `${resp5}\n${resp55}`;
+          }
+        }
+      }
+    }
+  }
+  let resp6 = document.getElementById("geralResp6").textContent;
+  let resp7 = document.getElementById("geralResp7").textContent;
+  let resp8 = document.getElementById("geralResp8").textContent;
+  let resp9 = document.getElementById("geralResp9").textContent;
+  let resp10 = document.getElementById("geralResp10").textContent;
+  let resp11 = document.getElementById("geralResp11").textContent;
+  let resp12 = document.getElementById("geralResp12").textContent;
+  let resp13 = document.getElementById("geralResp13").textContent;
+  var value = document.getElementsByName("btnBackup");
+  let textToCopy = "";
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}`;
+      } else {
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}`;
+      }
+    }
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
+
 function faltou() {
   document.getElementById("falta").style.display = "block";
   document.getElementById("naoFaltou").style.display = "none";
@@ -323,6 +338,23 @@ function faltou() {
 function falta() {
   document.getElementById("falta").style.display = "none";
   document.getElementById("naoFaltou").style.display = "block";
+}
+
+function duvida() {
+  var value = document.getElementsByName("duvidas");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "Bastante dificuldade") {
+        document.getElementById("duvida").style.display = "block";
+      } else {
+        document.getElementById("duvida").style.display = "none";
+      }
+      let resp5 = radio.value;
+      document.getElementById(
+        "geralResp5"
+      ).innerHTML = `- Dúvidas/Dificuldades da etapa anterior: ${resp5} `;
+    }
+  }
 }
 
 function copRespFalta() {

@@ -516,24 +516,19 @@
                   type="radio"
                   name="horario"
                   id="inlineRadio2"
-                  value="10 minutos atrasados"
+                  value="+10 minutos atrasados"
                   oninput="infoGeral()"
                 />
                 <label class="form-check-label" for="inlineRadio2"
-                  >10 min atrasados</label
+                  >+10 min atrasados</label
                 >
               </div>
               <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="horario"
-                  id="inlineRadio3"
-                  value="15 minutos atrasados"
-                  oninput="infoGeral()"
-                />
+                <input class="form-check-input" type="radio" name="horario"
+                id="inlineRadio3" value=+15 minutos atrasados"
+                oninput="infoGeral()" />
                 <label class="form-check-label" for="inlineRadio3"
-                  >15 min atrasados</label
+                  >+15 min atrasados</label
                 >
               </div>
             </div>
@@ -545,11 +540,11 @@
                   type="radio"
                   name="horario"
                   id="inlineRadio1"
-                  value="20 minutos atrasados"
+                  value="+20 minutos atrasados"
                   oninput="infoGeral()"
                 />
                 <label class="form-check-label" for="inlineRadio1"
-                  >20 min atrasados</label
+                  >+20 min atrasados</label
                 >
               </div>
               <div class="form-check form-check-inline">
@@ -697,7 +692,7 @@
                 <h5>Dúvidas/Dificuldades da etapa anterior?</h5>
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3" onclick="duvida()">
                 <div class="form-check form-check-inline">
                   <input
                     class="form-check-input"
@@ -736,6 +731,108 @@
                   <label class="form-check-label" for="inlineRadio2"
                     >Bastante dificuldade</label
                   >
+                </div>
+              </div>
+
+              <div id="duvida" style="display: none">
+                <div class="row mb-3">
+                  <h5>Em qual etapa tiveram dúvidas/dificuldades?</h5>
+                </div>
+
+                <div class="mb-3">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio1"
+                      value="Lista de Entregas"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Lista de Entregas</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio2"
+                      value="Robô"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Robô</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio1"
+                      value="Gestão de Processos"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Gestão de Processos</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio2"
+                      value="APP"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >APP</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio3"
+                      value="Departamentos"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio3"
+                      >Departamentos</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio1"
+                      value="Revisão/Tira Dúvidas"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Revisão/Tira Dúvidas</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="etapa2"
+                      id="inlineRadio2"
+                      value="Retomada"
+                      oninput="infoGeral()"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Retomada</label
+                    >
+                  </div>
                 </div>
               </div>
 
@@ -1121,6 +1218,7 @@
                     <p id="geralResp3"></p>
                     <p id="geralResp4"></p>
                     <p id="geralResp5"></p>
+                    <p id="geralResp55"></p>
                     <p id="geralResp6"></p>
                     <p id="geralResp7"></p>
                     <p id="geralResp8"></p>
@@ -1370,16 +1468,15 @@
             <!-- =============================================================================================================== -->
             <div class="mb-3 row">
               <label for="dispensaTicket" class="col-sm-3 col-form-label"
-                >Houve dispensa de treinamento ?Se sim, qual numero do
-                ticket?:</label
+                >Houve dispensa de treinamento:</label
               >
               <div class="col-sm-8">
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   id="dispensaTicket"
                   oninput="textoMigra() "
-                  placeholder="Digite..."
+                  placeholder="Se sim, qual numero do ticket?"
                 />
               </div>
             </div>
