@@ -462,13 +462,19 @@ function textoMigra() {
   document.getElementById("Mresp14").innerHTML = `- APLA: ${Aresp14}`;
 
   let Aresp15 = document.getElementById("ticketFinal").value;
-  document.getElementById("Mresp15").innerHTML = `- Número do Ticket de Finalização dos treinamentos: ${Aresp15}`;
+  document.getElementById(
+    "Mresp15"
+  ).innerHTML = `- Número do Ticket de Finalização dos treinamentos: ${Aresp15}`;
 
   let Aresp16 = document.getElementById("dispensaTicket").value;
-  document.getElementById("Mresp16").innerHTML = `- Houve dispensa de treinamento ?Se sim, qual numero do ticket?: ${Aresp16}`;
+  document.getElementById(
+    "Mresp16"
+  ).innerHTML = `- Houve dispensa de treinamento ?Se sim, qual numero do ticket?: ${Aresp16}`;
 
   let Aresp17 = document.getElementById("Minfo").value;
-  document.getElementById("Mresp17").innerHTML = `- Informações Adicionais ${Aresp17}`;
+  document.getElementById(
+    "Mresp17"
+  ).innerHTML = `- Informações Adicionais ${Aresp17}`;
 }
 
 function copResp3() {
