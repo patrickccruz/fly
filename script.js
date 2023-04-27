@@ -87,6 +87,16 @@ document.querySelector("#tecnologico").addEventListener("input", function () {
   valor2.innerHTML = `Nota: ${this.value}`;
 });
 
+document.querySelector("#comprometido2").addEventListener("input", function () {
+  const valor = document.querySelector("#comprometido2-value");
+  valor.innerHTML = `Nota: ${this.value}`;
+});
+
+document.querySelector("#tecnologico2").addEventListener("input", function () {
+  const valor2 = document.querySelector("#tecnologico2-value");
+  valor2.innerHTML = `Nota: ${this.value}`;
+});
+
 function teste() {
   let etapa1 = document.getElementById("dono").value;
   document.getElementById(
