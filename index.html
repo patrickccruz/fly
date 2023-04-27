@@ -475,18 +475,13 @@
                 />
               </div>
             </div>
-
-            <div class="mb-3 row">
-              <label for="parcicipantes" class="col-sm-3 col-form-label"
-                >Quem participou da consultoria/departamento:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="parcicipantes"
-                  oninput="infoGeral()"
-                />
+            
+            <div id="naoFaltou2">
+              <div class="mb-3 row">
+              <label for="parcicipantes" class="col-sm-3 col-form-label">Quem participou da consultoria/departamento:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="parcicipantes" oninput="infoGeral()" />
+                </div>
               </div>
             </div>
 
@@ -495,7 +490,7 @@
             </div>
 
             <div class="row mb-3">
-              <h5>Atrasaram?</h5>
+              <h5>Contabilidade Atrasou ?</h5>
             </div>
 
             <div class="mb-3" onclick="falta()">
@@ -740,6 +735,7 @@
                 </div>
 
                 <div class="mb-3">
+
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -1087,109 +1083,109 @@
                   ></textarea>
                 </div>
               </div>
-            </div>
-            <div class="row mb-3">
-              <h5>Backup?</h5>
-            </div>
-
-            <div class="mb-4">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  name="btnBackup"
-                  type="radio"
-                  name="simBackup"
-                  id="inlineRadio1"
-                  value="yes"
-                  oninput="pergBackup()"
-                />
-                <label class="form-check-label" for="inlineRadio1">Sim</label>
+              <div class="row mb-3">
+                <h5>Backup?</h5>
               </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  name="btnBackup"
-                  type="radio"
-                  name="naoBackup"
-                  id="inlineRadio2"
-                  value="no"
-                  oninput="pergBackup()"
-                  checked
-                />
-                <label class="form-check-label" for="inlineRadio2">Não</label>
-              </div>
-            </div>
 
-            <div id="telaBackup" class="mb-3" style="display: none">
-              <div class="card col-sm-12 col-md-11">
-                <div class="card-header">
-                  <h5>Informações para o Backup</h5>
+              <div class="mb-4">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    name="btnBackup"
+                    type="radio"
+                    name="simBackup"
+                    id="inlineRadio1"
+                    value="yes"
+                    oninput="pergBackup()"
+                  />
+                  <label class="form-check-label" for="inlineRadio1">Sim</label>
                 </div>
-                <div class="card-body">
-                  <div class="mb-3 row">
-                    <label for="customRange1" class="form-label"
-                      >Cliente comprometido?&nbsp;<span id="comprometido-value"
-                        >Nota: 5</span
-                      ></label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="comprometido"
-                      min="0"
-                      max="10"
-                      step="1"
-                      oninput="iTec.innerHTML=Number(tecnologico.value)"
-                      onchange="infoGeral()"
-                    />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    name="btnBackup"
+                    type="radio"
+                    name="naoBackup"
+                    id="inlineRadio2"
+                    value="no"
+                    oninput="pergBackup()"
+                    checked
+                  />
+                  <label class="form-check-label" for="inlineRadio2">Não</label>
+                </div>
+              </div>
+
+              <div id="telaBackup" class="mb-3" style="display: none">
+                <div class="card col-sm-12 col-md-11">
+                  <div class="card-header">
+                    <h5>Informações para o Backup</h5>
                   </div>
-                  <div class="mb-3 row">
-                    <label for="customRange1" class="form-label"
-                      >Cliente tecnológico?&nbsp;<span id="tecnologico-value"
-                        >Nota: 5</span
-                      ></label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="tecnologico"
-                      min="0"
-                      max="10"
-                      step="1"
-                      oninput="iTec.innerHTML=Number(tecnologico.value)"
-                      onchange="infoGeral()"
-                    />
-                  </div>
-                  <div class="mb-3 row">
-                    <label for="obs" class="form-label"
-                      >Informações Adicionais:</label
-                    >
-                    <div class="col-sm-11">
-                      <textarea
-                        class="form-control"
-                        name="etapaBackup"
-                        id="etapaBackup"
-                        rows="5"
-                        placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
-                        oninput="infoGeral()"
-                      ></textarea>
+                  <div class="card-body">
+                    <div class="mb-3 row">
+                      <label for="customRange1" class="form-label"
+                        >Cliente comprometido?&nbsp;<span id="comprometido-value"
+                          >Nota: 5</span
+                        ></label
+                      >
+                      <input
+                        type="range"
+                        class="form-range"
+                        id="comprometido"
+                        min="0"
+                        max="10"
+                        step="1"
+                        oninput="iTec.innerHTML=Number(tecnologico.value)"
+                        onchange="infoGeral()"
+                      />
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="customRange1" class="form-label"
+                        >Cliente tecnológico?&nbsp;<span id="tecnologico-value"
+                          >Nota: 5</span
+                        ></label
+                      >
+                      <input
+                        type="range"
+                        class="form-range"
+                        id="tecnologico"
+                        min="0"
+                        max="10"
+                        step="1"
+                        oninput="iTec.innerHTML=Number(tecnologico.value)"
+                        onchange="infoGeral()"
+                      />
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="obs" class="form-label"
+                        >Informações Adicionais:</label
+                      >
+                      <div class="col-sm-11">
+                        <textarea
+                          class="form-control"
+                          name="etapaBackup"
+                          id="etapaBackup"
+                          rows="5"
+                          placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                          oninput="infoGeral()"
+                        ></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="copResp2()"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal3"
-              >
-                Copiar Texto
-              </button>
-            </div>
+              <div class="mb-3">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  onclick="copResp2()"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal3"
+                >
+                  Copiar Texto
+                </button>
+              </div>
+            <div>
 
             <div
               class="modal fade"
@@ -1489,7 +1485,7 @@
                   name="geralObs"
                   id="Minfo"
                   rows="5"
-                  oninput="textoMigra()"
+                  oninput="textomigra()"
                 ></textarea>
               </div>
             </div>
@@ -1666,7 +1662,7 @@
                   name="tratativa"
                   id="tratativa"
                   rows="5"
-                  oninput="infoGeral()"
+                  oninput="acompTexto()"
                 ></textarea>
               </div>
             </div>

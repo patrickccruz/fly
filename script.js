@@ -194,7 +194,7 @@ function infoGeral() {
       let resp3 = radio.value;
       document.getElementById(
         "geralResp3"
-      ).innerHTML = `- Atrasaram: ${resp3} `;
+      ).innerHTML = `- Teve atrazo ? ${resp3} `;
     }
   }
 
@@ -333,11 +333,15 @@ function copResp2() {
 function faltou() {
   document.getElementById("falta").style.display = "block";
   document.getElementById("naoFaltou").style.display = "none";
+  document.getElementById("naoFaltou2").style.display = "none";
+  document.getElementById("btnaoFaltou").style.display = "none";
 }
 
 function falta() {
   document.getElementById("falta").style.display = "none";
   document.getElementById("naoFaltou").style.display = "block";
+  document.getElementById("naoFaltou2").style.display = "block";
+  document.getElementById("btnaoFaltou").style.display = "block";
 }
 
 function duvida() {
@@ -373,17 +377,13 @@ function copRespFalta() {
   ).innerHTML = `- Porcentagem de uso: ${resp1}%`;
   let respFalta1 = `Porcentagem de uso: ${resp1}%`;
 
-  let resp2 = document.getElementById("parcicipantes").value;
-  document.getElementById(
-    "respFaltou2"
-  ).innerHTML = `- Quem participou da consultoria/departamento: ${resp2}`;
-  let respFalta2 = `Quem participou da consultoria/departamento: ${resp2}`;
-
   let falta = document.getElementById("faltaCliente").value;
   let respFalta3 = `Atrasaram: ${falta}`;
-  document.getElementById("respFaltou3").innerHTML = `Falta: ${falta}`;
+  document.getElementById(
+    "respFaltou3"
+  ).innerHTML = `Informaçoes sobre a falta: ${falta}`;
 
-  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta2}\n${respFalta3}`;
+  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
