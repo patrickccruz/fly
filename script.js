@@ -157,6 +157,39 @@ function teste() {
   ).innerHTML = `- Informações Adicionais: ${etapa12}`;
 }
 
+// ============================
+
+function copRespFalta2() {
+  var value = document.getElementsByName("etapa");
+  let resp0 = "";
+  for (var radio of value) {
+    if (radio.checked) {
+      resp0 = radio.value;
+      document.getElementById("respFaltou").innerHTML = `${Gresp0}`;
+    }
+  }
+
+  let resp1 = document.getElementById("uso").value;
+  document.getElementById(
+    "respFaltou1"
+  ).innerHTML = `- Porcentagem de uso: ${Gresp1}%`;
+  let GrespFalta1 = `Porcentagem de uso: ${Gresp1}%`;
+
+  let falta = document.getElementById("faltaCliente").value;
+  let GrespFalta3 = `Atrasaram: ${falta}`;
+  document.getElementById(
+    "respFaltou3"
+  ).innerHTML = `Informaçoes sobre a falta: ${Gfalta}`;
+
+  const textToCopy = `${Gresp0}\n${GrespFalta1}\n${GrespFalta3}`;
+  const textarea = document.createElement("textarea");
+  textarea.value = textToCopy;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+}
+
 function copResp() {
   let etapa1 = document.getElementById("etapa1resp1").textContent;
   let etapa2 = document.getElementById("etapa1resp2").textContent;
