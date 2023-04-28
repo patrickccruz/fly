@@ -99,148 +99,163 @@
         <div class="col-sm-12 col-md-6">
           <article>
             <div class="row mb-3">
-              <h3>Introdução ao Cliente</h3>
+              <h2>Introdução ao Cliente</h2>
             </div>
-
-            <div class="mb-3 row">
-              <label for="dono" class="col-sm-3 col-form-label"
-                >Dono do escritório:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="dono"
-                  oninput="teste()"
-                />
+              <h5 class="mb-3">Cliente faltou ?</h5>
+                <div class="mb-3" onclick="falta()">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="horario" id="inlineRadio1" value="Não" oninput="infoGeral()" />
+                    <label class="form-check-label" for="inlineRadio1">Sim</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="+10 minutos atrasados"
+                      oninput="infoGeral()" />
+                    <label class="form-check-label" for="inlineRadio2">Não</label>
+                  </div>
+                  
+            
+               </div>
+            <div id="faltou3" >
+              <div class="mb-3 row">
+                <label for="dono" class="col-sm-3 col-form-label"
+                  >Dono do escritório:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dono"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="resp" class="col-sm-3 col-form-label"
-                >Responsavel Técnico:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="resp"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="resp" class="col-sm-3 col-form-label"
+                  >Responsavel Técnico:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="resp"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="quem" class="col-sm-3 col-form-label"
-                >Quem participou da consultoria:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="quem"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="quem" class="col-sm-3 col-form-label"
+                  >Quem participou da consultoria:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="quem"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="usuario" class="col-sm-3 col-form-label"
-                >Usuários aprox:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="usuario"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="usuario" class="col-sm-3 col-form-label"
+                  >Usuários aprox:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="usuario"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="empresas" class="col-sm-3 col-form-label"
-                >Empresas aprox:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="empresas"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="empresas" class="col-sm-3 col-form-label"
+                  >Empresas aprox:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="empresas"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="sistemaContabil" class="col-sm-3 col-form-label"
-                >Sistema Contábil:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="sistemaContabil"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="sistemaContabil" class="col-sm-3 col-form-label"
+                  >Sistema Contábil:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="sistemaContabil"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="jaUsaram" class="col-sm-3 col-form-label"
-                >Ja usaram sistema de gestão:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="jaUsaram"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="jaUsaram" class="col-sm-3 col-form-label"
+                  >Ja usaram sistema de gestão:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jaUsaram"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="formas" class="col-sm-3 col-form-label"
-                >Forma de entrega: (se recebem por email, wpp ou físico):</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="formas"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="formas" class="col-sm-3 col-form-label"
+                  >Forma de entrega: (se recebem por email, wpp ou físico):</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formas"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="maioriaRegimes" class="col-sm-3 col-form-label"
-                >Qual a maioria dos regimes tributários:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="maioriaRegimes"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="maioriaRegimes" class="col-sm-3 col-form-label"
+                  >Qual a maioria dos regimes tributários:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="maioriaRegimes"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="mb-3 row">
-              <label for="valor" class="col-sm-3 col-form-label"
-                >Valor da Acessórias mais chamou atenção:</label
-              >
-              <div class="col-sm-8">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="valor"
-                  oninput="teste()"
-                />
+              <div class="mb-3 row">
+                <label for="valor" class="col-sm-3 col-form-label"
+                  >Valor da Acessórias mais chamou atenção:</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="valor"
+                    oninput="teste()"
+                  />
+                </div>
               </div>
-            </div>
+            <div>
 
             <div class="mb-3 row">
               <label for="ticket" class="col-sm-3 col-form-label"

@@ -335,6 +335,15 @@ function faltou() {
   document.getElementById("naoFaltou").style.display = "none";
   document.getElementById("naoFaltou2").style.display = "none";
   document.getElementById("btnaoFaltou").style.display = "none";
+  document.getElementById("faltou3").style.display = "none";
+}
+
+function faltou3() {
+  document.getElementById("faltou3").style.display = "none";
+}
+
+function falta() {
+  document.getElementById("falta3").style.display = "block";
 }
 
 function falta() {
@@ -342,6 +351,7 @@ function falta() {
   document.getElementById("naoFaltou").style.display = "block";
   document.getElementById("naoFaltou2").style.display = "block";
   document.getElementById("btnaoFaltou").style.display = "block";
+  document.getElementById("falta3").style.display = "block";
 }
 
 function duvida() {
