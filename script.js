@@ -386,7 +386,7 @@ function copRespFalta() {
   let resp0 = "";
   for (var radio of value) {
     if (radio.checked) {
-      let resp0 = radio.value;
+      resp0 = radio.value;
       document.getElementById("respFaltou").innerHTML = `${resp0}`;
     }
   }
