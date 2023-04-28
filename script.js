@@ -170,7 +170,17 @@ function copResp() {
   let etapa10 = document.getElementById("etapa1resp10").textContent;
   let etapa11 = document.getElementById("etapa1resp11").textContent;
   let etapa12 = document.getElementById("etapa1resp12").textContent;
-  const textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa11}\n${etapa12}`;
+  var value = document.getElementsByName("faltaClient");
+  let textToCopy = "";
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        textToCopy = `${etapa11}\n${etapa12}`;
+      } else {
+        textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa11}\n${etapa12}`;
+      }
+    }
+  }
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
@@ -217,16 +227,6 @@ function infoGeral() {
       ).innerHTML = `- Realizaram as atividades anteriores: ${resp4} `;
     }
   }
-
-  // var value = document.getElementsByName("duvidas");
-  // for (var radio of value) {
-  //   if (radio.checked) {
-  //     let resp5 = radio.value;
-  //     document.getElementById(
-  //       "geralResp5"
-  //     ).innerHTML = `- Dúvidas/Dificuldades da etapa anterior: ${resp5} `;
-  //   }
-  // }
 
   var value = document.getElementsByName("participativos");
   for (var radio of value) {
@@ -613,4 +613,17 @@ function copResp4() {
   textarea.select();
   document.execCommand("copy");
   textarea.remove();
+}
+
+function faltaClient() {
+  var value = document.getElementsByName("faltaClient");
+  for (var radio of value) {
+    if (radio.checked) {
+      if (radio.value == "yes") {
+        document.getElementById("faltou3").style.display = "none";
+      } else {
+        document.getElementById("faltou3").style.display = "block";
+      }
+    }
+  }
 }
