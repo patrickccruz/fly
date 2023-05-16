@@ -524,7 +524,7 @@ function textoMigra() {
     "Mresp16"
   ).innerHTML = `- Houve dispensa de treinamento ?Se sim, qual numero do ticket?: ${Aresp16}`;
 
-  let Aresp17 = document.getElementById("Minfo").value;
+  let Aresp17 = document.getElementById("Minfo2").value;
   document.getElementById(
     "Mresp17"
   ).innerHTML = `- Informações Adicionais ${Aresp17}`;
@@ -547,8 +547,8 @@ function copResp3() {
   let resp13 = document.getElementById("Mresp14").textContent;
   let resp14 = document.getElementById("Mresp15").textContent;
   let resp15 = document.getElementById("Mresp16").textContent;
-  let resp16 = document.getElementById("Mresp17").textContent;
-  const textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
+  let resp18 = document.getElementById("Mresp17").textContent;
+  const textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp18}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
