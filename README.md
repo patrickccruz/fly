@@ -18,5 +18,5 @@ Local a onde fazemos a migração de um cliente do treinamento/consutoria para o
 
 ### Acompanhamento
 
-Aba a onde o consutor pode fazer todo o aconpanhamento com o seu cliente que já terminou o treinamento no geral.
+Aba a onde o consutor pode fazer todo o acompanhamento com o seu cliente que já terminou o treinamento no geral.
 
