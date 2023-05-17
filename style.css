@@ -41,18 +41,6 @@ textarea {
   background-color: #d1d1d1;
 }
 
-#tecnologico-value {
-  font-size: 25px;
-  margin-left: 24%;
-  letter-spacing: 3px;
-}
-
-#comprometido-value {
-  font-size: 25px;
-  margin-left: 21%;
-  letter-spacing: 3px;
-}
-
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
   color: #dcb678;
