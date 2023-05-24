@@ -497,7 +497,7 @@ function textoMigra() {
   document.getElementById("Mresp7").innerHTML = `- SMTP Ativo: ${Aresp7}`;
 
   let Aresp8 = document.getElementById("regUso").value;
-  document.getElementById("Mresp8").innerHTML = `- Uso: ${Aresp8}`;
+  document.getElementById("Mresp8").innerHTML = `- Uso: % ${Aresp8}`;
 
   let Aresp9 = document.getElementById("acesso").value;
   document.getElementById("Mresp9").innerHTML = `- Acesso: ${Aresp9}`;
