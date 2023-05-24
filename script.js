@@ -250,7 +250,7 @@ function infoGeral() {
       let resp3 = radio.value;
       document.getElementById(
         "geralResp3"
-      ).innerHTML = `- Teve atrazo ? ${resp3} `;
+      ).innerHTML = `- Teve atraso ? ${resp3} `;
     }
   }
 
