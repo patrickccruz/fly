@@ -148,16 +148,17 @@ function teste() {
     "etapa1resp10"
   ).innerHTML = `- Valor da Acessórias mais chamou atenção: ${etapa10}`;
 
-  let etapa11 = document.getElementById("ticket").value;
-  document.getElementById("etapa1resp11").innerHTML = `- TicketApp: ${etapa11}`;
+  let etapa11 = document.getElementById("ticket2").value;
+  document.getElementById("etapa1resp11").innerHTML = `- Ticket: ${etapa11}`;
 
-  let etapa12 = document.getElementById("obs").value;
+  let etapa12 = document.getElementById("ticketApp").value;
+  document.getElementById("etapa1resp12").innerHTML = `- TicketApp: ${etapa12}`;
+
+  let etapa13 = document.getElementById("obs").value;
   document.getElementById(
-    "etapa1resp12"
-  ).innerHTML = `- Informações Adicionais: ${etapa12}`;
+    "etapa1resp13"
+  ).innerHTML = `- Informações Adicionais: ${etapa13}`;
 }
-
-// ====================================================================================================
 
 function copRespFalta2() {
   var value = document.getElementsByName("etapa");
@@ -203,17 +204,18 @@ function copResp() {
   let etapa10 = document.getElementById("etapa1resp10").textContent;
   let etapa11 = document.getElementById("etapa1resp11").textContent;
   let etapa12 = document.getElementById("etapa1resp12").textContent;
+  let etapa13 = document.getElementById("etapa1resp13").textContent;
   var value = document.getElementsByName("faltaClient");
   let textToCopy = "";
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${etapa11}\n${etapa12}`;
+        textToCopy = `${etapa11}\n${etapa13}`;
         for (var i = 1; i <= 10; i++) {
           document.getElementById(`etapa1resp${i}`).innerHTML = ``;
         }
       } else {
-        textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa11}\n${etapa12}`;
+        textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa11}\n${etapa12}\n${etapa13}`;
       }
     }
   }
@@ -225,12 +227,14 @@ function copResp() {
   textarea.remove();
 }
 
+// ====================================================================================================
+
 function infoGeral() {
   var value = document.getElementsByName("etapa");
   let resp0 = "";
   for (var checkbox of value) {
     if (checkbox.checked) {
-      resp0 = resp0 + "<br> " + checkbox.value;
+      resp0 = resp0 + "- " + checkbox.value + " | ";
       document.getElementById("geralResp0").innerHTML = `${resp0}`;
     }
   } // Codigo para check box
@@ -340,13 +344,15 @@ function copResp2() {
     if (radio.checked) {
       if (radio.value == "Bastante dificuldade") {
         var value = document.getElementsByName("etapa2");
-        for (var radio of value) {
-          if (radio.checked) {
-            let resp55 = `- Em qual etapa tiveram dúvidas/dificuldades? ${radio.value}`;
+        let resp0 = "";
+        for (var checkbox of value) {
+          if (checkbox.checked) {
+            let resp55 = `- Em qual etapa tiveram dúvidas/dificuldades? ${(resp5 =
+              resp55 + "- " + checkbox.value + " | ")} `;
             document.getElementById("geralResp55").innerHTML = `${resp55}`;
             resp5 = `${resp5}\n${resp55}`;
           }
-        }
+        } // Codigo para check box
       }
     }
   }

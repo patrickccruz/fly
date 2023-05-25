@@ -171,9 +171,16 @@
 
           </div>
           <div class="mb-3 row">
+            <label for="ticket" class="col-sm-3 col-form-label">Ticket:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticket2" oninput="teste()" />
+            </div>
+          </div>
+
+          <div class="mb-3 row">
             <label for="ticket" class="col-sm-3 col-form-label">TicketApp:</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="ticket" oninput="teste()" />
+              <input type="text" class="form-control" id="TicketApp" oninput="teste()" />
             </div>
           </div>
 
@@ -217,6 +224,7 @@
                   <p id="etapa1resp10"></p>
                   <p id="etapa1resp11"></p>
                   <p id="etapa1resp12"></p>
+                  <p id="etapa1resp13"></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
@@ -468,6 +476,64 @@
               <div class="mb-3">
 
                 <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Configuração inicial" id="flexCheckDefault"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
+                </div>
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista de Tarefas" id="flexCheckDefault2"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault2">Lista de Tarefas</label>
+                </div>
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Robô" id="flexCheckDefault3"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault3">Robô</label>
+                </div>
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista/Robô" id="flexCheckDefault4"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault4">Lista/Robô</label>
+                </div>
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Gestão de Processos" id="flexCheckDefault5"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault5">Gestão de Processos</label>
+                </div>
+                </div>
+                
+                <div class="mb-3">
+                
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="etapa2" value="Departamentos" id="flexCheckDefault6"
+                      oninput="infoGeral()" />
+                    <label class="form-check-label" for="flexCheckDefault6">Departamentos</label>
+                  </div>
+                
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="etapa2" value="APP" id="flexCheckDefault7"
+                      oninput="infoGeral()" />
+                    <label class="form-check-label" for="flexCheckDefault7">APP</label>
+                  </div>
+                
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="etapa2" value="Revisão/Tira Dúvidas" id="flexCheckDefault8"
+                      oninput="infoGeral()" />
+                    <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
+                  </div>
+                
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="etapa2" value="Retomada" id="flexCheckDefault9"
+                      oninput="infoGeral()" />
+                    <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
+                  </div>
+                </div>
+                
+                <!-- <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio1" value="Lista de Entregas"
                     oninput="infoGeral()" />
                   <label class="form-check-label" for="inlineRadio1">Lista de Entregas</label>
@@ -504,7 +570,7 @@
                     oninput="infoGeral()" />
                   <label class="form-check-label" for="inlineRadio2">Retomada</label>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <div class="row mb-3">
