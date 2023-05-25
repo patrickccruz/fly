@@ -359,6 +359,7 @@ function copResp2() {
       }
     }
   }
+  let resp55 = document.getElementById("geralResp55").textContent;
   let resp6 = document.getElementById("geralResp6").textContent;
   let resp7 = document.getElementById("geralResp7").textContent;
   let resp8 = document.getElementById("geralResp8").textContent;
@@ -372,7 +373,7 @@ function copResp2() {
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}`;
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}`;
       } else {
         textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}`;
       }
