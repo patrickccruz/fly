@@ -227,9 +227,10 @@ function copResp() {
 
 function infoGeral() {
   var value = document.getElementsByName("etapa");
+  let resp0 = "";
   for (var checkbox of value) {
     if (checkbox.checked) {
-      let resp0 = checkbox.value;
+      resp0 = resp0 + "<br> " + checkbox.value;
       document.getElementById("geralResp0").innerHTML = `${resp0}`;
     }
   }
