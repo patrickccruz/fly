@@ -161,5 +161,5 @@ body {
 }
 
 #toggle_checkbox:checked + .label-darkmode-add #moon:before {
-  background-color: #000;
+  background-color: #000000;
 }

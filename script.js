@@ -52,7 +52,7 @@ const darkMode = document.querySelector("#toggle_checkbox");
 function darkOn() {
   const nav = document.querySelector(".navbar");
   const footer = document.querySelector("#footer");
-  document.body.style.backgroundColor = "rgb(50 50 50)";
+  document.body.style.backgroundColor = "#0a0808";
   document.body.style.color = "white";
   nav.style.backgroundColor = "#003050";
   footer.style.backgroundColor = "#003050";
@@ -157,7 +157,7 @@ function teste() {
   ).innerHTML = `- Informações Adicionais: ${etapa12}`;
 }
 
-// ============================
+// ====================================================================================================
 
 function copRespFalta2() {
   var value = document.getElementsByName("etapa");
@@ -227,9 +227,9 @@ function copResp() {
 
 function infoGeral() {
   var value = document.getElementsByName("etapa");
-  for (var radio of value) {
-    if (radio.checked) {
-      let resp0 = radio.value;
+  for (var checkbox of value) {
+    if (checkbox.checked) {
+      let resp0 = checkbox.value;
       document.getElementById("geralResp0").innerHTML = `${resp0}`;
     }
   }
