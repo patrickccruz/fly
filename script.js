@@ -240,7 +240,7 @@ function infoGeral() {
       resp0 = resp0 + "- " + checkbox.value + " | ";
       document.getElementById("geralResp0").innerHTML = `${resp0}`;
     }
-  } // Codigo para check box
+  }
 
   let resp1 = document.getElementById("uso").value;
   document.getElementById(
@@ -347,15 +347,15 @@ function copResp2() {
     if (radio.checked) {
       if (radio.value == "Bastante dificuldade") {
         var value = document.getElementsByName("etapa2");
-        let resp0 = "";
+        let resp55 = "";
         for (var checkbox of value) {
           if (checkbox.checked) {
-            let resp55 = `- Em qual etapa tiveram dúvidas/dificuldades? ${(resp5 =
-              resp55 + "- " + checkbox.value + " | ")} `;
-            document.getElementById("geralResp55").innerHTML = `${resp55}`;
-            resp5 = `${resp5}\n${resp55}`;
+            resp55 = resp55 + "- " + checkbox.value + " | ";
           }
         } // Codigo para check box
+        document.getElementById(
+          "geralResp55"
+        ).innerHTML = `- Em qual etapa tiveram dúvidas/dificuldades: ${resp55}`;
       }
     }
   }
