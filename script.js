@@ -233,7 +233,7 @@ function infoGeral() {
       resp0 = resp0 + "<br> " + checkbox.value;
       document.getElementById("geralResp0").innerHTML = `${resp0}`;
     }
-  }
+  } // Codigo para check box
 
   let resp1 = document.getElementById("uso").value;
   document.getElementById(
