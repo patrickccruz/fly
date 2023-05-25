@@ -152,7 +152,9 @@ function teste() {
   document.getElementById("etapa1resp11").innerHTML = `- Ticket: ${etapa11}`;
 
   let etapa12 = document.getElementById("ticketApp").value;
-  document.getElementById("etapa1resp12").innerHTML = `- TicketApp: ${etapa12}`;
+  document.getElementById(
+    "etapa1resp12"
+  ).innerHTML = `- Ticket do App e Area Vip: ${etapa12}`;
 
   let etapa13 = document.getElementById("obs").value;
   document.getElementById(
@@ -205,6 +207,7 @@ function copResp() {
   let etapa11 = document.getElementById("etapa1resp11").textContent;
   let etapa12 = document.getElementById("etapa1resp12").textContent;
   let etapa13 = document.getElementById("etapa1resp13").textContent;
+  console.log(etapa13);
   var value = document.getElementsByName("faltaClient");
   let textToCopy = "";
   for (var radio of value) {
