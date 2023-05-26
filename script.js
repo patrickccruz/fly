@@ -208,9 +208,6 @@ function copResp() {
   let etapa12 = document.getElementById("etapa1resp12").textContent;
   let etapa13 = document.getElementById("etapa1resp13").textContent;
 
-  console.log(etapa12);
-  console.log(etapa13);
-
   var value = document.getElementsByName("faltaClient");
   let textToCopy = "";
   for (var radio of value) {
