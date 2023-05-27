@@ -697,3 +697,5 @@ function deleteResp() {
   document.getElementById("dono").value = "";
   document.getElementById("resp").value = "";
 }
+
+function deleteResp2() {}

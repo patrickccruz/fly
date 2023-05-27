@@ -86,7 +86,6 @@ body {
   overflow: hidden;
 }
 
-
 #star {
   position: absolute;
   top: 8px;
@@ -163,4 +162,15 @@ body {
 
 #toggle_checkbox:checked + .label-darkmode-add #moon:before {
   background-color: #000000;
+}
+
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+  background-color: #d1d1d1;
+}
+
+.form-floating > label {
+  color: black;
 }
