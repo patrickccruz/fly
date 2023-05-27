@@ -93,6 +93,9 @@
                 >Acompanhamento</a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link" id="ataNav" onclick="ata()" href="#">ATA</a>
+            </li>
             <li class="nav-item toogle-sun-moon">
               <input type="checkbox" id="toggle_checkbox" />
               <label class="label-darkmode-add" for="toggle_checkbox">
@@ -110,6 +113,7 @@
 
     <div
       class="bg-image"
+      id="background-image"
       style="
         background-image: url('images/background.png');
         height: 86.5vh;
@@ -1915,6 +1919,32 @@
           </article>
         </div>
       </div>
+    </div>
+
+    <div class="container-fluid mt-3" id="ata">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <article>
+            <div class="row mb-3">
+              <h3>Migração</h3>
+            </div>
+            <div class="mb-3 row">
+              <label for="valorMigra" class="col-sm-3 col-form-label"
+                >Valor do Acessórias:</label
+              >
+              <div class="col-sm-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="valorMigra"
+                  oninput="newFunction()"
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- <iframe src="ata.html" height="2300px"></iframe> -->
     </div>
 
     <footer id="footer" class="text-center text-lg-start">

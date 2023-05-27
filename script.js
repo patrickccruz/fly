@@ -3,11 +3,17 @@ function confIni() {
   document.getElementById("menuGeral").style.display = "none";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
+  document.getElementById("ata").style.display = "none";
   document.querySelector("#confIni").classList.add("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.remove("active");
   document.querySelector("#acpt").classList.remove("active");
-  document.querySelector(".bg-image").style.display = "none";
+  document.querySelector("#ataNav").classList.remove("active");
+  document.querySelector("#background-image").style.display = "none";
+}
+
+function image() {
+  document.querySelector("#background-image").style.display = "none";
 }
 
 function geral() {
@@ -15,11 +21,13 @@ function geral() {
   document.getElementById("menuGeral").style.display = "block";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
+  document.getElementById("ata").style.display = "none";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.add("active");
   document.querySelector("#migra").classList.remove("active");
   document.querySelector("#acpt").classList.remove("active");
-  document.querySelector(".bg-image").style.display = "none";
+  document.querySelector("#ataNav").classList.remove("active");
+  document.querySelector("#background-image").style.display = "none";
 }
 
 function migra() {
@@ -27,12 +35,13 @@ function migra() {
   document.getElementById("menuGeral").style.display = "none";
   document.getElementById("migração").style.display = "block";
   document.getElementById("acomp").style.display = "none";
-
+  document.getElementById("ata").style.display = "none";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.add("active");
   document.querySelector("#acpt").classList.remove("active");
-  document.querySelector(".bg-image").style.display = "none";
+  document.querySelector("#ataNav").classList.remove("active");
+  document.querySelector("#background-image").style.display = "none";
 }
 
 function acpt() {
@@ -40,11 +49,27 @@ function acpt() {
   document.getElementById("menuGeral").style.display = "none";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "block";
+  document.getElementById("ata").style.display = "none";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.remove("active");
   document.querySelector("#acpt").classList.add("active");
-  document.querySelector(".bg-image").style.display = "none";
+  document.querySelector("#ataNav").classList.remove("active");
+  document.querySelector("#background-image").style.display = "none";
+}
+
+function ata() {
+  document.getElementById("etapa1").style.display = "none";
+  document.getElementById("menuGeral").style.display = "none";
+  document.getElementById("migração").style.display = "none";
+  document.getElementById("acomp").style.display = "none";
+  document.getElementById("ata").style.display = "block";
+  document.querySelector("#confIni").classList.remove("active");
+  document.querySelector("#geral").classList.remove("active");
+  document.querySelector("#migra").classList.remove("active");
+  document.querySelector("#acpt").classList.remove("active");
+  document.querySelector("#ata").classList.add("active");
+  document.querySelector("#background-image").style.display = "none";
 }
 
 const darkMode = document.querySelector("#toggle_checkbox");
