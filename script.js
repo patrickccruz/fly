@@ -170,6 +170,7 @@ function copResp() {
   textarea.remove();
 }
 
+<<<<<<< Updated upstream
 function copResp2() {
   let resp0 = document.getElementById("geralResp0").textContent;
   let resp1 = document.getElementById("geralResp1").textContent;
@@ -186,6 +187,12 @@ function copResp2() {
   let resp12 = document.getElementById("geralResp12").textContent;
   let resp13 = document.getElementById("geralResp13").textContent;
   var value = document.getElementsByName("btnBackup");
+=======
+  console.log(etapa12);
+  console.log(etapa13);
+
+  var value = document.getElementsByName("faltaClient");
+>>>>>>> Stashed changes
   let textToCopy = "";
   for (var radio of value) {
     if (radio.checked) {

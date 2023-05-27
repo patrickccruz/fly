@@ -20,6 +20,7 @@
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.png" />
   </head>
 
+<<<<<<< Updated upstream
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #005c9a">
       <div class="container-fluid">
@@ -76,6 +77,74 @@
             </li>
           </ul>
         </div>
+=======
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preenchimento Fly</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="imagex/png" href="./images/logo.png" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #e26161 ; display: none;">
+    <!-- none = não aparece | block = aparece -->
+    <div class="container-fluid">
+      <a class="navbar-brand" target="_blank" style="color: #fff; font-weight: 600">
+        <height="26" class="d-inline-block align-text-top" />
+        🛑Devido o meu desligamento da empresas estarei disponibilizado esse site para compra atraves do meu
+        Whatsapp, hoje apos o horario de trabalho estarei bloqueando a
+        <br>aplicação.🛑
+        <Br>
+        <br> 💙 Ps: Foi um prazer trabalhar com todos vocês!!!
+      </a>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #005c9a">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://app.acessorias.com/sysmain.php?m=145" target="_blank"
+        style="color: #fff; font-weight: 600">
+        <img src="images/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top" />
+        Preenchimento Fly
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="confIni" onclick="confIni()" href="#">Alinhamento Inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="geral" onclick="geral()" href="#">Etapas Gerais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="migra" onclick="migra()" href="#">Migração</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="acpt" onclick="acpt()" href="#">Acompanhamento</a>
+          </li>
+          <li class="nav-item toogle-sun-moon">
+            <input type="checkbox" id="toggle_checkbox" />
+            <label class="label-darkmode-add" for="toggle_checkbox">
+              <div id="star">
+                <div class="star" id="star-1">★</div>
+                <div class="star" id="star-2">★</div>
+              </div>
+              <div id="moon"></div>
+            </label>
+          </li>
+        </ul>
+>>>>>>> Stashed changes
       </div>
     </nav>
 
@@ -88,6 +157,7 @@
       "
     ></div>
 
+<<<<<<< Updated upstream
     <div class="container-fluid mt-3" id="etapa1">
       <div class="row">
         <div class="col-sm-12 col-md-6">
@@ -107,10 +177,45 @@
                   id="dono"
                   oninput="teste()"
                 />
+=======
+  <div class="container-fluid mt-3" id="etapa1">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h2>Introdução ao Cliente</h2>
+          </div>
+          <div>
+            <h5 class="mb-3">Cliente faltou ?</h5>
+          </div>
+          <div class="mb-3" onclick="faltaClient()">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="faltaClient" id="inlineRadio1" value="yes" />
+              <label class="form-check-label" for="inlineRadio1">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="faltaClient" id="inlineRadio2" value="no" checked />
+              <label class="form-check-label" for="inlineRadio2">Não</label>
+            </div>
+          </div>
+          <div id="faltou3">
+            <div class="mb-3 row">
+              <label for="dono" class="col-sm-3 col-form-label">Dono do escritório:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="dono" oninput="teste()" />
               </div>
             </div>
 
             <div class="mb-3 row">
+              <label for="resp" class="col-sm-3 col-form-label">Responsavel Técnico:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="resp" oninput="teste()" />
+>>>>>>> Stashed changes
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="resp" class="col-sm-3 col-form-label"
                 >Responsavel Técnico:</label
               >
@@ -121,10 +226,16 @@
                   id="resp"
                   oninput="teste()"
                 />
+=======
+              <label for="quem" class="col-sm-3 col-form-label">Quem participou da consultoria:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="quem" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="quem" class="col-sm-3 col-form-label"
                 >Quem participou da consultoria:</label
               >
@@ -135,10 +246,16 @@
                   id="quem"
                   oninput="teste()"
                 />
+=======
+              <label for="usuario" class="col-sm-3 col-form-label">Usuários aprox:</label>
+              <div class="col-sm-8">
+                <input type="number" class="form-control" id="usuario" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="usuario" class="col-sm-3 col-form-label"
                 >Usuários aprox:</label
               >
@@ -149,10 +266,16 @@
                   id="usuario"
                   oninput="teste()"
                 />
+=======
+              <label for="empresas" class="col-sm-3 col-form-label">Empresas aprox:</label>
+              <div class="col-sm-8">
+                <input type="number" class="form-control" id="empresas" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="empresas" class="col-sm-3 col-form-label"
                 >Empresas aprox:</label
               >
@@ -163,10 +286,16 @@
                   id="empresas"
                   oninput="teste()"
                 />
+=======
+              <label for="sistemaContabil" class="col-sm-3 col-form-label">Sistema Contábil:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="sistemaContabil" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="sistemaContabil" class="col-sm-3 col-form-label"
                 >Sistema Contábil:</label
               >
@@ -177,10 +306,16 @@
                   id="sistemaContabil"
                   oninput="teste()"
                 />
+=======
+              <label for="jaUsaram" class="col-sm-3 col-form-label">Ja usaram sistema de gestão:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="jaUsaram" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="jaUsaram" class="col-sm-3 col-form-label"
                 >Ja usaram sistema de gestão:</label
               >
@@ -191,10 +326,17 @@
                   id="jaUsaram"
                   oninput="teste()"
                 />
+=======
+              <label for="formas" class="col-sm-3 col-form-label">Forma de entrega: (se recebem por email, wpp ou
+                físico):</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="formas" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="formas" class="col-sm-3 col-form-label"
                 >Forma de entrega: (se recebem por email, wpp ou físico):</label
               >
@@ -205,10 +347,17 @@
                   id="formas"
                   oninput="teste()"
                 />
+=======
+              <label for="maioriaRegimes" class="col-sm-3 col-form-label">Qual a maioria dos regimes
+                tributários:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="maioriaRegimes" oninput="teste()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="maioriaRegimes" class="col-sm-3 col-form-label"
                 >Qual a maioria dos regimes tributários:</label
               >
@@ -234,8 +383,38 @@
                   oninput="teste()"
                 />
               </div>
+=======
+              <label for="valor" class="col-sm-3 col-form-label">Valor da Acessórias mais chamou atenção:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="valor" oninput="teste()" />
+              </div>
             </div>
 
+          </div>
+          <div class="mb-3 row">
+            <label for="ticket" class="col-sm-3 col-form-label">Ticket:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticket2" oninput="teste()" />
+>>>>>>> Stashed changes
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="ticket" class="col-sm-3 col-form-label">Ticket do App e Area Vip:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="TicketApp" oninput="teste()" />
+            </div>
+          </div>
+
+
+          <div class="mb-3 row">
+            <label for="obs" class="form-label">Informações Adicionais:</label>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="obs" id="obs" rows="8" oninput="teste()"></textarea>
+            </div>
+          </div>
+
+<<<<<<< Updated upstream
             <div class="mb-3 row">
               <label for="ticket" class="col-sm-3 col-form-label"
                 >TicketApp:</label
@@ -322,6 +501,46 @@
                       Fechar
                     </button>
                   </div>
+=======
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Copiar Texto
+            </button>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="etapa1resp1"></p>
+                  <p id="etapa1resp2"></p>
+                  <p id="etapa1resp3"></p>
+                  <p id="etapa1resp4"></p>
+                  <p id="etapa1resp5"></p>
+                  <p id="etapa1resp6"></p>
+                  <p id="etapa1resp7"></p>
+                  <p id="etapa1resp8"></p>
+                  <p id="etapa1resp9"></p>
+                  <p id="etapa1resp10"></p>
+                  <p id="etapa1resp11"></p>
+                  <p id="etapa1resp12"></p>
+                  <p id="etapa1resp13"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
+>>>>>>> Stashed changes
                 </div>
               </div>
             </div>
@@ -342,6 +561,7 @@
 
     <!------------------------------------------------ Etapas gerais -------------------------------------------------------------------->
 
+<<<<<<< Updated upstream
     <div class="container-fluid mt-3" id="menuGeral">
       <div class="row">
         <div class="col-sm-12 col-md-6">
@@ -400,6 +620,174 @@
                 <label class="form-check-label" for="inlineRadio1"
                   >Gestão de Processos</label
                 >
+=======
+  <div class="container-fluid mt-3" id="menuGeral">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Etapas Gerais</h3>
+          </div>
+
+          <!-- <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="etapa" value="- Configuração inicial" id="flexCheckDefault"
+              oninput="infoGeral()" />
+            <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
+          </div> -->
+
+          <div class="mb-3">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial"
+                id="flexCheckDefault" oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Lista de Tarefas"
+                id="flexCheckDefault2" oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault2">Lista de Tarefas</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Robô" id="flexCheckDefault3"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault3">Robô</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Lista/Robô" id="flexCheckDefault4"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault4">Lista/Robô</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Gestão de Processos"
+                id="flexCheckDefault5" oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault5">Gestão de Processos</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Departamentos" id="flexCheckDefault6"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault6">Departamentos</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="APP" id="flexCheckDefault7"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault7">APP</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Revisão/Tira Dúvidas"
+                id="flexCheckDefault8" oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="Retomada" id="flexCheckDefault9"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="etapa" value="APLA" id="flexCheckDefault10"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="flexCheckDefault9">APLA</label>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="uso" class="col-sm-3 col-form-label">Porcentagem de uso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="uso" oninput="infoGeral()" />
+            </div>
+          </div>
+
+          <div id="naoFaltou2">
+            <div class="mb-3 row">
+              <label for="parcicipantes" class="col-sm-3 col-form-label">Quem participou da
+                consultoria/departamento:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="parcicipantes" oninput="infoGeral()" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <h3>Observações sobre a consultoria</h3>
+          </div>
+
+          <div class="row mb-3">
+            <h5>Contabilidade Atrasou ?</h5>
+          </div>
+
+          <div class="mb-3" onclick="falta()">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio1" value="Não"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">Não</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio2"
+                value="+10 minutos atrasados" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio2">+10 min atrasados</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio3" value=+15 minutos atrasados"
+                oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio3">+15 min atrasados</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio1"
+                value="+20 minutos atrasados" oninput="infoGeral()" />
+              <label class="form-check-label" for="inlineRadio1">+20 min atrasados</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="Faltou"
+                oninput="faltou()" />
+              <label class="form-check-label" for="inlineRadio2">Faltou!</label>
+            </div>
+          </div>
+
+          <div class="form-check form-check-inline mb-3" id="falta" style="display: none">
+            <textarea class="form-control" name="etapaBackup2" id="faltaCliente" rows="5" cols="55"
+              placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"></textarea>
+            <button type="button" class="btn btn-outline-primary mt-3" onclick="copRespFalta()" data-bs-toggle="modal"
+              data-bs-target="#exampleModaFaltou">
+              Copiar Texto
+            </button>
+          </div>
+
+          <div class="modal fade" id="exampleModaFaltou" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="respFaltou"></p>
+                  <p id="respFaltou1"></p>
+                  <p id="respFaltou2"></p>
+                  <p id="respFaltou3"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
+                </div>
+>>>>>>> Stashed changes
               </div>
             </div>
 
@@ -684,6 +1072,114 @@
               </div>
             </div>
 
+<<<<<<< Updated upstream
+=======
+            <div id="duvida" style="display: none">
+              <div class="row mb-3">
+                <h5>Em qual etapa tiveram dúvidas/dificuldades?</h5>
+              </div>
+
+              <div class="mb-3">
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Configuração inicial"
+                    id="flexCheckDefault" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista de Tarefas"
+                    id="flexCheckDefault2" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault2">Lista de Tarefas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Robô" id="flexCheckDefault3"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault3">Robô</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista/Robô"
+                    id="flexCheckDefault4" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault4">Lista/Robô</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Gestão de Processos"
+                    id="flexCheckDefault5" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault5">Gestão de Processos</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Departamentos"
+                    id="flexCheckDefault6" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault6">Departamentos</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="APP" id="flexCheckDefault7"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault7">APP</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Revisão/Tira Dúvidas"
+                    id="flexCheckDefault8" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Retomada" id="flexCheckDefault9"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
+                </div>
+              </div>
+
+              <!-- <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio1" value="Lista de Entregas"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio1">Lista de Entregas</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio2" value="Robô"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio2">Robô</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio1"
+                    value="Gestão de Processos" oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio1">Gestão de Processos</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio2" value="APP"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio2">APP</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio3" value="Departamentos"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio3">Departamentos</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio1"
+                    value="Revisão/Tira Dúvidas" oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio1">Revisão/Tira Dúvidas</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="etapa2" id="inlineRadio2" value="Retomada"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="inlineRadio2">Retomada</label>
+                </div>
+              </div> -->
+            </div>
+
+>>>>>>> Stashed changes
             <div class="row mb-3">
               <h5>Participativos?</h5>
             </div>
@@ -908,6 +1404,7 @@
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="ticketConsult" class="col-sm-3 col-form-label"
                 >Ticket da consultoria:</label
               >
@@ -918,10 +1415,16 @@
                   id="ticketConsult"
                   oninput="infoGeral()"
                 />
+=======
+              <label for="ticketConsult" class="col-sm-3 col-form-label">Ticket da consultoria:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="ticketConsult" oninput="infoGeral()" />
+>>>>>>> Stashed changes
               </div>
             </div>
 
             <div class="mb-3 row">
+<<<<<<< Updated upstream
               <label for="geralObs" class="form-label"
                 >Informações Adicionais:</label
               >
@@ -933,9 +1436,13 @@
                   rows="5"
                   oninput="infoGeral()"
                 ></textarea>
+=======
+              <label for="geralObs" class="form-label">Informações Adicionais:</label>
+              <div class="col-sm-11">
+                <textarea class="form-control" name="geralObs" id="geralObs" rows="5" oninput="infoGeral()"></textarea>
+>>>>>>> Stashed changes
               </div>
             </div>
-
             <div class="row mb-3">
               <h5>Backup?</h5>
             </div>
@@ -1009,6 +1516,7 @@
                     />
                   </div>
                   <div class="mb-3 row">
+<<<<<<< Updated upstream
                     <label for="obs" class="form-label"
                       >Informações Adicionais:</label
                     >
@@ -1021,6 +1529,13 @@
                         placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
                         oninput="infoGeral()"
                       ></textarea>
+=======
+                    <label for="obs" class="form-label">Informações Adicionais:</label>
+                    <div class="col-sm-11">
+                      <textarea class="form-control" name="etapaBackup" id="etapaBackup" rows="5"
+                        placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                        oninput="infoGeral()"></textarea>
+>>>>>>> Stashed changes
                     </div>
                   </div>
                 </div>
@@ -1039,6 +1554,7 @@
               </button>
             </div>
 
+<<<<<<< Updated upstream
             <div
               class="modal fade"
               id="exampleModal3"
@@ -1083,6 +1599,341 @@
                     >
                       Fechar
                     </button>
+=======
+              <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Texto Copiado
+                      </h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p id="geralResp0"></p>
+                      <p id="geralResp1"></p>
+                      <p id="geralResp2"></p>
+                      <p id="geralResp3"></p>
+                      <p id="geralResp4"></p>
+                      <p id="geralResp5"></p>
+                      <p id="geralResp55"></p>
+                      <p id="geralResp6"></p>
+                      <p id="geralResp7"></p>
+                      <p id="geralResp8"></p>
+                      <p id="geralResp9"></p>
+                      <p id="geralResp10"></p>
+                      <p id="geralResp11"></p>
+                      <p id="geralResp12"></p>
+                      <p id="geralResp13"></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                        Fechar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------ Migração -------------------------------------------------------------------->
+  <div class="container-fluid mt-3" id="migração">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Migração</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="valorMigra" class="col-sm-3 col-form-label">Valor do Acessórias:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="valorMigra" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="referenciaMigra" class="col-sm-3 col-form-label">Referencia técnica e seu departamento:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="referenciaMigra" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="formaContato" class="col-sm-3 col-form-label">Melhor forma de contato:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="formaContato" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="equipeEngajada" class="col-sm-3 col-form-label">Equipe engajada? Quais? :
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="equipeEngajada" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="dispensaMassa" class="col-sm-3 col-form-label">Dispensa em massa? :
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="dispensaMassa" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="erp" class="col-sm-3 col-form-label">ERP: </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="erp" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="smtp" class="col-sm-3 col-form-label">SMTP Ativo:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="smtp" oninput="textoMigra()" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+
+          <div class="row mb-3">
+            <h3>Registro de uso</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="regUso" oninput="textoMigra()" placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="acesso" oninput="textoMigra()" placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="entregas" oninput="textoMigra() " placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="robo" class="col-sm-3 col-form-label">Robô:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="robo" oninput="textoMigra() " placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="gestao" class="col-sm-3 col-form-label">Gestão:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="gestao" oninput="textoMigra() " placeholder="Digitar..." />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="app" class="col-sm-3 col-form-label">APP:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="app" oninput="textoMigra() " placeholder="Digitar..." />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="apla" class="col-sm-3 col-form-label">APLA:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="apla" oninput="textoMigra() " placeholder="Digitar..." />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="ticketFinal" class="col-sm-3 col-form-label">Número do Ticket de Finalização dos
+              treinamentos:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="ticketFinal" oninput="textoMigra() "
+                placeholder="Digite..." />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="dispensaTicket" class="col-sm-3 col-form-label">Houve dispensa de treinamento:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="dispensaTicket" oninput="textoMigra() "
+                placeholder="Se sim, qual numero do ticket?" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="geralObs" id="Minfo2" rows="5" oninput="textoMigra()"></textarea>
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <!-- Button trigger modal -->
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp3()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal2">
+              Copiar Texto
+            </button>
+          </div>
+          <!-- =============================================================================================================== -->
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Texto Copiado
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="Mresp1"></p>
+                  <p id="Mresp2"></p>
+                  <p id="Mresp3"></p>
+                  <p id="Mresp4"></p>
+                  <p id="Mresp5"></p>
+                  <p id="Mresp6"></p>
+                  <p id="Mresp7"></p>
+                  <p id="Mresp8"></p>
+                  <p id="Mresp9"></p>
+                  <p id="Mresp10"></p>
+                  <p id="Mresp11"></p>
+                  <p id="Mresp12"></p>
+                  <p id="Mresp13"></p>
+                  <p id="Mresp14"></p>
+                  <p id="Mresp15"></p>
+                  <p id="Mresp16"></p>
+                  <p id="Mresp17"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!-- =================================================Aconpanhamento============================================================== -->
+  <div class="container-fluid mt-3" id="acomp">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <article>
+          <div class="row mb-3">
+            <h3>Acompanhamento</h3>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="contato" class="col-sm-3 col-form-label">Contato com:
+            </label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="contato" oninput="acompTexto() " placeholder="Digite..." />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="ticketAcomp" class="col-sm-3 col-form-label">Ticket:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="ticketAcomp" oninput="acompTexto() "
+                placeholder="Justificar se não tiver" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="AregUso" oninput="acompTexto() "
+                placeholder="Justificar se não tiver" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="Aacesso" oninput="acompTexto() " placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="Aentregas" oninput="acompTexto() " placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <label for="Arobo" class="col-sm-3 col-form-label">Robô:</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="Arobo" oninput="acompTexto() " placeholder="%" />
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+          <div class="mb-3 row">
+            <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
+            <div class="col-sm-11">
+              <textarea class="form-control" name="tratativa" id="tratativa" rows="5" oninput="acompTexto()"></textarea>
+            </div>
+          </div>
+          <!-- =============================================================================================================== -->
+
+          <div class="row mb-3">
+            <h5>Backup?</h5>
+          </div>
+
+          <div class="mb-4">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup2" type="radio" id="simBackup2" value="yes"
+                oninput="pergBackup2()" />
+              <label class="form-check-label" for="simBackup2">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" name="btnBackup2" type="radio" id="naoBackup2" value="no"
+                oninput="pergBackup2()" checked />
+              <label class="form-check-label" for="naoBackup2">Não</label>
+            </div>
+          </div>
+
+          <div id="telaBackup2" class="mb-3" style="display: none">
+            <div class="card col-sm-12 col-md-11">
+              <div class="card-header">
+                <h5>Informações para o Backup</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente comprometido?&nbsp;<span
+                      id="comprometido2-value">Nota: 5</span></label>
+                  <input type="range" class="form-range" id="comprometido2" min="0" max="10" step="1"
+                    oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="acompTexto()" />
+                </div>
+                <div class="mb-3 row">
+                  <label for="customRange1" class="form-label">Cliente tecnológico?&nbsp;<span
+                      id="tecnologico2-value">Nota: 5</span></label>
+                  <input type="range" class="form-range" id="tecnologico2" min="0" max="10" step="1"
+                    oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="acompTexto()" />
+                </div>
+                <div class="mb-3 row">
+                  <label for="obs" class="form-label">Informações Adicionais:</label>
+                  <div class="col-sm-11">
+                    <textarea class="form-control" name="etapaBackup2" id="etapaBackup2" rows="5"
+                      placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                      oninput="acompTexto()"></textarea>
+>>>>>>> Stashed changes
                   </div>
                 </div>
               </div>
@@ -1690,6 +2541,7 @@
       </div>
     </footer>
 
+<<<<<<< Updated upstream
     <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
@@ -1703,3 +2555,6 @@
     ></script>
   </body>
 </html>
+=======
+</html>
+>>>>>>> Stashed changes
