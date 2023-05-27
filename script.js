@@ -72,10 +72,28 @@ function sunOn() {
 darkMode.addEventListener("click", function () {
   if (darkMode.checked === true) {
     darkOn();
+    localStorage.setItem("mode", "dark");
   } else {
     sunOn();
+    localStorage.setItem("mode", "sun");
   }
 });
+
+window.onload = (event) => {
+  let mode = localStorage.getItem("mode");
+  if (mode == "sun") {
+    sunOn();
+    document.getElementById("toggle_checkbox").checked = false;
+  } else if (mode == "dark") {
+    darkOn();
+    document.getElementById("toggle_checkbox").checked = true;
+  }
+};
+
+function getMode() {
+  let mode = localStorage.getItem("mode");
+  console.log(mode);
+}
 
 document.querySelector("#comprometido").addEventListener("input", function () {
   const valor = document.querySelector("#comprometido-value");
