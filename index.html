@@ -33,7 +33,8 @@
 
   <nav class="navbar navbar-expand-lg" style="background-color: #005c9a">
     <div class="container-fluid">
-      <a class="navbar-brand" href="https://app.acessorias.com/sysmain.php?m=145" target="_blank" style="color: #fff; font-weight: 600">
+      <a class="navbar-brand" href="https://app.acessorias.com/sysmain.php?m=145" target="_blank"
+        style="color: #fff; font-weight: 600">
         <img src="images/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top" />
         Preenchimento Fly
       </a>
@@ -101,7 +102,7 @@
               <input class="form-control" placeholder="Leave a comment here" id="dono" oninput="teste()" />
               <label for="floatingTextarea">Dono do escritório:</label>
             </div>
-            
+
             <br>
             <div class="form-floating">
               <input class="form-control" placeholder="Leave a comment here" id="resp" oninput="teste()" />
@@ -116,37 +117,43 @@
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="number" placeholder="Leave a comment here" id="usuario" oninput="teste()" />
+              <input class="form-control" type="number" placeholder="Leave a comment here" id="usuario"
+                oninput="teste()" />
               <label for="floatingTextarea">Usuários aprox:</label>
             </div>
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="number" placeholder="Leave a comment here" id="empresas" oninput="teste()" />
+              <input class="form-control" type="number" placeholder="Leave a comment here" id="empresas"
+                oninput="teste()" />
               <label for="floatingTextarea">Empresas aprox:</label>
             </div>
-            
+
             <br>
             <div class="form-floating">
-              <input class="form-control" type="text" placeholder="Leave a comment here" id="sistemaContabil" oninput="teste()" />
+              <input class="form-control" type="text" placeholder="Leave a comment here" id="sistemaContabil"
+                oninput="teste()" />
               <label for="floatingTextarea">Sistema Contábil:</label>
             </div>
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="text" placeholder="Leave a comment here" id="jaUsaram" oninput="teste()" />
+              <input class="form-control" type="text" placeholder="Leave a comment here" id="jaUsaram"
+                oninput="teste()" />
               <label for="floatingTextarea">Ja usaram sistema de gestão:</label>
             </div>
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="text" placeholder="Leave a comment here" id="formas" oninput="teste()" />
+              <input class="form-control" type="text" placeholder="Leave a comment here" id="formas"
+                oninput="teste()" />
               <label for="floatingTextarea">Forma de entrega: (se recebem por email, wpp ou físico):</label>
             </div>
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="text" placeholder="Leave a comment here" id="maioriaRegimes" oninput="teste()" />
+              <input class="form-control" type="text" placeholder="Leave a comment here" id="maioriaRegimes"
+                oninput="teste()" />
               <label for="floatingTextarea">Qual a maioria dos regimes tributários:</label>
             </div>
 
@@ -158,82 +165,80 @@
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="text" placeholder="Leave a comment here" id="ticket2" oninput="teste()" />
+              <input class="form-control" type="text" placeholder="Leave a comment here" id="ticket2"
+                oninput="teste()" />
               <label for="floatingTextarea">Ticket:</label>
             </div>
 
             <br>
             <div class="form-floating">
-              <input class="form-control" type="text" placeholder="Leave a comment here" id="TicketApp" oninput="teste()" />
+              <input class="form-control" type="text" placeholder="Leave a comment here" id="TicketApp"
+                oninput="teste()" />
               <label for="floatingTextarea">Ticket do App e Area Vip:</label>
             </div>
 
             <br>
             <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="obs"style="height: 100px" oninput="teste()" ></textarea>
+              <textarea class="form-control" placeholder="Leave a comment here" id="obs" style="height: 100px"
+                oninput="teste()"></textarea>
               <label for="floatingTextarea2">Informações Adicionais:</label>
             </div>
             <br>
             <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="obs"style="height: 100px" oninput="teste()" ></textarea>
+              <textarea class="form-control" placeholder="Leave a comment here" id="obs" style="height: 100px"
+                oninput="teste()"></textarea>
               <label for="floatingTextarea2">Informações Adicionais:</label>
             </div>
 
             <!-- Button trigger modal -->
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="copResp()"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
+            <div class="mb-3 mt-3">
+              <button type="button" class="btn btn-outline-primary" onclick="copResp()" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 Copiar Texto
               </button>
               <!-- Button trigger modal dell -->
-            <button type="button" class="btn btn-outline-danger" onclick="copResp()" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
-            Apagar Tudo
-          </button>
+              <button type="button" class="btn btn-outline-danger" onclick="deleteResp()">
+                Apagar Tudo
+              </button>
             </div>
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    Texto Copiado
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="alert alert-warning" role="alert">
-                    Não esqueça de colocar o ticket da consutoria e do app
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Texto Copiado
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <p id="etapa1resp1"></p>
-                  <p id="etapa1resp2"></p>
-                  <p id="etapa1resp3"></p>
-                  <p id="etapa1resp4"></p>
-                  <p id="etapa1resp5"></p>
-                  <p id="etapa1resp6"></p>
-                  <p id="etapa1resp7"></p>
-                  <p id="etapa1resp8"></p>
-                  <p id="etapa1resp9"></p>
-                  <p id="etapa1resp10"></p>
-                  <p id="etapa1resp11"></p>
-                  <p id="etapa1resp12"></p>
-                  <p id="etapa1resp13"></p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
-                    Fechar
-                  </button>
+                  <div class="modal-body">
+                    <div class="alert alert-warning" role="alert">
+                      Não esqueça de colocar o ticket da consutoria e do app
+                    </div>
+                    <p id="etapa1resp1"></p>
+                    <p id="etapa1resp2"></p>
+                    <p id="etapa1resp3"></p>
+                    <p id="etapa1resp4"></p>
+                    <p id="etapa1resp5"></p>
+                    <p id="etapa1resp6"></p>
+                    <p id="etapa1resp7"></p>
+                    <p id="etapa1resp8"></p>
+                    <p id="etapa1resp9"></p>
+                    <p id="etapa1resp10"></p>
+                    <p id="etapa1resp11"></p>
+                    <p id="etapa1resp12"></p>
+                    <p id="etapa1resp13"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                      Fechar
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </article>
       </div>
       <!-- <div class="col-md-6">
@@ -260,16 +265,16 @@
           </div>
 
           <div class="mb-3">
-            
+
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial" id="flexCheckDefault"
-                oninput="infoGeral()" />
+              <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial"
+                id="flexCheckDefault" oninput="infoGeral()" />
               <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="etapa" value="Lista de Tarefas" id="flexCheckDefault2"
-                oninput="infoGeral()" />
+              <input class="form-check-input" type="checkbox" name="etapa" value="Lista de Tarefas"
+                id="flexCheckDefault2" oninput="infoGeral()" />
               <label class="form-check-label" for="flexCheckDefault2">Lista de Tarefas</label>
             </div>
 
@@ -286,8 +291,8 @@
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="etapa" value="Gestão de Processos" id="flexCheckDefault5"
-                oninput="infoGeral()" />
+              <input class="form-check-input" type="checkbox" name="etapa" value="Gestão de Processos"
+                id="flexCheckDefault5" oninput="infoGeral()" />
               <label class="form-check-label" for="flexCheckDefault5">Gestão de Processos</label>
             </div>
           </div>
@@ -307,8 +312,8 @@
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" name="etapa" value="Revisão/Tira Dúvidas" id="flexCheckDefault8"
-                oninput="infoGeral()" />
+              <input class="form-check-input" type="checkbox" name="etapa" value="Revisão/Tira Dúvidas"
+                id="flexCheckDefault8" oninput="infoGeral()" />
               <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
             </div>
 
@@ -317,7 +322,7 @@
                 oninput="infoGeral()" />
               <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
             </div>
-            
+
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" name="etapa" value="APLA" id="flexCheckDefault10"
                 oninput="infoGeral()" />
@@ -330,12 +335,13 @@
             <input class="form-control" placeholder="Leave a comment here" type="number" id="uso" oninput="infoGeral()">
             <label for="floatingTextarea2">Porcentagem de uso:</label>
 
-          <div id="naoFaltou2"> 
-            <br>
-            <div class="form-floating">
-              <input class="form-control" placeholder="Leave a comment here" type="text" id="parcicipantes" oninput="infoGeral()">
-              <label for="floatingTextarea2">Quem participou da consultoria/departamento:</label>
-            </div>
+            <div id="naoFaltou2">
+              <br>
+              <div class="form-floating">
+                <input class="form-control" placeholder="Leave a comment here" type="text" id="parcicipantes"
+                  oninput="infoGeral()">
+                <label for="floatingTextarea2">Quem participou da consultoria/departamento:</label>
+              </div>
             </div>
           </div>
           <br>
@@ -473,62 +479,62 @@
               <div class="mb-3">
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="etapa2" value="Configuração inicial" id="flexCheckDefault"
-                    oninput="infoGeral()" />
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Configuração inicial"
+                    id="flexCheckDefault" oninput="infoGeral()" />
                   <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
                 </div>
-                
+
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista de Tarefas" id="flexCheckDefault2"
-                    oninput="infoGeral()" />
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista de Tarefas"
+                    id="flexCheckDefault2" oninput="infoGeral()" />
                   <label class="form-check-label" for="flexCheckDefault2">Lista de Tarefas</label>
                 </div>
-                
+
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" name="etapa2" value="Robô" id="flexCheckDefault3"
                     oninput="infoGeral()" />
                   <label class="form-check-label" for="flexCheckDefault3">Robô</label>
                 </div>
-                
+
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista/Robô" id="flexCheckDefault4"
-                    oninput="infoGeral()" />
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Lista/Robô"
+                    id="flexCheckDefault4" oninput="infoGeral()" />
                   <label class="form-check-label" for="flexCheckDefault4">Lista/Robô</label>
                 </div>
-                
+
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="etapa2" value="Gestão de Processos" id="flexCheckDefault5"
-                    oninput="infoGeral()" />
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Gestão de Processos"
+                    id="flexCheckDefault5" oninput="infoGeral()" />
                   <label class="form-check-label" for="flexCheckDefault5">Gestão de Processos</label>
                 </div>
+              </div>
+
+              <div class="mb-3">
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Departamentos"
+                    id="flexCheckDefault6" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault6">Departamentos</label>
                 </div>
-                
-                <div class="mb-3">
-                
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="etapa2" value="Departamentos" id="flexCheckDefault6"
-                      oninput="infoGeral()" />
-                    <label class="form-check-label" for="flexCheckDefault6">Departamentos</label>
-                  </div>
-                
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="etapa2" value="APP" id="flexCheckDefault7"
-                      oninput="infoGeral()" />
-                    <label class="form-check-label" for="flexCheckDefault7">APP</label>
-                  </div>
-                
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="etapa2" value="Revisão/Tira Dúvidas" id="flexCheckDefault8"
-                      oninput="infoGeral()" />
-                    <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
-                  </div>
-                
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="etapa2" value="Retomada" id="flexCheckDefault9"
-                      oninput="infoGeral()" />
-                    <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
-                  </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="APP" id="flexCheckDefault7"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault7">APP</label>
                 </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Revisão/Tira Dúvidas"
+                    id="flexCheckDefault8" oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="etapa2" value="Retomada" id="flexCheckDefault9"
+                    oninput="infoGeral()" />
+                  <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
+                </div>
+              </div>
             </div>
 
             <div class="row mb-3">
@@ -642,7 +648,8 @@
 
             <br>
             <div class="form-floating">
-              <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="ticketConsult" oninput="infoGeral()">
+              <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="ticketConsult"
+                oninput="infoGeral()">
               <label for="floatingTextarea2">Ticket da consultoria:</label>
             </div>
 
@@ -690,65 +697,68 @@
                   </div>
                   <br>
                   <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="etapaBackup" style="height: 100px" placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade." oninput="infoGeral()"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="etapaBackup"
+                      style="height: 100px"
+                      placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
+                      oninput="infoGeral()"></textarea>
                     <label for="floatingTextarea2">Informações Adicionais:</label>
                   </div>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="mb-3">
-              <button type="button" class="btn btn-outline-primary" onclick="copResp2()" data-bs-toggle="modal"
-                data-bs-target="#exampleModal3">
-                Copiar Texto
-              </button>
-            </div>
-            <!-- Button trigger modal Dell-->
-            <button type="button" class="btn btn-outline-danger" onclick="copResp()" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">
-              Apagar Tudo
+          <div class="mb-3">
+            <button type="button" class="btn btn-outline-primary" onclick="copResp2()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal3">
+              Copiar Texto
             </button>
-            <div>
+          </div>
+          <!-- Button trigger modal Dell-->
+          <button type="button" class="btn btn-outline-danger" onclick="copResp()" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Apagar Tudo
+          </button>
+          <div>
 
-              <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        Texto Copiado
-                      </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Texto Copiado
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="alert alert-warning" role="alert">
+                      Não esqueça de colocar o ticket da consutoria e do app
                     </div>
-                    <div class="modal-body">
-                      <div class="alert alert-warning" role="alert">
-                        Não esqueça de colocar o ticket da consutoria e do app
-                      </div>
-                      <p id="geralResp0"></p>
-                      <p id="geralResp1"></p>
-                      <p id="geralResp2"></p>
-                      <p id="geralResp3"></p>
-                      <p id="geralResp4"></p>
-                      <p id="geralResp5"></p>
-                      <p id="geralResp55"></p>
-                      <p id="geralResp6"></p>
-                      <p id="geralResp7"></p>
-                      <p id="geralResp8"></p>
-                      <p id="geralResp9"></p>
-                      <p id="geralResp10"></p>
-                      <p id="geralResp11"></p>
-                      <p id="geralResp12"></p>
-                      <p id="geralResp13"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
-                        Fechar
-                      </button>
-                    </div>
+                    <p id="geralResp0"></p>
+                    <p id="geralResp1"></p>
+                    <p id="geralResp2"></p>
+                    <p id="geralResp3"></p>
+                    <p id="geralResp4"></p>
+                    <p id="geralResp5"></p>
+                    <p id="geralResp55"></p>
+                    <p id="geralResp6"></p>
+                    <p id="geralResp7"></p>
+                    <p id="geralResp8"></p>
+                    <p id="geralResp9"></p>
+                    <p id="geralResp10"></p>
+                    <p id="geralResp11"></p>
+                    <p id="geralResp12"></p>
+                    <p id="geralResp13"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                      Fechar
+                    </button>
                   </div>
                 </div>
               </div>
+            </div>
         </article>
       </div>
     </div>
