@@ -173,15 +173,29 @@
               <textarea class="form-control" placeholder="Leave a comment here" id="obs"style="height: 100px" oninput="teste()" ></textarea>
               <label for="floatingTextarea2">Informações Adicionais:</label>
             </div>
-
             <br>
-          <!-- Button trigger modal -->
-          <div class="mb-3">
-            <button type="button" class="btn btn-outline-primary" onclick="copResp()" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">
-              Copiar Texto
-            </button>
-          </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="obs"style="height: 100px" oninput="teste()" ></textarea>
+              <label for="floatingTextarea2">Informações Adicionais:</label>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="mb-3">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                onclick="copResp()"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Copiar Texto
+              </button>
+              <!-- Button trigger modal dell -->
+            <button type="button" class="btn btn-outline-danger" onclick="copResp()" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Apagar Tudo
+          </button>
+            </div>
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -674,13 +688,12 @@
                     <input type="range" class="form-range" id="tecnologico" min="0" max="10" step="1"
                       oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="infoGeral()" />
                   </div>
-
                   <br>
                   <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="etapaBackup" style="height: 100px" placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade." oninput="infoGeral()"></textarea>
                     <label for="floatingTextarea2">Informações Adicionais:</label>
                   </div>
-
+                  </div>
                 </div>
               </div>
             </div>
@@ -691,6 +704,11 @@
                 Copiar Texto
               </button>
             </div>
+            <!-- Button trigger modal Dell-->
+            <button type="button" class="btn btn-outline-danger" onclick="copResp()" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Apagar Tudo
+            </button>
             <div>
 
               <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
