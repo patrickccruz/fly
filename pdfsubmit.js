@@ -1,7 +1,7 @@
 document.querySelector(".doc-content").style.display = 'none'
 
 function PrintElem(){
-    const pdfPage = window.open('', 'PRINT', 'blank');
+    const pdfPage = window.open('', 'PRINT', 'height=800,width=800');
     pdfPage.document.write('<html><head><title>' + '</title>' + '<link rel="stylesheet" href="style_ata.css" />');
     pdfPage.document.write('</head><body >');
     pdfPage.document.write(document.querySelector(".doc-content").innerHTML);
