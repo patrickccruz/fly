@@ -178,3 +178,7 @@ body {
 .form-floating > label {
   color: black;
 }
+
+label::after{
+  background-color: transparent !important;
+}
