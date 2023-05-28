@@ -12,10 +12,6 @@ function confIni() {
   document.querySelector("#background-image").style.display = "none";
 }
 
-function image() {
-  document.querySelector("#background-image").style.display = "none";
-}
-
 function geral() {
   document.getElementById("etapa1").style.display = "none";
   document.getElementById("menuGeral").style.display = "block";
@@ -83,6 +79,8 @@ function darkOn() {
   footer.style.backgroundColor = "#003050";
   footer.style.color = "white";
   document.querySelector("h2").style.color = "white";
+  document.querySelector("h5").style.color = "white";
+  document.querySelector("h3").style.color = "white";
 }
 
 function sunOn() {
@@ -94,6 +92,8 @@ function sunOn() {
   footer.style.backgroundColor = "white";
   footer.style.color = "#000";
   document.querySelector("h2").style.color = "#000000";
+  document.querySelector("h5").style.color = "#000000";
+  document.querySelector("h3").style.color = "#000000";
 }
 
 darkMode.addEventListener("click", function () {
@@ -553,7 +553,7 @@ function textoMigra() {
   document.getElementById("Mresp7").innerHTML = `- SMTP Ativo: ${Aresp7}`;
 
   let Aresp8 = document.getElementById("regUso").value;
-  document.getElementById("Mresp8").innerHTML = `- Uso: % ${Aresp8}`;
+  document.getElementById("Mresp8").innerHTML = `- Uso: ${Aresp8}%`;
 
   let Aresp9 = document.getElementById("acesso").value;
   document.getElementById("Mresp9").innerHTML = `- Acesso: ${Aresp9}`;
@@ -565,7 +565,7 @@ function textoMigra() {
   document.getElementById("Mresp11").innerHTML = `- Robô: ${Aresp11}`;
 
   let Aresp12 = document.getElementById("gestao").value;
-  document.getElementById("Mresp12").innerHTML = `- Gestão:: ${Aresp12}`;
+  document.getElementById("Mresp12").innerHTML = `- Gestão: ${Aresp12}`;
 
   let Aresp13 = document.getElementById("app").value;
   document.getElementById("Mresp13").innerHTML = `- APP: ${Aresp13}`;
@@ -581,7 +581,7 @@ function textoMigra() {
   let Aresp16 = document.getElementById("dispensaTicket").value;
   document.getElementById(
     "Mresp16"
-  ).innerHTML = `- Houve dispensa de treinamento ?Se sim, qual numero do ticket?: ${Aresp16}`;
+  ).innerHTML = `- Houve dispensa de treinamento ? ${Aresp16}`;
 
   let Aresp17 = document.getElementById("Minfo2").value;
   document.getElementById(
@@ -624,7 +624,7 @@ function acompTexto() {
   document.getElementById("Aresp2").innerHTML = `- Ticket: ${Aresp2}`;
 
   let Aresp3 = document.getElementById("AregUso").value;
-  document.getElementById("Aresp3").innerHTML = `- Uso: ${Aresp3}`;
+  document.getElementById("Aresp3").innerHTML = `- Uso: ${Aresp3}%`;
 
   let Aresp4 = document.getElementById("Aacesso").value;
   document.getElementById("Aresp4").innerHTML = `- Acesso: ${Aresp4}`;
@@ -720,9 +720,62 @@ function faltaClient() {
   }
 }
 
-function deleteResp() {
+function deleteRespInicio() {
   document.getElementById("dono").value = "";
   document.getElementById("resp").value = "";
+  document.getElementById("quem").value = "";
+  document.getElementById("usuario").value = "";
+  document.getElementById("empresas").value = "";
+  document.getElementById("sistemaContabil").value = "";
+  document.getElementById("jaUsaram").value = "";
+  document.getElementById("formas").value = "";
+  document.getElementById("maioriaRegimes").value = "";
+  document.getElementById("valor").value = "";
+  document.getElementById("TicketApp").value = "";
+  document.getElementById("ticket2").value = "";
+  document.getElementById("obs").value = "";
 }
 
-function deleteResp2() {}
+function deleteRespGeral() {
+  document.getElementById("uso").value = "";
+  document.getElementById("parcicipantes").value = "";
+  document.getElementById("ticketConsult").value = "";
+  document.getElementById("geralObs").value = "";
+  document.getElementById("comprometido").value = "";
+  document.getElementById("comprometido").value = "";
+  document.getElementById("tecnologico").value = "";
+  document.getElementById("etapaBackup").value = "";
+}
+
+function deleteRespMigra() {
+  document.getElementById("valorMigra").value = "";
+  document.getElementById("referenciaMigra").value = "";
+  document.getElementById("formaContato").value = "";
+  document.getElementById("equipeEngajada").value = "";
+  document.getElementById("dispensaMassa").value = "";
+  document.getElementById("erp").value = "";
+  document.getElementById("smtp").value = "";
+  document.getElementById("regUso").value = "";
+  document.getElementById("acesso").value = "";
+  document.getElementById("entregas").value = "";
+  document.getElementById("robo").value = "";
+  document.getElementById("gestao").value = "";
+  document.getElementById("app").value = "";
+  document.getElementById("apla").value = "";
+  document.getElementById("ticketFinal").value = "";
+  document.getElementById("dispensaTicket").value = "";
+  document.getElementById("Minfo2").value = "";
+}
+
+function deleteRespAcomp() {
+  document.getElementById("contato").value = "";
+  document.getElementById("ticketAcomp").value = "";
+  document.getElementById("AregUso").value = "";
+  document.getElementById("Aacesso").value = "";
+  document.getElementById("Aentregas").value = "";
+  document.getElementById("Arobo").value = "";
+  document.getElementById("tratativa").value = "";
+  document.getElementById("comprometido2").value = "";
+  document.getElementById("tecnologico2").value = "";
+  document.getElementById("etapaBackup2").value = "";
+}

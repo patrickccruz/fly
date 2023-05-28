@@ -43,7 +43,7 @@
           <a class="nav-link" id="acpt" onclick="acpt()" href="#">Acompanhamento</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="ataNav" onclick="ata()" href="#">ATA</a>
+          <a class="nav-link" id="ataNav" onclick="ata()" href="#">Gerador de Ata</a>
         </li>
         <li class="nav-item toogle-sun-moon">
           <input type="checkbox" id="toggle_checkbox" />
@@ -166,7 +166,7 @@
             data-bs-target="#exampleModal">
             Copiar Texto
           </button>
-          <button type="button" class="btn btn-outline-danger" onclick="deleteResp()">
+          <button type="button" class="btn btn-outline-danger" onclick="deleteRespInicio()">
             Apagar Tudo
           </button>
         </div>
@@ -221,7 +221,7 @@
           <h3>Etapas Gerais</h3>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3" id="etapa-geral">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial"
               id="flexCheckDefault" oninput="infoGeral()" />
@@ -253,7 +253,7 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3" id="">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" name="etapa" value="Departamentos" id="flexCheckDefault6"
               oninput="infoGeral()" />
@@ -660,7 +660,7 @@
             data-bs-target="#exampleModal3">
             Copiar Texto
           </button>
-          <button type="button" class="btn btn-outline-danger" onclick="deleteResp2()">
+          <button type="button" class="btn btn-outline-danger" onclick="deleteRespGeral()">
             Apagar Tudo
           </button>
         </div>
@@ -676,7 +676,7 @@
               </div>
               <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                  Não esqueça de colocar o ticket da consutoria e do app
+                  Não esqueça de criar o Ticket no movidesk !
                 </div>
                 <p id="geralResp0"></p>
                 <p id="geralResp1"></p>
@@ -714,125 +714,98 @@
         <div class="row mb-3">
           <h3>Migração</h3>
         </div>
-        <div class="mb-3 row">
-          <label for="valorMigra" class="col-sm-3 col-form-label">Valor do Acessórias:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="valorMigra" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="valorMigra"
+            oninput="textoMigra()" />
+          <label for="valorMigra">Valor do Acessórias:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="referenciaMigra" class="col-sm-3 col-form-label">Referencia técnica e seu departamento:
-          </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="referenciaMigra" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="referenciaMigra"
+            oninput="textoMigra()" />
+          <label for="referenciaMigra">Referencia técnica e seu departamento:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="formaContato" class="col-sm-3 col-form-label">Melhor forma de contato:
-          </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="formaContato" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="formaContato"
+            oninput="textoMigra()" />
+          <label for="formaContato">Melhor forma de contato:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="equipeEngajada" class="col-sm-3 col-form-label">Equipe engajada? Quais? :
-          </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="equipeEngajada" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="equipeEngajada"
+            oninput="textoMigra()" />
+          <label for="equipeEngajada">Equipe engajada? Quais?</label>
         </div>
-        <div class="mb-3 row">
-          <label for="dispensaMassa" class="col-sm-3 col-form-label">Dispensa em massa? :
-          </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="dispensaMassa" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="dispensaMassa"
+            oninput="textoMigra()" />
+          <label for="dispensaMassa">Dispensa em massa?</label>
         </div>
-        <div class="mb-3 row">
-          <label for="erp" class="col-sm-3 col-form-label">ERP: </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="erp" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="erp"
+            oninput="textoMigra()" />
+          <label for="erp">ERP:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="smtp" class="col-sm-3 col-form-label">SMTP Ativo:
-          </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="smtp" oninput="textoMigra()" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="smtp"
+            oninput="textoMigra()" />
+          <label for="smtp">SMTP Ativo ?</label>
         </div>
-
         <div class="row mb-3">
-          <h3>Registro de uso</h3>
+          <h5>Registro de uso</h5>
         </div>
-        <div class="mb-3 row">
-          <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="regUso" oninput="textoMigra()" placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="regUso"
+            oninput="textoMigra()" />
+          <label for="regUso">Uso:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="acesso" oninput="textoMigra()" placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="acesso"
+            oninput="textoMigra()" />
+          <label for="acesso">Acesso:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="entregas" oninput="textoMigra() " placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="entregas"
+            oninput="textoMigra()" />
+          <label for="entregas">Entregas:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="robo" class="col-sm-3 col-form-label">Robô:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="robo" oninput="textoMigra() " placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="robo"
+            oninput="textoMigra()" />
+          <label for="robo">Robô:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="gestao" class="col-sm-3 col-form-label">Gestão:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="gestao" oninput="textoMigra() " placeholder="Digitar..." />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="gestao"
+            oninput="textoMigra()" />
+          <label for="gestao">Gestão:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="app" class="col-sm-3 col-form-label">APP:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="app" oninput="textoMigra() " placeholder="Digitar..." />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="app"
+            oninput="textoMigra()" />
+          <label for="app">Aplicativo e Area Vip:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="apla" class="col-sm-3 col-form-label">APLA:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="apla" oninput="textoMigra() " placeholder="Digitar..." />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="apla"
+            oninput="textoMigra()" />
+          <label for="apla">Modulo APLA Foi Aplicado?</label>
         </div>
-        <div class="mb-3 row">
-          <label for="ticketFinal" class="col-sm-3 col-form-label">Número do Ticket de Finalização dos
-            treinamentos:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="ticketFinal" oninput="textoMigra() "
-              placeholder="Digite..." />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="ticketFinal"
+            oninput="textoMigra()" />
+          <label for="ticketFinal">Número do Ticket de Finalização dos treinamentos:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="dispensaTicket" class="col-sm-3 col-form-label">Houve dispensa de treinamento:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="dispensaTicket" oninput="textoMigra() "
-              placeholder="Se sim, qual numero do ticket?" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="dispensaTicket"
+            oninput="textoMigra()" />
+          <label for="dispensaTicket">Houve dispensa de treinamento ? (Se sim, qual numero do ticket?)</label>
         </div>
-        <div class="mb-3 row">
-          <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
-          <div class="col-sm-11">
-            <textarea class="form-control" name="geralObs" id="Minfo2" rows="5" oninput="textoMigra()"></textarea>
-          </div>
-        </div>
+        
 
         <div class="mb-3">
           <button type="button" class="btn btn-outline-primary" onclick="copResp3()" data-bs-toggle="modal"
             data-bs-target="#exampleModal2">
             Copiar Texto
+          </button>
+          <button type="button" class="btn btn-outline-danger" onclick="deleteRespMigra()">
+            Apagar Tudo
           </button>
         </div>
 
@@ -846,6 +819,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+                <div class="alert alert-warning" role="alert">
+                  Não esqueça de criar o Ticket de migração no movidesk !
+                </div>
                 <p id="Mresp1"></p>
                 <p id="Mresp2"></p>
                 <p id="Mresp3"></p>
@@ -884,52 +860,43 @@
         <div class="row mb-3">
           <h3>Acompanhamento</h3>
         </div>
-        <div class="mb-3 row">
-          <label for="contato" class="col-sm-3 col-form-label">Contato com:
-          </label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="contato" oninput="acompTexto() " placeholder="Digite..." />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="contato"
+            oninput="acompTexto()" />
+          <label for="contato">Contato com:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="ticketAcomp" class="col-sm-3 col-form-label">Ticket:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="ticketAcomp" oninput="acompTexto() "
-              placeholder="Justificar se não tiver" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="ticketAcomp"
+            oninput="acompTexto()" />
+          <label for="ticketAcomp">Ticket:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="regUso" class="col-sm-3 col-form-label">Uso:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="AregUso" oninput="acompTexto() "
-              placeholder="Justificar se não tiver" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="AregUso"
+            oninput="acompTexto()" />
+          <label for="AregUso">Uso: (Justificar se não tiver)</label>
         </div>
-        <div class="mb-3 row">
-          <label for="acesso" class="col-sm-3 col-form-label">Acesso:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="Aacesso" oninput="acompTexto() " placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="Aacesso"
+            oninput="acompTexto()" />
+          <label for="Aacesso">Acesso:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="entregas" class="col-sm-3 col-form-label">Entregas:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="Aentregas" oninput="acompTexto() " placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="Aentregas"
+            oninput="acompTexto()" />
+          <label for="Aentregas">Entregas:</label>
         </div>
-        <div class="mb-3 row">
-          <label for="Arobo" class="col-sm-3 col-form-label">Robô:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="Arobo" oninput="acompTexto() " placeholder="%" />
-          </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="Arobo"
+            oninput="acompTexto()" />
+          <label for="Arobo">Robô:</label>
         </div>
-        <div class="mb-3 row">
-          <h4 for="Minfo" class="form-label">Informações Adicionais:</h4>
-          <div class="col-sm-11">
-            <textarea class="form-control" name="tratativa" id="tratativa" rows="5" oninput="acompTexto()"></textarea>
-          </div>
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Leave a comment here" id="tratativa" style="height: 100px"
+            placeholder="1"
+            oninput="textoMigra()"></textarea>
+          <label for="tratativa">Informações Adicionais:</label>
         </div>
-
+        
         <div class="row mb-3">
           <h5>Backup?</h5>
         </div>
@@ -965,40 +932,22 @@
                 <input type="range" class="form-range" id="tecnologico2" min="0" max="10" step="1"
                   oninput="iTec.innerHTML=Number(tecnologico.value)" onchange="acompTexto()" />
               </div>
-              <div class="mb-3 row">
-                <label for="obs" class="form-label">Informações Adicionais:</label>
-                <div class="col-sm-11">
-                  <textarea class="form-control" name="etapaBackup2" id="etapaBackup2" rows="5"
-                    placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
-                    oninput="acompTexto()"></textarea>
-                </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Leave a comment here" id="etapaBackup2" style="height: 100px"
+                  placeholder="1"
+                  oninput="acompTexto()"></textarea>
+                <label for="etapaBackup2">Informações Adicionais:</label>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- <div id="telaBackup2" style="display: none" class="mb-3">
-            <div class="mb-3 row">
-              <label for="obs" class="form-label"
-                >Informações Adicionais:</label
-              >
-              <div class="col-sm-11">
-                <textarea
-                  class="form-control"
-                  name="etapaBackup2"
-                  id="etapaBackup2"
-                  rows="5"
-                  placeholder="Preencher com informações importantes para o consultor do Backup realizar sua consultoria com mais praticidade."
-                  oninput="acompTexto()"
-                ></textarea>
-              </div>
-            </div>
-          </div> -->
-
         <div class="mb-3">
           <button type="button" class="btn btn-outline-primary" onclick="copResp4()" data-bs-toggle="modal"
             data-bs-target="#exampleModal4">
             Copiar Texto
+          </button>
+          <button type="button" class="btn btn-outline-danger" onclick="deleteRespAcomp()">
+            Apagar Tudo
           </button>
         </div>
 
@@ -1013,6 +962,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+                <div class="alert alert-warning" role="alert">
+                  Não esqueça de criar o Ticket de Acompanhamento no movidesk !
+                </div>
                 <p id="Aresp1"></p>
                 <p id="Aresp2"></p>
                 <p id="Aresp3"></p>
@@ -1042,962 +994,1399 @@
     <div class="col-sm-12 col-md-6">
       <article>
         <div class="row mb-3">
-          <h3>Ata de Alinhamento Inicial</h3>
+          <h2>Gerador de Ata de Alinhamento Inicial</h2>
         </div>
-
-        <div class="mb-3 row">
-          <label for="ClinteEmpresa" class="col-sm-3 col-form-label">Cliente (Empresa):</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="cliente-input" oninput="Ata()" />
+        <div class="row mb-3">
+          <h3>Identificação</h3>
+        </div>
+        <div>
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="cliente-input"
+              oninput="Ata()" />
+            <label for="ClinteEmpresa">Cliente (Empresa):</label>
           </div>
-        </div>
 
-        <div class="mb-3 row">
-          <label for="Inicio" class="col-sm-3 col-form-label">Início:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="inicio-input" oninput="Ata()" />
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="inicio-input"
+              oninput="Ata()" />
+            <label for="Inicio">Início:</label>
           </div>
-        </div>
 
-        <div class="mb-3 row">
-          <label for="Inicio" class="col-sm-3 col-form-label">Finalização:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="finalizacao-input" oninput="Ata()" />
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+              oninput="Ata()" />
+            <label for="Inicio">Finalização:</label>
           </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="responsavel-input"
+              oninput="Ata()" />
+            <label for="Inicio">Responsável Técnico (Empresa):</label>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="tel" width="10" id="telefone-input"
+              oninput="Ata()" />
+            <label for="Inicio">Telefone:</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="tel" width="10" id="telefone2-input"
+              oninput="Ata()" />
+            <label for="Inicio">Telefone fixo:</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="contratante-input"
+              oninput="Ata()" />
+            <label for="Inicio">Contratante da Solução (Proprietário):</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="email" width="10" id="finalizacao-input"
+              oninput="Ata()" />
+            <label for="Inicio">E-mail:</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="consultor-input"
+              oninput="Ata()" />
+            <label for="Inicio">Consultor Acessórias:</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" type="email" width="10" id="emailConsultor-input"
+              oninput="Ata()" />
+            <label for="Inicio">E-mail Consultor:</label>
+          </div>
+        <!-- <FIz ate aqui> -->
+        <div class="row mb-3">
+          <h3>Sucesso para a empresa é quando ?</h3>
+        </div>
+        <div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
         </div>
 
-        <p><button id="pre-vizualizar">Pré Vizualizar</button></p>
-        <p><button id="preencherPDF">Imprimir</button></p>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
 
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
 
-<div class="c-39 doc-content">
-  <div>
-    <p class="c48 c53">
-      <span
-        style="
-          overflow: hidden;
-          display: inline-block;
-          margin: 0px 0px;
-          border: 0px solid #000000;
-          transform: rotate(0rad) translateZ(0px);
-          -webkit-transform: rotate(0rad) translateZ(0px);
-          width: 204.5px;
-          height: 34.71px;
-        "
-        ><img
-          alt=""
-          src="images/image1.png"
-          style="
-            width: 204.5px;
-            height: 34.71px;
-            margin-left: 0px;
-            margin-top: 0px;
-            transform: rotate(0rad) translateZ(0px);
-            -webkit-transform: rotate(0rad) translateZ(0px);
-          "
-          title="" /></span
-      ><img />
-    </p>
-  </div>
-  <p class="c63">
-    <span class="c18 c60"
-      >Cronograma de Implanta&ccedil;&atilde;o Acess&oacute;rias</span
-    >
-  </p>
-  <ol class="c30 lst-kix_90wmzo7egkw2-0 start" start="1">
-    <li class="c32 c47 li-bullet-0">
-      <h2 id="h.nlyzdz7jf2ji" style="display: inline">
-        <span class="c18 c6">Identifica&ccedil;&atilde;o</span>
-      </h2>
-    </li>
-  </ol>
-  <p class="c0 c32">
-    <span class="c18 c26"
-      >(responsabilidade pelo preenchimento: Consultor de
-      Implanta&ccedil;&atilde;o)</span
-    >
-  </p>
-  <p class="c3 c7"><span class="c18 c26"></span></p>
-  <a id="t.e1ed9be709795078a1e738cc08608ec9815d6a57"></a><a id="t.0"></a>
-  <table class="c62">
-    <tr class="c54">
-      <td class="c37" colspan="2" rowspan="1">
-        <p class="c2"><span class="c16">Cliente (Empresa):</span></p>
-        <p class="c0 c3"><span id="cliente-label" class="c14"></span></p>
-      </td>
-      <td class="c59" colspan="2" rowspan="1">
-        <p class="c0 c41"><span class="c18 c16">In&iacute;cio:</span></p>
-        <p class="c0 c3"><span id="inicio-label" class="c14"></span></p>
-      </td>
-      <td class="c45" colspan="2" rowspan="1">
-        <p class="c0 c58">
-          <span class="c16">Finaliza&ccedil;&atilde;o:</span>
-          <p><span id="finalizacao-label" class="c14"></span></p>
-        </p>
-        <p class="c0 c3 c58"><span class="c14"></span></p>
-      </td>
-    </tr>
-    <tr class="c34">
-      <td class="c37" colspan="2" rowspan="1">
-        <p class="c0">
-          <span class="c16"
-            >Respons&aacute;vel T&eacute;cnico (Empresa):</span
-          >
-        </p>
-      </td>
-      <td class="c59" colspan="2" rowspan="1">
-        <p class="c0"><span class="c18 c16">Telefone:</span></p>
-        <p class="c0 c3"><span class="c14"></span></p>
-      </td>
-      <td class="c45" colspan="2" rowspan="1">
-        <p class="c0"><span class="c18 c16">Telefone:</span></p>
-        <p class="c0 c3"><span class="c14"></span></p>
-      </td>
-    </tr>
-    <tr class="c25">
-      <td class="c37" colspan="2" rowspan="1">
-        <p class="c0">
-          <span class="c18 c16"
-            >Contratante da Solu&ccedil;&atilde;o (Propriet&aacute;rio):</span
-          >
-        </p>
-        <p class="c0 c3"><span class="c14"></span></p>
-      </td>
-      <td class="c44" colspan="4" rowspan="1">
-        <p class="c0"><span class="c16">E-mail:</span></p>
-      </td>
-    </tr>
-    <tr class="c25">
-      <td class="c37" colspan="2" rowspan="1">
-        <p class="c0">
-          <span class="c18 c16">Consultor Acess&oacute;rias:</span>
-        </p>
-        <p class="c0"><span class="c14">Patrick da costa cruz </span></p>
-      </td>
-      <td class="c44" colspan="4" rowspan="1">
-        <p class="c0"><span class="c18 c16">E-mail:</span></p>
-        <p class="c0"><span class="c14">patrick.cruz@acessorias.com</span></p>
-      </td>
-    </tr>
-  </table>
-  <ol class="c30 lst-kix_90wmzo7egkw2-0" start="2">
-    <li class="c46 c32 li-bullet-0">
-      <h2 id="h.1yvfiw6g5dwv" style="display: inline">
-        <span class="c6">Benef&iacute;cios esperados com o projeto</span>
-      </h2>
-    </li>
-  </ol>
-  <a id="t.20c0aa771a22fe39c3455f566bcc42cb9d0a3add"></a><a id="t.1"></a>
-  <table class="c27">
-    <tr class="c56">
-      <td class="c15 c23" colspan="1" rowspan="1">
-        <p class="c2">
-          <span class="c16">Benef&iacute;cios do Projeto</span>
-        </p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c15" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c33"
-            >O Time de implanta&ccedil;&atilde;o tem o objetivo de entregar o
-            primeiro sucesso ao cliente. Sucesso este, que consiste em
-            entender qual a necessidade do cliente e auxiliar nas
-            configura&ccedil;&otilde;es e ajustes da ferramenta.</span
-          >
-        </p>
-      </td>
-    </tr>
-    <tr class="c57">
-      <td class="c15" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Abordaremos os pontos principais que ir&atilde;o levar o cliente
-            ao primeiro sucesso de uma forma r&aacute;pida</span
-          >
-        </p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c15" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >O time de implanta&ccedil;&atilde;o ir&aacute; criar um roteiro,
-            que ter&aacute; o foco em tornar o cliente apto nas
-            funcionalidades que s&atilde;o cruciais para o atingimento dos
-            objetivos do mesmo.</span
-          >
-        </p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c15" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Esses objetivos ser&atilde;o alcan&ccedil;ados com nosso
-            Alinhamento de 1hora para entender o fluxo e expectativas do
-            cliente.</span
-          >
-        </p>
-      </td>
-    </tr>
-  </table>
-  <ol class="c30 lst-kix_90wmzo7egkw2-0" start="3">
-    <li class="c46 c32 li-bullet-0">
-      <h2 id="h.sippditxg7yw" style="display: inline">
-        <span class="c6">Objetivo do projeto</span>
-      </h2>
-    </li>
-  </ol>
-  <p class="c7">
-    <span class="c18 c26"
-      >(responsabilidade pelo preenchimento: Consultor de
-      Implanta&ccedil;&atilde;o)</span
-    >
-  </p>
-  <p class="c48 c3"><span class="c18 c26"></span></p>
-  <a id="t.4c5933014a71e2d578d9a11cbad51a95f8c38f9d"></a><a id="t.2"></a>
-  <table class="c27">
-    <tr class="c5">
-      <td class="c15" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c33"
-            >Facilitar a fluidez do suporte com o cliente; otimizar o processo
-            do agente que est&aacute; em campo ou no suporte</span
-          >
-        </p>
-      </td>
-    </tr>
-  </table>
-  <ol class="c30 lst-kix_90wmzo7egkw2-1 start" start="1">
-    <li class="c42 li-bullet-0">
-      <h2 id="h.gmr81kmdkspy" style="display: inline">
-        <span class="c6">Sucesso para a empresa &eacute; quando:</span>
-      </h2>
-    </li>
-  </ol>
-  <p class="c7">
-    <span class="c18 c26"
-      >(responsabilidade pelo preenchimento:Consultor de
-      Implanta&ccedil;&atilde;o)</span
-    >
-  </p>
-  <p class="c7 c3"><span class="c18 c26"></span></p>
-  <a id="t.f99f69b642b9d93be59a62cd8af50894c5f2cece"></a><a id="t.3"></a>
-  <table class="c40">
-    <tr class="c5">
-      <td class="c51" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c8" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Organizar Entregas de prazos e obriga&ccedil;&otilde;es</span
-          >
-        </p>
-      </td>
-      <td class="c35" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c12" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Automatizar o envio de documentos e
-            obriga&ccedil;&otilde;es</span
-          >
-        </p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c51" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c8" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Facilitar a comunica&ccedil;&atilde;o com o cliente</span
-          >
-        </p>
-      </td>
-      <td class="c35" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c12" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Visibilidade das entregas e facilitar a gest&atilde;o da
-            equipe</span
-          >
-        </p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c51" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c8" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14"
-            >Garantir a entrega do documento para o cliente final tendo
-            protocolos de registros</span
-          >
-        </p>
-      </td>
-      <td class="c35" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c12" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c14"></span></p>
-      </td>
-    </tr>
-  </table>
-  <ol class="c30 lst-kix_90wmzo7egkw2-0" start="4">
-    <li class="c46 c32 li-bullet-0">
-      <h2 id="h.fe318mbzomsy" style="display: inline">
-        <span class="c18 c6"
-          >Tipos de Recursos necess&aacute;rios - M&oacute;dulos</span
-        >
-      </h2>
-    </li>
-  </ol>
-  <p class="c7">
-    <span class="c18 c26"
-      >(responsabilidade pelo preenchimento:Consultor de
-      Implanta&ccedil;&atilde;o)</span
-    >
-  </p>
-  <p class="c7 c3"><span class="c18 c26"></span></p>
-  <a id="t.027caf749ff87649258ecfb7d44dd75fed0a890a"></a><a id="t.4"></a>
-  <table class="c40">
-    <tr class="c5">
-      <td class="c51" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c28" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">Gest&atilde;o de Processos</span></p>
-      </td>
-      <td class="c38" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c12" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c14">Aplicativo e &Aacute;rea VIP</span>
-        </p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c51" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c28" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">APLA</span></p>
-      </td>
-      <td class="c38" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">( )</span></p>
-      </td>
-      <td class="c12" colspan="1" rowspan="1">
-        <p class="c0"><span class="c14">Komunic</span></p>
-      </td>
-    </tr>
-  </table>
-  <p class="c3 c48"><span class="c18 c50"></span></p>
-  <ol class="c30 lst-kix_90wmzo7egkw2-0" start="5">
-    <li class="c46 c32 li-bullet-0">
-      <h2 id="h.t8dd8dna76x4" style="display: inline">
-        <span class="c18 c6">Detalhamento do Cronograma</span>
-      </h2>
-    </li>
-  </ol>
-  <p class="c7">
-    <span class="c18 c26"
-      >(responsabilidade pelo preenchimento: Consultor de
-      Implanta&ccedil;&atilde;o)</span
-    >
-  </p>
-  <p class="c7 c3"><span class="c18 c26"></span></p>
-  <a id="t.b1a9c0612c2675e74aa695aa34b1c74d3e8554cf"></a><a id="t.5"></a>
-  <table class="c61">
-    <tr class="c5">
-      <td class="c19" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Alinhamento</span></p>
-      </td>
-      <td class="c13 c43" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c43" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c43" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c43" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">Alinhamento inicial</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c17" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Consultoria 1</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2">
-          <span class="c11">Configura&ccedil;&atilde;o inicial</span>
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c17" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Consultoria 2</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2">
-          <span class="c11">Lista de tarefas e rob&ocirc;</span>
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c17" colspan="1" rowspan="1">
-        <p class="c2"><span class="c31">Consultoria 3</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">E-continuo avan&ccedil;ado</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c17" colspan="1" rowspan="1">
-        <p class="c2"><span class="c31">Consultoria 4</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">Departamento</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c17" colspan="1" rowspan="1">
-        <p class="c2"><span class="c31">Consultoria 5</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">Gest&atilde;o de processo</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c55">
-      <td class="c17" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Consultoria 6</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Data</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Hora</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c24" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">App e area vip</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2"><span class="c11">1 h</span></p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c2 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-  </table>
-  <ol class="c30 lst-kix_90wmzo7egkw2-0" start="6">
-    <li class="c32 c46 li-bullet-0">
-      <h2 id="h.afyyt1a858f9" style="display: inline">
-        <span class="c18 c6">Acompanhamento das Tarefas</span>
-      </h2>
-    </li>
-  </ol>
-  <p class="c7 c3"><span class="c18 c26"></span></p>
-  <a id="t.3cb9727a21da1cf8ade4c4c9ab648174e152b47b"></a><a id="t.6"></a>
-  <table class="c61">
-    <tr class="c5">
-      <td class="c22 c21" colspan="1" rowspan="1">
-        <p class="c2">
-          <span class="c9">Configura&ccedil;&otilde;es Iniciais</span>
-        </p>
-      </td>
-      <td class="c20 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Atividade</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Respons&aacute;vel </span></p>
-      </td>
-      <td class="c4 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Prazo</span></p>
-      </td>
-      <td class="c4 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0"><span class="c11">Cadastro dos Colaboradores</span></p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Realizar o cadastro dos colaboradores de acordo com as
-            permiss&otilde;es</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11">Revis&atilde;o dos Departamentos</span>
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Revisar os departamentos existentes na ferramenta com os atuais
-            criando novos ou exclu&iacute;do os que n&atilde;o existem</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11">Revis&atilde;o das Obriga&ccedil;&otilde;es</span>
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Revisar obriga&ccedil;&otilde;es existentes e criar alguma
-            espec&iacute;fica caso n&atilde;o exista
-          </span>
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Revis&atilde;o dos Regimes Tribut&aacute;rios</span
-          >
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Revisar os regimes tribut&aacute;rios dentro do padr&atilde;o da
-            empresa</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11">Preenchimento da Planilha de Clientes</span>
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Preencher planilha de importa&ccedil;&atilde;o de clientes
-            disponibilizada pelo consultor</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0"><span class="c11">Cadastro dos Clientes</span></p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11">Realizar o cadastro do cliente</span>
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11">Revis&atilde;o das Empresas Cadastradas</span>
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Realizar a revis&atilde;o das empresas com foco em Outros
-            indicadores, e-mail do cliente, obriga&ccedil;&otilde;es e
-            respons&aacute;veis pelos departamentos</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">e-Cont&iacute;nuo</span></p>
-      </td>
-      <td class="c20 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Atividade</span></p>
-      </td>
-      <td class="c13 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Respons&aacute;vel </span></p>
-      </td>
-      <td class="c4 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Prazo</span></p>
-      </td>
-      <td class="c4 c21" colspan="1" rowspan="1">
-        <p class="c2"><span class="c9">Status</span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Instala&ccedil;&atilde;o do e-Cont&iacute;nuo</span
-          >
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Realizar a instala&ccedil;&atilde;o do sistema e-cont&iacute;nuo
-            para os colaboradores que ir&atilde;o utilizar</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Configura&ccedil;&atilde;o do e-Cont&iacute;nuo</span
-          >
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >configurar as pastas Download e Upload de acordo com as
-            configura&ccedil;&otilde;es do cliente</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Separa&ccedil;&atilde;o de Guias para Cadastro</span
-          >
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Separar guias dentro dos par&acirc;metros de leitura para
-            cadastro.</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11">Configura&ccedil;&atilde;o de Guias</span>
-        </p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Realizar o cadastro das guias dentro das
-            configura&ccedil;&otilde;es que atendam a contabilidade.</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-    <tr class="c5">
-      <td class="c22" colspan="1" rowspan="1">
-        <p class="c0"><span class="c11">Teste de envio de Guias</span></p>
-      </td>
-      <td class="c20" colspan="1" rowspan="1">
-        <p class="c0">
-          <span class="c11"
-            >Realizar testes de envio para validar o processo de envio</span
-          >
-        </p>
-      </td>
-      <td class="c13" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-      <td class="c4" colspan="1" rowspan="1">
-        <p class="c0 c3"><span class="c11"></span></p>
-      </td>
-    </tr>
-  </table>
-  <p class="c48 c3"><span class="c18 c26"></span></p>
-</div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
 
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
 
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+            oninput="Ata()" />
+          <label for="Inicio">Finalização:</label>
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-outline-primary" id="pre-vizualizar" data-bs-toggle="modal">
+            Pré Vizualizar
+          </button>
+          <button type="button" class="btn btn-outline-danger" id="preencherPDF">
+            Gerar Pdf
+          </button>
+        </div>
+
+        <div class="c-39 doc-content">
+          <div>
+            <p class="c48 c53">
+              <span
+                style="
+                  overflow: hidden;
+                  display: inline-block;
+                  margin: 0px 0px;
+                  border: 0px solid #000000;
+                  transform: rotate(0rad) translateZ(0px);
+                  -webkit-transform: rotate(0rad) translateZ(0px);
+                  width: 204.5px;
+                  height: 34.71px;
+                "
+                ><img
+                  alt=""
+                  src="images/image1.png"
+                  style="
+                    width: 204.5px;
+                    height: 34.71px;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    transform: rotate(0rad) translateZ(0px);
+                    -webkit-transform: rotate(0rad) translateZ(0px);
+                  "
+                  title="" /></span
+              ><img />
+            </p>
+          </div>
+          <p class="c63">
+            <span class="c18 c60"
+              >Cronograma de Implanta&ccedil;&atilde;o Acess&oacute;rias</span
+            >
+          </p>
+          <ol class="c30 lst-kix_90wmzo7egkw2-0 start" start="1">
+            <li class="c32 c47 li-bullet-0">
+              <h2 id="h.nlyzdz7jf2ji" style="display: inline">
+                <span class="c18 c6">Identifica&ccedil;&atilde;o</span>
+              </h2>
+            </li>
+          </ol>
+          <p class="c0 c32">
+            <span class="c18 c26"
+              >(responsabilidade pelo preenchimento: Consultor de
+              Implanta&ccedil;&atilde;o)</span
+            >
+          </p>
+          <p class="c3 c7"><span class="c18 c26"></span></p>
+          <a id="t.e1ed9be709795078a1e738cc08608ec9815d6a57"></a><a id="t.0"></a>
+          <table class="c62">
+            <tr class="c54">
+              <td class="c37" colspan="2" rowspan="1">
+                <p class="c2"><span class="c16">Cliente (Empresa):</span></p>
+                <p class="c0 c3"><span id="cliente-label" class="c14"></span></p>
+              </td>
+              <td class="c59" colspan="2" rowspan="1">
+                <p class="c0 c41"><span class="c18 c16">In&iacute;cio:</span></p>
+                <p class="c0 c3"><span id="inicio-label" class="c14"></span></p>
+              </td>
+              <td class="c45" colspan="2" rowspan="1">
+                <p class="c0 c58">
+                  <span class="c16">Finaliza&ccedil;&atilde;o:</span>
+                  <p><span id="finalizacao-label" class="c14"></span></p>
+                </p>
+                <p class="c0 c3 c58"><span class="c14"></span></p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c37" colspan="2" rowspan="1">
+                <p class="c0">
+                  <span class="c16"
+                    >Respons&aacute;vel T&eacute;cnico (Empresa):</span
+                  >
+                </p>
+              </td>
+              <td class="c59" colspan="2" rowspan="1">
+                <p class="c0"><span class="c18 c16">Telefone:</span></p>
+                <p class="c0 c3"><span class="c14"></span></p>
+              </td>
+              <td class="c45" colspan="2" rowspan="1">
+                <p class="c0"><span class="c18 c16">Telefone:</span></p>
+                <p class="c0 c3"><span class="c14"></span></p>
+              </td>
+            </tr>
+            <tr class="c25">
+              <td class="c37" colspan="2" rowspan="1">
+                <p class="c0">
+                  <span class="c18 c16"
+                    >Contratante da Solu&ccedil;&atilde;o (Propriet&aacute;rio):</span
+                  >
+                </p>
+                <p class="c0 c3"><span class="c14"></span></p>
+              </td>
+              <td class="c44" colspan="4" rowspan="1">
+                <p class="c0"><span class="c16">E-mail:</span></p>
+              </td>
+            </tr>
+            <tr class="c25">
+              <td class="c37" colspan="2" rowspan="1">
+                <p class="c0">
+                  <span class="c18 c16">Consultor Acess&oacute;rias:</span>
+                </p>
+                <p class="c0"><span class="c14">Patrick da costa cruz </span></p>
+              </td>
+              <td class="c44" colspan="4" rowspan="1">
+                <p class="c0"><span class="c18 c16">E-mail:</span></p>
+                <p class="c0"><span class="c14">patrick.cruz@acessorias.com</span></p>
+              </td>
+            </tr>
+          </table>
+          <ol class="c30 lst-kix_90wmzo7egkw2-0" start="2">
+            <li class="c46 c32 li-bullet-0">
+              <h2 id="h.1yvfiw6g5dwv" style="display: inline">
+                <span class="c6">Benef&iacute;cios esperados com o projeto</span>
+              </h2>
+            </li>
+          </ol>
+          <a id="t.20c0aa771a22fe39c3455f566bcc42cb9d0a3add"></a><a id="t.1"></a>
+          <table class="c27">
+            <tr class="c56">
+              <td class="c15 c23" colspan="1" rowspan="1">
+                <p class="c2">
+                  <span class="c16">Benef&iacute;cios do Projeto</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c15" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c33"
+                    >O Time de implanta&ccedil;&atilde;o tem o objetivo de entregar o
+                    primeiro sucesso ao cliente. Sucesso este, que consiste em
+                    entender qual a necessidade do cliente e auxiliar nas
+                    configura&ccedil;&otilde;es e ajustes da ferramenta.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c57">
+              <td class="c15" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Abordaremos os pontos principais que ir&atilde;o levar o cliente
+                    ao primeiro sucesso de uma forma r&aacute;pida</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c15" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >O time de implanta&ccedil;&atilde;o ir&aacute; criar um roteiro,
+                    que ter&aacute; o foco em tornar o cliente apto nas
+                    funcionalidades que s&atilde;o cruciais para o atingimento dos
+                    objetivos do mesmo.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c15" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Esses objetivos ser&atilde;o alcan&ccedil;ados com nosso
+                    Alinhamento de 1hora para entender o fluxo e expectativas do
+                    cliente.</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+          <ol class="c30 lst-kix_90wmzo7egkw2-0" start="3">
+            <li class="c46 c32 li-bullet-0">
+              <h2 id="h.sippditxg7yw" style="display: inline">
+                <span class="c6">Objetivo do projeto</span>
+              </h2>
+            </li>
+          </ol>
+          <p class="c7">
+            <span class="c18 c26"
+              >(responsabilidade pelo preenchimento: Consultor de
+              Implanta&ccedil;&atilde;o)</span
+            >
+          </p>
+          <p class="c48 c3"><span class="c18 c26"></span></p>
+          <a id="t.4c5933014a71e2d578d9a11cbad51a95f8c38f9d"></a><a id="t.2"></a>
+          <table class="c27">
+            <tr class="c5">
+              <td class="c15" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c33"
+                    >Facilitar a fluidez do suporte com o cliente; otimizar o processo
+                    do agente que est&aacute; em campo ou no suporte</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+          <ol class="c30 lst-kix_90wmzo7egkw2-1 start" start="1">
+            <li class="c42 li-bullet-0">
+              <h2 id="h.gmr81kmdkspy" style="display: inline">
+                <span class="c6">Sucesso para a empresa &eacute; quando:</span>
+              </h2>
+            </li>
+          </ol>
+          <p class="c7">
+            <span class="c18 c26"
+              >(responsabilidade pelo preenchimento:Consultor de
+              Implanta&ccedil;&atilde;o)</span
+            >
+          </p>
+          <p class="c7 c3"><span class="c18 c26"></span></p>
+          <a id="t.f99f69b642b9d93be59a62cd8af50894c5f2cece"></a><a id="t.3"></a>
+          <table class="c40">
+            <tr class="c5">
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c8" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Organizar Entregas de prazos e obriga&ccedil;&otilde;es</span
+                  >
+                </p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c12" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Automatizar o envio de documentos e
+                    obriga&ccedil;&otilde;es</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c8" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Facilitar a comunica&ccedil;&atilde;o com o cliente</span
+                  >
+                </p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c12" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Visibilidade das entregas e facilitar a gest&atilde;o da
+                    equipe</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c8" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14"
+                    >Garantir a entrega do documento para o cliente final tendo
+                    protocolos de registros</span
+                  >
+                </p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c12" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c14"></span></p>
+              </td>
+            </tr>
+          </table>
+          <ol class="c30 lst-kix_90wmzo7egkw2-0" start="4">
+            <li class="c46 c32 li-bullet-0">
+              <h2 id="h.fe318mbzomsy" style="display: inline">
+                <span class="c18 c6"
+                  >Tipos de Recursos necess&aacute;rios - M&oacute;dulos</span
+                >
+              </h2>
+            </li>
+          </ol>
+          <p class="c7">
+            <span class="c18 c26"
+              >(responsabilidade pelo preenchimento:Consultor de
+              Implanta&ccedil;&atilde;o)</span
+            >
+          </p>
+          <p class="c7 c3"><span class="c18 c26"></span></p>
+          <a id="t.027caf749ff87649258ecfb7d44dd75fed0a890a"></a><a id="t.4"></a>
+          <table class="c40">
+            <tr class="c5">
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c28" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">Gest&atilde;o de Processos</span></p>
+              </td>
+              <td class="c38" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c12" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c14">Aplicativo e &Aacute;rea VIP</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c28" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">APLA</span></p>
+              </td>
+              <td class="c38" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">( )</span></p>
+              </td>
+              <td class="c12" colspan="1" rowspan="1">
+                <p class="c0"><span class="c14">Komunic</span></p>
+              </td>
+            </tr>
+          </table>
+          <p class="c3 c48"><span class="c18 c50"></span></p>
+          <ol class="c30 lst-kix_90wmzo7egkw2-0" start="5">
+            <li class="c46 c32 li-bullet-0">
+              <h2 id="h.t8dd8dna76x4" style="display: inline">
+                <span class="c18 c6">Detalhamento do Cronograma</span>
+              </h2>
+            </li>
+          </ol>
+          <p class="c7">
+            <span class="c18 c26"
+              >(responsabilidade pelo preenchimento: Consultor de
+              Implanta&ccedil;&atilde;o)</span
+            >
+          </p>
+          <p class="c7 c3"><span class="c18 c26"></span></p>
+          <a id="t.b1a9c0612c2675e74aa695aa34b1c74d3e8554cf"></a><a id="t.5"></a>
+          <table class="c61">
+            <tr class="c5">
+              <td class="c19" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Alinhamento</span></p>
+              </td>
+              <td class="c13 c43" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c43" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c43" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c43" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">Alinhamento inicial</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c17" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Consultoria 1</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2">
+                  <span class="c11">Configura&ccedil;&atilde;o inicial</span>
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c17" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Consultoria 2</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2">
+                  <span class="c11">Lista de tarefas e rob&ocirc;</span>
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c17" colspan="1" rowspan="1">
+                <p class="c2"><span class="c31">Consultoria 3</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">E-continuo avan&ccedil;ado</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c17" colspan="1" rowspan="1">
+                <p class="c2"><span class="c31">Consultoria 4</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">Departamento</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c17" colspan="1" rowspan="1">
+                <p class="c2"><span class="c31">Consultoria 5</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">Gest&atilde;o de processo</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c55">
+              <td class="c17" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Consultoria 6</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Data</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Hora</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Dura&ccedil;&atilde;o</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">App e area vip</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2"><span class="c11">1 h</span></p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c2 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+          </table>
+          <ol class="c30 lst-kix_90wmzo7egkw2-0" start="6">
+            <li class="c32 c46 li-bullet-0">
+              <h2 id="h.afyyt1a858f9" style="display: inline">
+                <span class="c18 c6">Acompanhamento das Tarefas</span>
+              </h2>
+            </li>
+          </ol>
+          <p class="c7 c3"><span class="c18 c26"></span></p>
+          <a id="t.3cb9727a21da1cf8ade4c4c9ab648174e152b47b"></a><a id="t.6"></a>
+          <table class="c61">
+            <tr class="c5">
+              <td class="c22 c21" colspan="1" rowspan="1">
+                <p class="c2">
+                  <span class="c9">Configura&ccedil;&otilde;es Iniciais</span>
+                </p>
+              </td>
+              <td class="c20 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Atividade</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Respons&aacute;vel </span></p>
+              </td>
+              <td class="c4 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Prazo</span></p>
+              </td>
+              <td class="c4 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0"><span class="c11">Cadastro dos Colaboradores</span></p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Realizar o cadastro dos colaboradores de acordo com as
+                    permiss&otilde;es</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11">Revis&atilde;o dos Departamentos</span>
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Revisar os departamentos existentes na ferramenta com os atuais
+                    criando novos ou exclu&iacute;do os que n&atilde;o existem</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11">Revis&atilde;o das Obriga&ccedil;&otilde;es</span>
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Revisar obriga&ccedil;&otilde;es existentes e criar alguma
+                    espec&iacute;fica caso n&atilde;o exista
+                  </span>
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Revis&atilde;o dos Regimes Tribut&aacute;rios</span
+                  >
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Revisar os regimes tribut&aacute;rios dentro do padr&atilde;o da
+                    empresa</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11">Preenchimento da Planilha de Clientes</span>
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Preencher planilha de importa&ccedil;&atilde;o de clientes
+                    disponibilizada pelo consultor</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0"><span class="c11">Cadastro dos Clientes</span></p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11">Realizar o cadastro do cliente</span>
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11">Revis&atilde;o das Empresas Cadastradas</span>
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Realizar a revis&atilde;o das empresas com foco em Outros
+                    indicadores, e-mail do cliente, obriga&ccedil;&otilde;es e
+                    respons&aacute;veis pelos departamentos</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">e-Cont&iacute;nuo</span></p>
+              </td>
+              <td class="c20 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Atividade</span></p>
+              </td>
+              <td class="c13 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Respons&aacute;vel </span></p>
+              </td>
+              <td class="c4 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Prazo</span></p>
+              </td>
+              <td class="c4 c21" colspan="1" rowspan="1">
+                <p class="c2"><span class="c9">Status</span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Instala&ccedil;&atilde;o do e-Cont&iacute;nuo</span
+                  >
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Realizar a instala&ccedil;&atilde;o do sistema e-cont&iacute;nuo
+                    para os colaboradores que ir&atilde;o utilizar</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Configura&ccedil;&atilde;o do e-Cont&iacute;nuo</span
+                  >
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >configurar as pastas Download e Upload de acordo com as
+                    configura&ccedil;&otilde;es do cliente</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Separa&ccedil;&atilde;o de Guias para Cadastro</span
+                  >
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Separar guias dentro dos par&acirc;metros de leitura para
+                    cadastro.</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11">Configura&ccedil;&atilde;o de Guias</span>
+                </p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Realizar o cadastro das guias dentro das
+                    configura&ccedil;&otilde;es que atendam a contabilidade.</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+            <tr class="c5">
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c0"><span class="c11">Teste de envio de Guias</span></p>
+              </td>
+              <td class="c20" colspan="1" rowspan="1">
+                <p class="c0">
+                  <span class="c11"
+                    >Realizar testes de envio para validar o processo de envio</span
+                  >
+                </p>
+              </td>
+              <td class="c13" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+              <td class="c4" colspan="1" rowspan="1">
+                <p class="c0 c3"><span class="c11"></span></p>
+              </td>
+            </tr>
+          </table>
+          <p class="c48 c3"><span class="c18 c26"></span></p>
+        </div>
       </article>
     </div>
   </div>
