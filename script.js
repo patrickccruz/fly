@@ -82,6 +82,7 @@ function darkOn() {
   nav.style.backgroundColor = "#003050";
   footer.style.backgroundColor = "#003050";
   footer.style.color = "white";
+  document.querySelector("h2").style.color = "white";
 }
 
 function sunOn() {
@@ -92,6 +93,7 @@ function sunOn() {
   nav.style.backgroundColor = "#005c9a";
   footer.style.backgroundColor = "white";
   footer.style.color = "#000";
+  document.querySelector("h2").style.color = "#000000";
 }
 
 darkMode.addEventListener("click", function () {
