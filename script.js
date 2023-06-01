@@ -597,16 +597,16 @@ function acompTexto() {
   document.getElementById("Aresp2").innerHTML = `- Ticket: ${Aresp2}`;
 
   let Aresp3 = document.getElementById("AregUso").value;
-  document.getElementById("Aresp3").innerHTML = `- Uso: ${Aresp3}`;
+  document.getElementById("Aresp3").innerHTML = `- Uso: $ ${Aresp3}`;
 
   let Aresp4 = document.getElementById("Aacesso").value;
-  document.getElementById("Aresp4").innerHTML = `- Acesso: ${Aresp4}`;
+  document.getElementById("Aresp4").innerHTML = `- Acesso: $ ${Aresp4}`;
 
   let Aresp5 = document.getElementById("Aentregas").value;
-  document.getElementById("Aresp5").innerHTML = `- Entregas: ${Aresp5}`;
+  document.getElementById("Aresp5").innerHTML = `- Entregas: $ ${Aresp5}`;
 
   let Aresp6 = document.getElementById("Arobo").value;
-  document.getElementById("Aresp6").innerHTML = `- Robô: ${Aresp6}`;
+  document.getElementById("Aresp6").innerHTML = `- Robô: $ ${Aresp6}`;
 
   let Aresp7 = document.getElementById("tratativa").value;
   document.getElementById("Aresp7").innerHTML = `- Tratativa: ${Aresp7}`;
