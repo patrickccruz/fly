@@ -179,6 +179,10 @@ body {
   color: black;
 }
 
-label::after{
+label::after {
   background-color: transparent !important;
+}
+
+.accordion {
+  --bs-accordion-bg: #fff0;
 }
