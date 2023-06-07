@@ -449,8 +449,7 @@ function copResp2() {
 function faltou() {
   document.getElementById("falta").style.display = "block";
   document.getElementById("naoFaltou").style.display = "none";
-  document.getElementById("naoFaltou2").style.display = "none";
-  document.getElementById("btnaoFaltou").style.display = "none";
+  document.getElementById("faltouButton").style.display = "none";
   document.getElementById("faltou3").style.display = "none";
 }
 
@@ -459,15 +458,9 @@ function faltou3() {
 }
 
 function falta() {
-  document.getElementById("falta3").style.display = "block";
-}
-
-function falta() {
   document.getElementById("falta").style.display = "none";
   document.getElementById("naoFaltou").style.display = "block";
-  document.getElementById("naoFaltou2").style.display = "block";
-  document.getElementById("btnaoFaltou").style.display = "block";
-  document.getElementById("falta3").style.display = "block";
+  document.getElementById("faltouButton").style.display = "block";
 }
 
 function duvida() {
@@ -727,10 +720,8 @@ function faltaClient() {
     if (radio.checked) {
       if (radio.value == "yes") {
         document.getElementById("faltou3").style.display = "none";
-        document.getElementById("botao-geral").style.display = "none";
       } else {
         document.getElementById("faltou3").style.display = "block";
-        document.getElementById("botao-geral").style.display = "block";
       }
     }
   }
