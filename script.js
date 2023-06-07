@@ -508,7 +508,19 @@ function copRespFalta() {
   document.getElementById("respFaltou4").innerHTML = `Uso: ${resp4}`;
   let respFalta4 = `Uso: ${resp4}`;
 
-  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}\n${respFalta4}`;
+  let resp5 = document.getElementById("etp-acesso").value;
+  document.getElementById("respFaltou5").innerHTML = `>Acesso: ${resp5}`;
+  let respFalta5 = `Acesso: ${resp5}`;
+
+  let resp6 = document.getElementById("etp-entrega").value;
+  document.getElementById("respFaltou6").innerHTML = `>Entrega: ${resp6}`;
+  let respFalta6 = `Entrega: ${resp6}`;
+
+  let resp7 = document.getElementById("etp-robo").value;
+  document.getElementById("respFaltou7").innerHTML = `>Robô: ${resp7}`;
+  let respFalta7 = `Robô: ${resp6}`;
+
+  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}\n${respFalta4}\n${respFalta5}\n${respFalta6}\n${respFalta7}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
