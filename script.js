@@ -451,6 +451,7 @@ function faltou() {
   document.getElementById("naoFaltou").style.display = "none";
   document.getElementById("faltouButton").style.display = "none";
   document.getElementById("faltou3").style.display = "none";
+  document.getElementById("ticketConsult").style.display = "none";
 }
 
 function faltou3() {
@@ -460,6 +461,7 @@ function faltou3() {
 function falta() {
   document.getElementById("falta").style.display = "none";
   document.getElementById("naoFaltou").style.display = "block";
+  document.getElementById("faltouButton").style.display = "block";
   document.getElementById("faltouButton").style.display = "block";
 }
 
@@ -501,6 +503,9 @@ function copRespFalta() {
   document.getElementById(
     "respFaltou3"
   ).innerHTML = `Informaçoes sobre a falta: ${falta}`;
+
+  let respFalta4 = `Atrasaram: ${falta}`;
+  document.getElementById("respFaltou4").innerHTML = `Uso: ${respFalta4}`;
 
   const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}`;
   const textarea = document.createElement("textarea");
