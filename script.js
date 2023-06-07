@@ -504,10 +504,11 @@ function copRespFalta() {
     "respFaltou3"
   ).innerHTML = `Informaçoes sobre a falta: ${falta}`;
 
-  let respFalta4 = `Atrasaram: ${falta}`;
-  document.getElementById("respFaltou4").innerHTML = `Uso: ${respFalta4}`;
+  let resp4 = document.getElementById("etp-uso").value;
+  document.getElementById("respFaltou4").innerHTML = `Uso: ${resp4}`;
+  let respFalta4 = `Uso: ${resp4}`;
 
-  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}`;
+  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}\n${respFalta4}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
