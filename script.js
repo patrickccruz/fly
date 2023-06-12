@@ -263,7 +263,7 @@ function copResp() {
           document.getElementById(`etapa1resp${i}`).innerHTML = ``;
         }
       } else {
-        textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa11}\n${etapa12}\n${etapa13}`;
+        textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa12}\n${etapa11}\n${etapa13}`;
       }
     }
   }
@@ -347,34 +347,36 @@ function infoGeral() {
     }
   }
 
-  let resp9 = document.getElementById("ticketConsult").value;
-  document.getElementById(
-    "geralResp9"
-  ).innerHTML = `- Ticket da consultoria: ${resp9}`;
+  // ====================
 
-  let resp10 = document.getElementById("geralObs").value;
+  let resp12 = document.getElementById("ticketConsult").value;
   document.getElementById(
-    "geralResp10"
-  ).innerHTML = `- Informações Adicionais: ${resp10}`;
+    "geralResp12"
+  ).innerHTML = `- Ticket da consultoria: ${resp12}`;
+
+  let resp13 = document.getElementById("geralObs").value;
+  document.getElementById(
+    "geralResp13"
+  ).innerHTML = `- Informações Adicionais: ${resp13}`;
 
   var value = document.getElementsByName("btnBackup");
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        let resp11 = document.getElementById("comprometido").value;
+        let resp14 = document.getElementById("comprometido").value;
         document.getElementById(
-          "geralResp11"
-        ).innerHTML = `- Cliente comprometido: ${resp11}`;
+          "geralResp14"
+        ).innerHTML = `- Cliente comprometido: ${resp14}`;
 
-        let resp12 = document.getElementById("tecnologico").value;
+        let resp15 = document.getElementById("tecnologico").value;
         document.getElementById(
-          "geralResp12"
-        ).innerHTML = `- Cliente tecnológico: ${resp12}`;
+          "geralResp15"
+        ).innerHTML = `- Cliente tecnológico: ${resp15}`;
 
-        let resp13 = document.getElementById("etapaBackup").value;
+        let resp16 = document.getElementById("etapaBackup").value;
         document.getElementById(
-          "geralResp13"
-        ).innerHTML = `Informacoes para o consultoria de backup: ${resp13}`;
+          "geralResp16"
+        ).innerHTML = `Informacoes para o consultoria de backup: ${resp16}`;
       }
     }
   }
@@ -414,13 +416,14 @@ function copResp2() {
   let resp12 = document.getElementById("geralResp12").textContent;
   let resp13 = document.getElementById("geralResp13").textContent;
   var value = document.getElementsByName("btnBackup");
+  console.log(resp13);
   let textToCopy = "";
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}`;
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
       } else {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}`;
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}`;
       }
     }
   }
