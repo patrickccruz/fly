@@ -78,9 +78,6 @@ function darkOn() {
   nav.style.backgroundColor = "#003050";
   footer.style.backgroundColor = "#003050";
   footer.style.color = "white";
-  document.querySelector("h2").style.color = "white";
-  document.querySelector("h5").style.color = "white";
-  document.querySelector("h3").style.color = "white";
 }
 
 function sunOn() {
@@ -91,9 +88,6 @@ function sunOn() {
   nav.style.backgroundColor = "#005c9a";
   footer.style.backgroundColor = "white";
   footer.style.color = "#000";
-  document.querySelector("h2").style.color = "#000000";
-  document.querySelector("h5").style.color = "#000000";
-  document.querySelector("h3").style.color = "#000000";
 }
 
 darkMode.addEventListener("click", function () {
@@ -221,9 +215,9 @@ function copRespFalta2() {
   document.getElementById(
     "respFaltou1"
   ).innerHTML = `- Porcentagem de uso: ${Gresp1}%`;
-  let GrespFalta1 = `Porcentagem de uso: ${Gresp1}%`;
 
   let falta = document.getElementById("faltaCliente").value;
+
   let GrespFalta3 = `Atrasaram: ${falta}`;
   document.getElementById(
     "respFaltou3"
@@ -292,58 +286,76 @@ function infoGeral() {
     "geralResp1"
   ).innerHTML = `- Porcentagem de uso: ${resp1}%`;
 
-  let resp2 = document.getElementById("parcicipantes").value;
+  let resp2 = document.getElementById("etp-uso").value;
   document.getElementById(
     "geralResp2"
-  ).innerHTML = `- Quem participou da consultoria/departamento: ${resp2}`;
+  ).innerHTML = `- Uso do sistema: ${resp2}%`;
+
+  let resp3 = document.getElementById("etp-acesso").value;
+  document.getElementById(
+    "geralResp3"
+  ).innerHTML = `- Acesso no sistema: ${resp3}%`;
+
+  let resp4 = document.getElementById("etp-entrega").value;
+  document.getElementById(
+    "geralResp4"
+  ).innerHTML = `- Entregas no sistema : ${resp4}%`;
+
+  let resp5 = document.getElementById("etp-robo").value;
+  document.getElementById("geralResp5").innerHTML = `- Uso do robo: ${resp5}%`;
+
+  let resp6 = document.getElementById("parcicipantes").value;
+  document.getElementById(
+    "geralResp6"
+  ).innerHTML = `- Quem participou da consultoria/departamento: ${resp6}`;
 
   var value = document.getElementsByName("horario");
   for (var radio of value) {
     if (radio.checked) {
-      let resp3 = radio.value;
+      let resp7 = radio.value;
       document.getElementById(
-        "geralResp3"
-      ).innerHTML = `- Teve atraso ? ${resp3} `;
+        "geralResp7"
+      ).innerHTML = `- Teve atraso ? ${resp7} `;
     }
   }
 
   var value = document.getElementsByName("atividades");
   for (var radio of value) {
     if (radio.checked) {
-      let resp4 = radio.value;
+      let resp8 = radio.value;
       document.getElementById(
-        "geralResp4"
-      ).innerHTML = `- Realizaram as atividades anteriores: ${resp4} `;
+        "geralResp8"
+      ).innerHTML = `- Realizaram as atividades anteriores: ${resp8} `;
     }
   }
 
   var value = document.getElementsByName("participativos");
   for (var radio of value) {
     if (radio.checked) {
-      let resp6 = radio.value;
+      let resp9 = radio.value;
       document.getElementById(
-        "geralResp6"
-      ).innerHTML = `- Participativos: ${resp6} `;
+        "geralResp9"
+      ).innerHTML = `- Participativos: ${resp9} `;
     }
   }
 
   var value = document.getElementsByName("problema");
   for (var radio of value) {
     if (radio.checked) {
-      let resp7 = radio.value;
+      let resp10 = radio.value;
       document.getElementById(
-        "geralResp7"
-      ).innerHTML = `- Algum problema: ${resp7} `;
+        "geralResp10"
+      ).innerHTML = `- Algum problema: ${resp10} `;
     }
   }
 
   var value = document.getElementsByName("nota");
   for (var radio of value) {
     if (radio.checked) {
-      let resp8 = radio.value;
+      let resp11 = radio.value;
       document.getElementById(
-        "geralResp8"
-      ).innerHTML = `- Nota para a consultoria:  ${resp8} `;
+        "geralResp11"
+      ).innerHTML = `- Nota para a consultoria:  ${resp11} `;
     }
   }
 
@@ -438,9 +450,9 @@ function copResp2() {
 function faltou() {
   document.getElementById("falta").style.display = "block";
   document.getElementById("naoFaltou").style.display = "none";
-  document.getElementById("naoFaltou2").style.display = "none";
-  document.getElementById("btnaoFaltou").style.display = "none";
+  document.getElementById("faltouButton").style.display = "none";
   document.getElementById("faltou3").style.display = "none";
+  document.getElementById("ticketConsult").style.display = "none";
 }
 
 function faltou3() {
@@ -448,15 +460,10 @@ function faltou3() {
 }
 
 function falta() {
-  document.getElementById("falta3").style.display = "block";
-}
-
-function falta() {
   document.getElementById("falta").style.display = "none";
   document.getElementById("naoFaltou").style.display = "block";
-  document.getElementById("naoFaltou2").style.display = "block";
-  document.getElementById("btnaoFaltou").style.display = "block";
-  document.getElementById("falta3").style.display = "block";
+  document.getElementById("faltouButton").style.display = "block";
+  document.getElementById("faltouButton").style.display = "block";
 }
 
 function duvida() {
@@ -498,7 +505,23 @@ function copRespFalta() {
     "respFaltou3"
   ).innerHTML = `Informaçoes sobre a falta: ${falta}`;
 
-  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}`;
+  let resp4 = document.getElementById("etp-uso").value;
+  document.getElementById("respFaltou4").innerHTML = `Uso: ${resp4}`;
+  let respFalta4 = `Uso: ${resp4}`;
+
+  let resp5 = document.getElementById("etp-acesso").value;
+  document.getElementById("respFaltou5").innerHTML = `>Acesso: ${resp5}`;
+  let respFalta5 = `Acesso: ${resp5}`;
+
+  let resp6 = document.getElementById("etp-entrega").value;
+  document.getElementById("respFaltou6").innerHTML = `>Entrega: ${resp6}`;
+  let respFalta6 = `Entrega: ${resp6}`;
+
+  let resp7 = document.getElementById("etp-robo").value;
+  document.getElementById("respFaltou7").innerHTML = `>Robô: ${resp7}`;
+  let respFalta7 = `Robô: ${resp6}`;
+
+  const textToCopy = `${resp0}\n${respFalta1}\n${respFalta3}\n${respFalta4}\n${respFalta5}\n${respFalta6}\n${respFalta7}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
@@ -630,13 +653,13 @@ function acompTexto() {
   document.getElementById("Aresp3").innerHTML = `- Uso: ${Aresp3}%`;
 
   let Aresp4 = document.getElementById("Aacesso").value;
-  document.getElementById("Aresp4").innerHTML = `- Acesso: ${Aresp4}`;
+  document.getElementById("Aresp4").innerHTML = `- Acesso: ${Aresp4}%`;
 
   let Aresp5 = document.getElementById("Aentregas").value;
-  document.getElementById("Aresp5").innerHTML = `- Entregas: ${Aresp5}`;
+  document.getElementById("Aresp5").innerHTML = `- Entregas: ${Aresp5}%`;
 
   let Aresp6 = document.getElementById("Arobo").value;
-  document.getElementById("Aresp6").innerHTML = `- Robô: ${Aresp6}`;
+  document.getElementById("Aresp6").innerHTML = `- Robô: ${Aresp6}%`;
 
   let Aresp7 = document.getElementById("tratativa").value;
   document.getElementById("Aresp7").innerHTML = `- Tratativa: ${Aresp7}`;
@@ -696,9 +719,9 @@ function copResp4() {
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n\n** Informaoces para o Backup **\n${resp7}\n${resp8}\n${resp9}`;
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n\n** Informações para o Backup **\n${resp7}\n${resp8}\n${resp9}`;
       } else {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}`;
+        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}`;
       }
     }
   }
@@ -748,6 +771,10 @@ function deleteRespGeral() {
   document.getElementById("comprometido").value = "";
   document.getElementById("tecnologico").value = "";
   document.getElementById("etapaBackup").value = "";
+  document.getElementById("etp-uso").value = "";
+  document.getElementById("etp-acesso").value = "";
+  document.getElementById("etp-entrega").value = "";
+  document.getElementById("etp-robo").value = "";
 }
 
 function deleteRespMigra() {
