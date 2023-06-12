@@ -281,11 +281,6 @@ function infoGeral() {
     }
   }
 
-  let resp1 = document.getElementById("uso").value;
-  document.getElementById(
-    "geralResp1"
-  ).innerHTML = `- Porcentagem de uso: ${resp1}%`;
-
   let resp2 = document.getElementById("etp-uso").value;
   document.getElementById(
     "geralResp2"
@@ -433,9 +428,9 @@ function copResp2() {
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
+        textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
       } else {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}`;
+        textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}`;
       }
     }
   }
