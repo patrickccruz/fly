@@ -577,16 +577,16 @@ function textoMigra() {
   document.getElementById("Mresp8").innerHTML = `- Uso: ${Aresp8}%`;
 
   let Aresp9 = document.getElementById("acesso").value;
-  document.getElementById("Mresp9").innerHTML = `- Acesso: ${Aresp9}`;
+  document.getElementById("Mresp9").innerHTML = `- Acesso: ${Aresp9}%`;
 
   let Aresp10 = document.getElementById("entregas").value;
   document.getElementById("Mresp10").innerHTML = `- Entregas: ${Aresp10}`;
 
   let Aresp11 = document.getElementById("robo").value;
-  document.getElementById("Mresp11").innerHTML = `- Robô: ${Aresp11}`;
+  document.getElementById("Mresp11").innerHTML = `- Robô: ${Aresp11}%`;
 
   let Aresp12 = document.getElementById("gestao").value;
-  document.getElementById("Mresp12").innerHTML = `- Gestão: ${Aresp12}`;
+  document.getElementById("Mresp12").innerHTML = `- Gestão: ${Aresp12}%`;
 
   let Aresp13 = document.getElementById("app").value;
   document.getElementById("Mresp13").innerHTML = `- APP: ${Aresp13}`;
