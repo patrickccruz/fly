@@ -44,7 +44,7 @@
           <a class="nav-link" id="acpt" onclick="acpt()" href="#">Acompanhamento</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="ataNav" onclick="ata()" href="#">Gerador de Ata</a>
+          <a class="nav-link" id="ataNav" onclick="ola()" href="#">Gerador de Ata | Em breve....</a>
         </li>
         <li class="nav-item toogle-sun-moon">
           <input type="checkbox" id="toggle_checkbox" />
@@ -99,7 +99,7 @@
 
           <div class="form-floating mb-3">
             <input class="form-control" placeholder="Leave a comment here" id="resp" oninput="teste()" />
-            <label for="floatingTextarea">Responsavel Técnico:</label>
+            <label for="floatingTextarea">Responsável Técnico:</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -110,13 +110,13 @@
           <div class="form-floating mb-3">
             <input class="form-control" type="number" placeholder="Leave a comment here" id="usuario"
               oninput="teste()" />
-            <label for="floatingTextarea">Usuários aprox:</label>
+            <label for="floatingTextarea">Usuários aproximado:</label>
           </div>
 
           <div class="form-floating mb-3">
             <input class="form-control" type="number" placeholder="Leave a comment here" id="empresas"
               oninput="teste()" />
-            <label for="floatingTextarea">Empresas aprox:</label>
+            <label for="floatingTextarea">Empresas aproximado:</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -166,7 +166,7 @@
           <label for="floatingTextarea2">Informações Adicionais:</label>
         </div>
 
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-3" id="botao-geral">
           <button type="button" class="btn btn-outline-primary" onclick="copResp()" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
             Copiar Texto
@@ -176,7 +176,7 @@
           </button>
         </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="modal-header">
@@ -187,7 +187,7 @@
               </div>
               <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                  Não esqueça de colocar o ticket da consutoria e do app
+                  Não esqueça de colocar o ticket da consultoria e do app
                 </div>
                 <p id="etapa1resp1"></p>
                 <p id="etapa1resp2"></p>
@@ -199,8 +199,8 @@
                 <p id="etapa1resp8"></p>
                 <p id="etapa1resp9"></p>
                 <p id="etapa1resp10"></p>
-                <p id="etapa1resp11"></p>
                 <p id="etapa1resp12"></p>
+                <p id="etapa1resp11"></p>
                 <p id="etapa1resp13"></p>
               </div>
               <div class="modal-footer">
@@ -243,12 +243,6 @@
             <input class="form-check-input" type="checkbox" name="etapa" value="Robô" id="flexCheckDefault3"
               oninput="infoGeral()" />
             <label class="form-check-label" for="flexCheckDefault3">Robô</label>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="etapa" value="Lista/Robô" id="flexCheckDefault4"
-              oninput="infoGeral()" />
-            <label class="form-check-label" for="flexCheckDefault4">Lista/Robô</label>
           </div>
 
           <div class="form-check form-check-inline">
@@ -295,6 +289,26 @@
           <label for="floatingTextarea2">Porcentagem de uso:</label>
         </div>
 
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" id="etp-uso" oninput="infoGeral()" />
+          <label for="floatingTextarea2">Uso:</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" id="etp-acesso" oninput="infoGeral()" />
+          <label for="floatingTextarea2">Acesso:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" id="etp-entrega" oninput="infoGeral()" />
+          <label for="floatingTextarea2">Entrega:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="number" id="etp-robo" oninput="infoGeral()" />
+          <label for="floatingTextarea2">Robô:</label>
+        </div>
+
         <div id="naoFaltou2 mb-3">
           <div class="form-floating">
             <input class="form-control" placeholder="Leave a comment here" type="text" id="parcicipantes"
@@ -302,6 +316,7 @@
             <label for="floatingTextarea2">Quem participou da consultoria/departamento:</label>
           </div>
         </div>
+
         <div class="row mb-3 mt-3">
           <h3>Observações sobre a consultoria</h3>
         </div>
@@ -340,13 +355,19 @@
             <label class="form-check-label" for="inlineRadio2">Faltou!</label>
           </div>
         </div>
+        
 
         <div class="form-check form-check-inline mb-3" id="falta" style="display: none">
-          <textarea class="form-control" name="etapaBackup2" id="faltaCliente" rows="5" cols="55"
-            placeholder="Preencher com informações importantes para serem preenchidas no Fly     >>NÃO ESQUEÇA DO TICKET<<"></textarea>
+          <div class="alert alert-warning" role="alert">
+            Preencher com informações importantes para serem preenchidas no Fly NÃO ESQUEÇA DO TICKET
+          </div>
+          <textarea class="form-control" name="etapaBackup2" id="faltaCliente" rows="5" cols="55"></textarea>
           <button type="button" class="btn btn-outline-primary mt-3" onclick="copRespFalta()" data-bs-toggle="modal"
             data-bs-target="#exampleModaFaltou">
             Copiar Texto
+          </button>
+          <button type="button" class="btn btn-outline-danger mt-3" onclick="deleteRespGeral()">
+            Apagar Tudo
           </button>
         </div>
 
@@ -364,6 +385,9 @@
                 <p id="respFaltou"></p>
                 <p id="respFaltou1"></p>
                 <p id="respFaltou2"></p>
+                <p id="respFaltou4"></p>
+                <p id="respFaltou5"></p>
+                <p id="respFaltou6"></p>
                 <p id="respFaltou3"></p>
               </div>
               <div class="modal-footer">
@@ -660,7 +684,7 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3" id="faltouButton">
           <button type="button" class="btn btn-outline-primary" onclick="copResp2()" data-bs-toggle="modal"
             data-bs-target="#exampleModal3">
             Copiar Texto
@@ -896,9 +920,9 @@
           <label for="Arobo">Robô:</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Leave a comment here" id="tratativa" style="height: 100px"
+          <textarea class="form-control" placeholder="Leave a comment here" id="tratativa" style="height: 300px"
             placeholder="1"
-            oninput="textoMigra()"></textarea>
+            oninput="acompTexto()"></textarea>
           <label for="tratativa">Informações Adicionais:</label>
         </div>
         
@@ -994,7 +1018,6 @@
   </div>
 </div>
 
-
 <div class="container-fluid mt-3" id="ata">
   <div class="row">
     <div class="col-sm-12 col-md-6">
@@ -1064,7 +1087,6 @@
               oninput="Ata()" />
             <label for="Inicio">E-mail Consultor:</label>
           </div>
-        <!-- <FIz ate aqui> -->
         <div class="row mb-3">
           <h3>Sucesso para a empresa é quando ?</h3>
         </div>
