@@ -18,6 +18,7 @@
 </head>
 
 
+
 <nav class="navbar navbar-expand-lg" style="background-color: #005c9a">
   <div class="container-fluid">
     <a class="navbar-brand" href="https://app.acessorias.com/sysmain.php?m=145" target="_blank"
@@ -46,6 +47,9 @@
         <li class="nav-item">
           <a class="nav-link" id="ataNav" onclick="ola()" href="#">Gerador de Ata | Em breve....</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" id="AnotaçõesNav" onclick="ola()" href="#">Anotações salvas| Em breve....</a>
+        </li>
         <li class="nav-item toogle-sun-moon">
           <input type="checkbox" id="toggle_checkbox" />
           <label class="label-darkmode-add" for="toggle_checkbox">
@@ -60,16 +64,29 @@
     </div>
   </div>
 </nav>
+
+<nav class="container-fluid " style="background-color: #005c9a" id="dados">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="  Coloque o seu E-mail corporativo" aria-label="Search">
+      <input class="form-control me-2" type="search" placeholder="  Procure pelo Numero do Officer" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Procurar</button>
+    </form>
+  </div>
+</nav>
+
 <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;">
-  <strong>Aviso Importante⛔</strong> <br> Devido o meu desligamento da empresa estarei desativando a aplicação hoje após e final do horario de trabalho
+  <strong>⛔Aviso Importante⛔</strong> <br> Devido o meu desligamento da empresa estarei desativando a aplicação hoje após e final do horario de trabalho
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 
-<div class="bg-image" id="background-image" style="
+<div class="bg-image " id="background-image" style="
         background-image: url('images/background.png');
         height: 86.5vh;
         background-size: cover;
+        
       "></div>
+
 
 <div class="container-fluid mt-3" id="etapa1">
   <div class="row">
@@ -92,6 +109,11 @@
           </div>
         </div>
         <div id="faltou3">
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" id="officer" oninput="teste()" />
+            <label for="floatingTextarea">Numero do Officer</label>
+          </div>
+
           <div class="form-floating mb-3">
             <input class="form-control" placeholder="Leave a comment here" id="dono" oninput="teste()" />
             <label for="floatingTextarea">Dono do escritório:</label>
@@ -227,6 +249,12 @@
         </div>
 
         <div class="mb-3" id="etapa-geral">
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Leave a comment here" id="officer" oninput="teste()" />
+            <label for="floatingTextarea">Numero do Officer</label>
+          </div>
+
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial"
               id="flexCheckDefault" oninput="infoGeral()" />
@@ -344,11 +372,11 @@
               oninput="infoGeral()" />
             <label class="form-check-label" for="inlineRadio1">+20 min atrasados</label>
           </div>
-          <div class="form-check form-check-inline">
+          <!-- <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="Faltou"
               oninput="faltou()" />
             <label class="form-check-label" for="inlineRadio2">Faltou!</label>
-          </div>
+          </div> -->
         </div>
         
 
@@ -425,7 +453,7 @@
             </div>
           </div>
 
-          <!-- <div class="row mb-3">
+          <div class="row mb-3">
             <h5>Dúvidas/Dificuldades da etapa anterior?</h5>
           </div>
 
@@ -445,7 +473,7 @@
                 oninput="infoGeral()" />
               <label class="form-check-label" for="inlineRadio2">Bastante dificuldade</label>
             </div>
-          </div> -->
+          </div>
 
           <div id="duvida" style="display: none">
             <div class="row mb-3">
@@ -739,6 +767,10 @@
           <h3>Migração</h3>
         </div>
         <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" id="officer" oninput="teste()" />
+          <label for="floatingTextarea">Numero do Officer</label>
+        </div>
+        <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="valorMigra"
             oninput="textoMigra()" />
           <label for="valorMigra">Valor do Acessórias:</label>
@@ -883,6 +915,10 @@
       <article>
         <div class="row mb-3">
           <h3>Acompanhamento</h3>
+        </div>
+       <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" id="officer" oninput="teste()" />
+          <label for="floatingTextarea">Numero do Officer</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="contato"
@@ -1160,14 +1196,14 @@
           <h3>Detalhamento do Cronograma</h3>
         </div>
 
-        <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
+        <div class="accordion" id="accordionExample1">
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlinhamento" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Alinhamento" aria-expanded="true" aria-controls="Alinhamento">
                 Alinhamento inicial
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div id="Alinhamento" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="alinhamento-input"
@@ -1196,11 +1232,11 @@
             </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primeira-etapa" aria-expanded="false" aria-controls="primeira-etapa">
                 Primeira Etapa
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="primeira-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="consutoria1-input"
@@ -1230,11 +1266,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#segunda-etapa" aria-expanded="false" aria-controls="segunda-etapa">
                 Segunda etapa
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="segunda-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="consutoria2-input"
@@ -1264,11 +1300,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#terceira-etapa" aria-expanded="false" aria-controls="terceira-etapa">
                 Terceira etapa
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="terceira-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
@@ -1298,11 +1334,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuatro" aria-expanded="false" aria-controls="collapseQuatro">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#quarta-etapa" aria-expanded="false" aria-controls="quarta-etapa">
                 Quarta etapa
               </button>
             </h2>
-            <div id="collapseQuatro" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="quarta-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
@@ -1332,11 +1368,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#quinta-etapa" aria-expanded="false" aria-controls="quinta-etapa">
                 Quinta etapa
               </button>
             </h2>
-            <div id="collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="quinta-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
@@ -1366,11 +1402,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sexta-etapa" aria-expanded="false" aria-controls="sexta-etapa">
                 Sexta etapa
               </button>
             </h2>
-            <div id="collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="sexta-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
@@ -1402,14 +1438,14 @@
         <div class="row mb-3">
           <h3>Acompanhamento das Tarefas</h3>
         </div>
-        <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionExample1">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlinhamento" aria-expanded="true" aria-controls="collapseOne">
-                Cadastro dos Colaboradores
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cadrastro-colaborador" aria-expanded="true" aria-controls="cadrastro-colaborador">
+                Cadastro Colaborador
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div id="cadrastro-colaborador" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
@@ -1426,22 +1462,22 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
+              </div>
             </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Revisão dos Departamentos
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#revisao-departamento" aria-expanded="false" aria-controls="revisao-departamento">
+                Revisão dos departamentos
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="revisao-departamento" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1452,24 +1488,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Revisão das Obrigações
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#revisao-obrigacao" aria-expanded="false" aria-controls="revisao-obrigacao">
+                Revisão da obrigações
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="revisao-obrigacao" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1480,24 +1515,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#revisao-regime" aria-expanded="false" aria-controls="revisao-regime">
                 Revisão dos Regimes Tributários
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="revisao-regime" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1508,22 +1542,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
+          </div>
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Preenchimento da Planilha de Clientes
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#preenchimento-planilha" aria-expanded="false" aria-controls="preenchimento-planilha">
+                Preenchimento da planilha de clientes
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="preenchimento-planilha" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1534,21 +1569,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Cadastro dos Clientes
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cadrastro-cliente" aria-expanded="false" aria-controls="cadrastro-cliente">
+                Cadastro dos clientes
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="cadrastro-cliente" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1559,21 +1596,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Revisão das Empresas Cadastradas
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#revisao-empresas" aria-expanded="false" aria-controls="revisao-empresas">
+                Revisão das empresas cadastradas
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="revisao-empresas" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1584,24 +1623,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
           </div>
         </div>
-
         <div class="row mb-3">
           <h3>E-Contínuo</h3>
         </div>
 
-                <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordionExample1">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlinhamento" aria-expanded="true" aria-controls="collapseOne">
-                Instalação do e-Contínuo
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#instalar-econtinuo" aria-expanded="true" aria-controls="instalar-econtinuo">
+                Instalação do e-continuo
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div id="instalar-econtinuo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
@@ -1618,22 +1656,22 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
+              </div>
             </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Configuração do e-Contínuo
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#configurar-econtinuo" aria-expanded="false" aria-controls="configurar-econtinuo">
+                Configuração do E-continuo
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="configurar-econtinuo" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1644,24 +1682,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Separação de Guias para Cadastro
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#separar-guias" aria-expanded="false" aria-controls="separar-guias">
+                Separar guias para cadastro
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="separar-guias" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1672,24 +1709,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Configuração de Guias
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#configuracao-guias" aria-expanded="false" aria-controls="configuracao-guias">
+                Configuração de guias
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="configuracao-guias" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1700,22 +1736,23 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
+          </div>
+          <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Teste de envio de Guias
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#teste-guia" aria-expanded="false" aria-controls="teste-guia">
+                Teste de envio de guias
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="teste-guia" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
-
                 <div class="form-floating mb-3">
                   <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
                     oninput="Ata()" />
@@ -1726,45 +1763,20 @@
                   <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
-                </div>
-              </div>
-            </div>
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Teste de envio de Guias
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
-                    oninput="Ata()" />
-                  <label for="Inicio">Responsavel</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
-                    oninput="Ata()" />
-                  <label for="Inicio">Prazo</label>
-                </div>
-                
-                <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
-                    oninput="Ata()" />
-                  <label for="Inicio">Status</label>
-                </div>
+                </div>              
               </div>
             </div>
           </div>
         </div>
         <div class="mb-3">
           <button type="button" class="btn btn-outline-primary" id="pre-vizualizar" data-bs-toggle="modal">
-            Pré Vizualizar
+            Pré Visualizar
           </button>
           <button type="button" class="btn btn-outline-danger" id="preencherPDF">
             Gerar Pdf
           </button>
         </div>
-
+<!-- HTML da ata -->
         <div class="c-39 doc-content">
           <div>
             <p class="c48 c53">
@@ -1835,9 +1847,8 @@
             <tr class="c34">
               <td class="c37" colspan="2" rowspan="1">
                 <p class="c0">
-                  <span class="c16"
-                    >Respons&aacute;vel T&eacute;cnico (Empresa):</span
-                  >
+                  <span class="c16">Respons&aacute;vel T&eacute;cnico (Empresa):</span>
+                  <p><span id="responsavel-label" class="c14"></span></p>
                 </p>
               </td>
               <td class="c59" colspan="2" rowspan="1">
@@ -1867,11 +1878,11 @@
                 <p class="c0">
                   <span class="c18 c16">Consultor Acess&oacute;rias:</span>
                 </p>
-                <p class="c0"><span class="c14">Patrick da costa cruz </span></p>
+                <p class="c0"><span class="c14"></span></p>
               </td>
               <td class="c44" colspan="4" rowspan="1">
                 <p class="c0"><span class="c18 c16">E-mail:</span></p>
-                <p class="c0"><span class="c14">patrick.cruz@acessorias.com</span></p>
+                <p class="c0"><span class="c14"></span></p>
               </td>
             </tr>
           </table>
