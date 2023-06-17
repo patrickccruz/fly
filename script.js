@@ -4,6 +4,7 @@ function confIni() {
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
   document.getElementById("ata").style.display = "none";
+  document.getElementById("dados").style.display = "none";
   document.querySelector("#confIni").classList.add("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.remove("active");
@@ -18,6 +19,7 @@ function geral() {
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
   document.getElementById("ata").style.display = "none";
+  document.getElementById("dados").style.display = "none";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.add("active");
   document.querySelector("#migra").classList.remove("active");
@@ -32,6 +34,7 @@ function migra() {
   document.getElementById("migração").style.display = "block";
   document.getElementById("acomp").style.display = "none";
   document.getElementById("ata").style.display = "none";
+  document.getElementById("dados").style.display = "none";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.add("active");
@@ -46,6 +49,7 @@ function acpt() {
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "block";
   document.getElementById("ata").style.display = "none";
+  document.getElementById("dados").style.display = "none";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.remove("active");
   document.querySelector("#migra").classList.remove("active");
@@ -59,6 +63,7 @@ function ata() {
   document.getElementById("menuGeral").style.display = "none";
   document.getElementById("migração").style.display = "none";
   document.getElementById("acomp").style.display = "none";
+  document.getElementById("dados").style.display = "none";
   document.getElementById("ata").style.display = "block";
   document.querySelector("#confIni").classList.remove("active");
   document.querySelector("#geral").classList.remove("active");
@@ -410,6 +415,7 @@ function copResp2() {
         document.getElementById(
           "geralResp55"
         ).innerHTML = `- Em qual etapa tiveram dúvidas/dificuldades: ${resp55}`;
+        console.log(resp55);
       }
     }
   }
@@ -423,7 +429,6 @@ function copResp2() {
   let resp12 = document.getElementById("geralResp12").textContent;
   let resp13 = document.getElementById("geralResp13").textContent;
   var value = document.getElementsByName("btnBackup");
-  console.log(resp13);
   let textToCopy = "";
   for (var radio of value) {
     if (radio.checked) {
@@ -760,18 +765,15 @@ function deleteRespInicio() {
 }
 
 function deleteRespGeral() {
-  document.getElementById("uso").value = "";
-  document.getElementById("parcicipantes").value = "";
-  document.getElementById("ticketConsult").value = "";
-  document.getElementById("geralObs").value = "";
-  document.getElementById("comprometido").value = "";
-  document.getElementById("comprometido").value = "";
-  document.getElementById("tecnologico").value = "";
-  document.getElementById("etapaBackup").value = "";
   document.getElementById("etp-uso").value = "";
   document.getElementById("etp-acesso").value = "";
   document.getElementById("etp-entrega").value = "";
   document.getElementById("etp-robo").value = "";
+  document.getElementById("parcicipantes").value = "";
+  document.getElementById("falta").value = "";
+  document.getElementById("ticketConsult").value = "";
+  document.getElementById("geralObs").value = "";
+  document.getElementById("etapaBackup").value = "";
 }
 
 function deleteRespMigra() {
