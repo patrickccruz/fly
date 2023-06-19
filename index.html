@@ -247,14 +247,11 @@
         <div class="row mb-3">
           <h3>Etapas Gerais</h3>
         </div>
-
-        <div class="mb-3" id="etapa-geral">
-
           <div class="form-floating mb-3">
             <input class="form-control" placeholder="Leave a comment here" id="officer" oninput="teste()" />
             <label for="floatingTextarea">Numero do Officer</label>
           </div>
-
+        <div class="mb-3" id="etapa-geral">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial"
               id="flexCheckDefault" oninput="infoGeral()" />
@@ -372,11 +369,11 @@
               oninput="infoGeral()" />
             <label class="form-check-label" for="inlineRadio1">+20 min atrasados</label>
           </div>
-          <!-- <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="horario" id="inlineRadio2" value="Faltou"
               oninput="faltou()" />
             <label class="form-check-label" for="inlineRadio2">Faltou!</label>
-          </div> -->
+          </div>
         </div>
         
 
@@ -408,10 +405,11 @@
                 <p id="respFaltou"></p>
                 <p id="respFaltou1"></p>
                 <p id="respFaltou2"></p>
+                <p id="respFaltou3"></p>
                 <p id="respFaltou4"></p>
                 <p id="respFaltou5"></p>
                 <p id="respFaltou6"></p>
-                <p id="respFaltou3"></p>
+                <p id="respFaltou7"></p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
@@ -480,34 +478,34 @@
               <h5>Em qual etapa tiveram dúvidas/dificuldades?</h5>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3" id="etapa2">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Configuração inicial"
-                  id="flexCheckDefault" oninput="infoGeral()" />
+                  id="flexCheckDefault" oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault">Configuração inicial</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Lista de Tarefas"
-                  id="flexCheckDefault2" oninput="infoGeral()" />
+                  id="flexCheckDefault2" oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault2">Lista de Tarefas</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Robô" id="flexCheckDefault3"
-                  oninput="infoGeral()" />
+                  oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault3">Robô</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Lista/Robô" id="flexCheckDefault4"
-                  oninput="infoGeral()" />
+                  oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault4">Lista/Robô</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Gestão de Processos"
-                  id="flexCheckDefault5" oninput="infoGeral()" />
+                  id="flexCheckDefault5" oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault5">Gestão de Processos</label>
               </div>
             </div>
@@ -515,25 +513,25 @@
             <div class="mb-3">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Departamentos"
-                  id="flexCheckDefault6" oninput="infoGeral()" />
+                  id="flexCheckDefault6" oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault6">Departamentos</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="APP" id="flexCheckDefault7"
-                  oninput="infoGeral()" />
+                  oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault7">APP</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Revisão/Tira Dúvidas"
-                  id="flexCheckDefault8" oninput="infoGeral()" />
+                  id="flexCheckDefault8" oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault8">Revisão/Tira Dúvidas</label>
               </div>
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="etapa2" value="Retomada" id="flexCheckDefault9"
-                  oninput="infoGeral()" />
+                  oninput="duvida()" />
                 <label class="form-check-label" for="flexCheckDefault9">Retomada</label>
               </div>
             </div>
@@ -745,6 +743,9 @@
                 <p id="geralResp11"></p>
                 <p id="geralResp12"></p>
                 <p id="geralResp13"></p>
+                <p id="geralResp14"></p>
+                <p id="geralResp15"></p>
+                <p id="geralResp16"></p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
@@ -1118,16 +1119,16 @@
               oninput="Ata()" />
             <label for="Inicio">E-mail Consultor:</label>
           </div>
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
           <h3>Sucesso para a empresa é quando ?</h3>
         </div>
         <div>
 
-        <div id="etapa-geral">
+        <div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial" id="flexCheckDefault"
+            <input class="form-check-input" type="checkbox" name="etapa" value="Configuração inicial" id="organizar-obrigacao-input"
               oninput="infoGeral()" />
-            <label class="form-check-label" for="flexCheckDefault">Organizar Entregas de prazos e obrigações</label>
+            <label class="form-check-label" for="organizar-obrigacao">Organizar Entregas de prazos e obrigações</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" name="etapa" value="Lista de Tarefas" id="flexCheckDefault2"
@@ -1190,7 +1191,7 @@
               oninput="infoGeral()" />
             <label class="form-check-label mb-3" for="flexCheckDefault5">Komunic</label>
           </div>
-        </div>
+        </div> -->
 
         <div class="row mb-3">
           <h3>Detalhamento do Cronograma</h3>
@@ -1307,25 +1308,25 @@
             <div id="terceira-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="consutoria3-input"
                     oninput="Ata()" />
                   <label for="Inicio">Consultoria 3</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="dataConsu3-input"
                     oninput="Ata()" />
                   <label for="Inicio">Data</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="horaConsu3-input"
                     oninput="Ata()" />
                   <label for="Inicio">Hora</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="statusConsu3-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>
@@ -1341,25 +1342,25 @@
             <div id="quarta-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="consutoria4-input"
                     oninput="Ata()" />
                   <label for="Inicio">Consultoria 4</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="dataConsu4-input"
                     oninput="Ata()" />
                   <label for="Inicio">Data</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="horaConsu4-input"
                     oninput="Ata()" />
                   <label for="Inicio">Hora</label>
                 </div>
         
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="statusConsu4-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>
@@ -1375,25 +1376,25 @@
             <div id="quinta-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="consutoria5-input"
                     oninput="Ata()" />
                   <label for="Inicio">Consultoria 5</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="dataConsu5-input"
                     oninput="Ata()" />
                   <label for="Inicio">Data</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="horaConsu5-input"
                     oninput="Ata()" />
                   <label for="Inicio">Hora</label>
                 </div>
         
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="statusConsu5-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>
@@ -1409,25 +1410,25 @@
             <div id="sexta-etapa" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="consutoria6-input"
                     oninput="Ata()" />
                   <label for="Inicio">Consultoria 6</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="dataConsu6-input"
                     oninput="Ata()" />
                   <label for="Inicio">Data</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="time" width="10" id="horaConsu6-input"
                     oninput="Ata()" />
                   <label for="Inicio">Hora</label>
                 </div>
         
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="statusConsu6-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>
@@ -1441,25 +1442,25 @@
                 <div class="accordion" id="accordionExample1">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cadrastro-colaborador" aria-expanded="true" aria-controls="cadrastro-colaborador">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cadastro-colaborador" aria-expanded="true" aria-controls="cadastro-colaborador">
                 Cadastro Colaborador
               </button>
             </h2>
-            <div id="cadrastro-colaborador" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+            <div id="cadastro-colaborador" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="cadrastro-Responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="cadrastro-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="cadrastro-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1474,18 +1475,18 @@
             <div id="revisao-departamento" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisao-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="revisao-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisao-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1501,18 +1502,18 @@
             <div id="revisao-obrigacao" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisaoObrigacao-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="revisaoObrigacao-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisaoObrigacao-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1528,18 +1529,18 @@
             <div id="revisao-regime" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisaoRegime-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="revisaoRegime-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisaoRegime-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1555,18 +1556,18 @@
             <div id="preenchimento-planilha" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="preenchimento-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="preenchimento-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="preenchimento-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1582,18 +1583,18 @@
             <div id="cadrastro-cliente" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="cadrastroCliente-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="cadrastroCliente-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="cadrastroCliente-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1609,18 +1610,18 @@
             <div id="revisao-empresas" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisaoEmpresas-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="revisaoEmpresas-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="revisaoEmpresas-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1642,18 +1643,18 @@
             <div id="instalar-econtinuo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="econtinuo-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="econtinuo-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="econtinuo-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1668,18 +1669,18 @@
             <div id="configurar-econtinuo" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="configurar-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="configurar-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="configurar-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1695,18 +1696,18 @@
             <div id="separar-guias" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="separar-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="separar-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="separar-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1722,18 +1723,18 @@
             <div id="configuracao-guias" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="configurarGuia-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="configurarGuia-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="configurarGuia-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1749,18 +1750,18 @@
             <div id="teste-guia" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
               <div class="accordion-body">
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="teste-responsavel-input"
                     oninput="Ata()" />
                   <label for="Inicio">Responsavel</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="date" width="10" id="teste-prazo-input"
                     oninput="Ata()" />
                   <label for="Inicio">Prazo</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="finalizacao-input"
+                  <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="teste-status-input"
                     oninput="Ata()" />
                   <label for="Inicio">Status</label>
                 </div>              
@@ -1853,7 +1854,7 @@
               </td>
               <td class="c59" colspan="2" rowspan="1">
                 <p class="c0"><span class="c18 c16">Telefone:</span></p>
-                <p class="c0 c3"><span class="c14"></span></p>
+                <p class="c0 c3"><span id="telefone-label" class="c14"></span></p>
               </td>
               <td class="c45" colspan="2" rowspan="1">
                 <p class="c0"><span class="c18 c16">Telefone:</span></p>
@@ -1867,10 +1868,11 @@
                     >Contratante da Solu&ccedil;&atilde;o (Propriet&aacute;rio):</span
                   >
                 </p>
-                <p class="c0 c3"><span class="c14"></span></p>
+                <p class="c0 c3"><span id="telefone2-label class="c14"></span></p>
               </td>
               <td class="c44" colspan="4" rowspan="1">
                 <p class="c0"><span class="c16">E-mail:</span></p>
+                <p class="c0 c3"><span id="contratante-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c25">
@@ -1878,11 +1880,11 @@
                 <p class="c0">
                   <span class="c18 c16">Consultor Acess&oacute;rias:</span>
                 </p>
-                <p class="c0"><span class="c14"></span></p>
+                <p class="c0"><span id="consultor-label" class="c14"></span></p>
               </td>
               <td class="c44" colspan="4" rowspan="1">
                 <p class="c0"><span class="c18 c16">E-mail:</span></p>
-                <p class="c0"><span class="c14"></span></p>
+                <p class="c0"><span id="emailConsultor-label" class="c14"></span></p>
               </td>
             </tr>
           </table>
@@ -2003,7 +2005,7 @@
                 </p>
               </td>
               <td class="c35" colspan="1" rowspan="1">
-                <p class="c0"><span class="c14">( )</span></p>
+                <p class="c0"><span class="c14" id="organizar-obrigacao-label">( )</span></p>
               </td>
               <td class="c12" colspan="1" rowspan="1">
                 <p class="c0">
@@ -2138,23 +2140,27 @@
               </td>
               <td class="c13 c43" colspan="1" rowspan="1">
                 <p class="c2"><span class="c9">Status</span></p>
+                <p class="c0"><span id="statusAlin-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
-                <p class="c2"><span class="c11">Alinhamento inicial</span></p>
+                <p class="c0"><span id="alinhamento-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataAlin-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaAlin-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusAlin-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2177,20 +2183,23 @@
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
                 <p class="c2">
-                  <span class="c11">Configura&ccedil;&atilde;o inicial</span>
+                  <p class="c0"><span id="consutoria1-label" class="c14"></span></p>
                 </p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataConsu1-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaConsu1-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusConsu1-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2213,20 +2222,24 @@
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
                 <p class="c2">
-                  <span class="c11">Lista de tarefas e rob&ocirc;</span>
+                <p class="c0"><span id="consutoria2-label" class="c14"></span></p>
                 </p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataConsu2-label" class="c14"></span></p>
+                </p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaConsu2-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusConsu2-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2248,19 +2261,23 @@
             </tr>
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
-                <p class="c2"><span class="c11">E-continuo avan&ccedil;ado</span></p>
+                <p class="c0"><span id="consutoria3-label" class="c14"></span></p>
+              </td>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataConsu3-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaConsu3-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusConsu3-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2282,19 +2299,20 @@
             </tr>
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
-                <p class="c2"><span class="c11">Departamento</span></p>
+                <p class="c0"><span id="consutoria4-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
-                <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataConsu4-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
-                <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaConsu4-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusConsu4-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2316,19 +2334,22 @@
             </tr>
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
-                <p class="c2"><span class="c11">Gest&atilde;o de processo</span></p>
+                <p class="c0"><span id="consutoria5-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataConsu5-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaConsu5-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusConsu5-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c55">
@@ -2350,19 +2371,22 @@
             </tr>
             <tr class="c5">
               <td class="c24" colspan="1" rowspan="1">
-                <p class="c2"><span class="c11">App e area vip</span></p>
+                <p class="c0"><span id="consutoria6-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="dataConsu6-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="horaConsu6-label" class="c14"></span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2"><span class="c11">1 h</span></p>
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c2 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="statusConsu6-label" class="c14"></span></p>
               </td>
             </tr>
           </table>
@@ -2409,12 +2433,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastro-Responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastro-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastro-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2433,12 +2460,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisao-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisao-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisao-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2457,12 +2487,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoObrigacao-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoObrigacao-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoObrigacao-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2483,12 +2516,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoRegime-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoRegime-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoRegime-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2507,12 +2543,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="preenchimento-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="preenchimento-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="preenchimento-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2526,12 +2565,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastroCliente-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastroCliente-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastroCliente-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2551,12 +2593,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="cadrastroCliente-status-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoEmpresas-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="revisaoEmpresas-prazo-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2594,12 +2639,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="econtinuo-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="econtinuo-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurar-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2620,12 +2668,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurar-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurar-status-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurar-prazo-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2646,12 +2697,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="separar-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="separar-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="separar-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2670,12 +2724,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurarGuia-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurarGuia-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="configurarGuia-status-label" class="c14"></span></p>
               </td>
             </tr>
             <tr class="c5">
@@ -2691,12 +2748,15 @@
               </td>
               <td class="c13" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="teste-responsavel-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="teste-prazo-label" class="c14"></span></p>
               </td>
               <td class="c4" colspan="1" rowspan="1">
                 <p class="c0 c3"><span class="c11"></span></p>
+                <p class="c0"><span id="teste-status-label" class="c14"></span></p>
               </td>
             </tr>
           </table>
