@@ -432,7 +432,7 @@ function copResp2() {
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informaoces para o Backup **\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
+        textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informações para o Backup **\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
       } else {
         textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}`;
       }
@@ -600,10 +600,15 @@ function textoMigra() {
     "Mresp16"
   ).innerHTML = `- Houve dispensa de treinamento ? ${Aresp16}`;
 
-  let Aresp17 = document.getElementById("Minfo2").value;
+  let Aresp17 = document.getElementById("relatorioMigração").value;
   document.getElementById(
     "Mresp17"
-  ).innerHTML = `- Informações Adicionais ${Aresp17}`;
+  ).innerHTML = `- Resumo do treinamento ${Aresp17}`;
+
+  let Aresp18 = document.getElementById("obscervacaoMigração").value;
+  document.getElementById(
+    "Mresp18"
+  ).innerHTML = `- Observação sobre a consultória ${Aresp18}`;
 }
 
 function copResp3() {
@@ -624,7 +629,8 @@ function copResp3() {
   let resp14 = document.getElementById("Mresp15").textContent;
   let resp15 = document.getElementById("Mresp16").textContent;
   let resp18 = document.getElementById("Mresp17").textContent;
-  const textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp18}`;
+  let resp19 = document.getElementById("Mresp18").textContent;
+  const textToCopy = `************** Informações para Migração **************${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n\n${resp18}\n\n${resp19}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
@@ -784,7 +790,8 @@ function deleteRespMigra() {
   document.getElementById("apla").value = "";
   document.getElementById("ticketFinal").value = "";
   document.getElementById("dispensaTicket").value = "";
-  document.getElementById("Minfo2").value = "";
+  document.getElementById("obscervacaoMigração").value = "";
+  document.getElementById("relatorioMigração").value = "";
 }
 
 function deleteRespAcomp() {

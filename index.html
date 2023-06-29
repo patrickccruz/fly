@@ -45,10 +45,10 @@
           <a class="nav-link" id="acpt" onclick="acpt()" href="#">Acompanhamento</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="ataNav" onclick="ola()" href="#">Gerador de Ata | Em breve....</a>
+          <a class="nav-link" id="ataNav" onclick="Ata()" href="#">Gerador de Ata | Em breve....</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" id="AnotaçõesNav" onclick="ola()" href="#">Anotações salvas| Em breve....</a>
+          <a class="nav-link" id="AnotaçõesNav" onclick="notas()" href="#">Anotações salvas| Em breve....</a>
         </li>
         <li class="nav-item toogle-sun-moon">
           <input type="checkbox" id="toggle_checkbox" />
@@ -774,17 +774,17 @@
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="valorMigra"
             oninput="textoMigra()" />
-          <label for="valorMigra">Valor do Acessórias:</label>
+          <label for="valorMigra">Valor do Acessórias para o cliente:</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="referenciaMigra"
             oninput="textoMigra()" />
-          <label for="referenciaMigra">Referencia técnica e seu departamento:</label>
+          <label for="referenciaMigra">Referencia técnica e seu departamento atual:</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="formaContato"
             oninput="textoMigra()" />
-          <label for="formaContato">Melhor forma de contato:</label>
+          <label for="formaContato">Melhor forma de contato com o cliente:</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="equipeEngajada"
@@ -794,12 +794,12 @@
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="dispensaMassa"
             oninput="textoMigra()" />
-          <label for="dispensaMassa">Dispensa em massa?</label>
+          <label for="dispensaMassa">Teve dispensa em massa?</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="erp"
             oninput="textoMigra()" />
-          <label for="erp">ERP:</label>
+          <label for="erp">Qual sistema Contábil</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="smtp"
@@ -832,17 +832,17 @@
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="gestao"
             oninput="textoMigra()" />
-          <label for="gestao">Gestão:</label>
+          <label for="gestao"> Foi aplicado Gestão de Processo?</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="app"
             oninput="textoMigra()" />
-          <label for="app">Aplicativo e Area Vip:</label>
+          <label for="app">Foi aplicado Aplicativo e Area Vip?</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="apla"
             oninput="textoMigra()" />
-          <label for="apla">Modulo APLA Foi Aplicado?</label>
+          <label for="apla">Foi aplicadoModulo APLA Foi Aplicado?</label>
         </div>
         <div class="form-floating mb-3">
           <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="ticketFinal"
@@ -853,6 +853,16 @@
           <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="dispensaTicket"
             oninput="textoMigra()" />
           <label for="dispensaTicket">Houve dispensa de treinamento ? (Se sim, qual numero do ticket?)</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Leave a comment here" id="relatorioMigração" style="height: 150px"
+             oninput="textoMigra()"></textarea>
+          <label for="floatingTextarea2">Resumo do treinamento:</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Leave a comment here" id="obscervacaoMigração" style="height: 150px"
+            oninput="textoMigra()"></textarea>
+          <label for="floatingTextarea2">Observações sobre a consultoria:</label>
         </div>
         
 
@@ -896,6 +906,7 @@
                 <p id="Mresp15"></p>
                 <p id="Mresp16"></p>
                 <p id="Mresp17"></p>
+                <p id="Mresp18"></p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
@@ -937,7 +948,7 @@
           <label for="AregUso">Uso: (Justificar se não tiver)</label>
         </div>
         <div class="form-floating mb-3">
-          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="Aacesso"
+          <input class="form-control" placeholder="Leave a comment here" type="number" width="10" id="Aacesso"
             oninput="acompTexto()" />
           <label for="Aacesso">Acesso:</label>
         </div>
@@ -1777,6 +1788,23 @@
             Gerar Pdf
           </button>
         </div>
+      <div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid mt-3" id="notas">
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+        
 <!-- HTML da ata -->
         <div class="c-39 doc-content">
           <div>
