@@ -449,6 +449,7 @@ function copResp2() {
 
 function faltou() {
   document.getElementById("falta").style.display = "block";
+  document.getElementById("falta2").style.display = "block";
   document.getElementById("naoFaltou").style.display = "none";
   document.getElementById("faltouButton").style.display = "none";
   document.getElementById("faltou3").style.display = "none";
@@ -457,6 +458,7 @@ function faltou() {
 
 function falta() {
   document.getElementById("falta").style.display = "none";
+  document.getElementById("falta2").style.display = "none";
   document.getElementById("naoFaltou").style.display = "block";
   document.getElementById("faltouButton").style.display = "block";
 }
@@ -771,6 +773,7 @@ function deleteRespGeral() {
   document.getElementById("ticketConsult").value = "";
   document.getElementById("geralObs").value = "";
   document.getElementById("etapaBackup").value = "";
+  document.getElementById("faltaCliente").value = "";
 }
 
 function deleteRespMigra() {
