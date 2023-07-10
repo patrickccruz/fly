@@ -855,6 +855,11 @@
           <label for="dispensaTicket">Houve dispensa de treinamento ? (Se sim, qual numero do ticket?)</label>
         </div>
         <div class="form-floating mb-3">
+          <input class="form-control" placeholder="Leave a comment here" type="text" width="10" id="appleTicket"
+            oninput="textoMigra()" />
+          <label for="dispensaTicket">O cliente irá fazer o aplicativo da Apple? (Se sim, já criou a conta?)</label>
+        </div>
+        <div class="form-floating mb-3">
           <textarea class="form-control" placeholder="Leave a comment here" id="relatorioMigração" style="height: 150px"
              oninput="textoMigra()"></textarea>
           <label for="floatingTextarea2">Resumo do treinamento:</label>
@@ -889,23 +894,43 @@
                 <div class="alert alert-warning" role="alert">
                   Não esqueça de criar o Ticket de migração no movidesk !
                 </div>
+                <!-- Valor do Acessórias: -->
                 <p id="Mresp1"></p>
+                <!-- - Referencia técnica e seu departamento: -->
                 <p id="Mresp2"></p>
+                <!-- - Melhor forma de contato: -->
                 <p id="Mresp3"></p>
+                <!-- - Equipe engajada? Quais?: -->
                 <p id="Mresp4"></p>
+                <!-- - Dispensa em massa? -->
                 <p id="Mresp5"></p>
+                <!-- - ERP: -->
                 <p id="Mresp6"></p>
+                <!-- - SMTP Ativo: -->
                 <p id="Mresp7"></p>
+                <!-- - Uso: % -->
                 <p id="Mresp8"></p>
+                <!-- - Acesso: % -->
                 <p id="Mresp9"></p>
+                <!-- - Entregas: -->
                 <p id="Mresp10"></p>
+                <!-- - Robô: % -->
                 <p id="Mresp11"></p>
+                <!-- - Gestão: % -->
                 <p id="Mresp12"></p>
+                <!-- - APP: -->
                 <p id="Mresp13"></p>
+                <!-- - APLA: -->
                 <p id="Mresp14"></p>
+                <!-- - Número do Ticket de Finalização dos treinamentos: -->
                 <p id="Mresp15"></p>
+                <!-- - Houve dispensa de treinamento ? -->
                 <p id="Mresp16"></p>
+                <!-- - O cliente irá fazer o aplicativo da Apple? (Se sim, já criou a conta?) -->
+                <p id="Mresp19"></p>
+                <!-- - Resumo do treinamento -->
                 <p id="Mresp17"></p>
+                <!-- - Observação sobre a consultória -->
                 <p id="Mresp18"></p>
               </div>
               <div class="modal-footer">

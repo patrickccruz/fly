@@ -594,6 +594,10 @@ function textoMigra() {
   document.getElementById(
     "Mresp15"
   ).innerHTML = `- Número do Ticket de Finalização dos treinamentos: ${Aresp15}`;
+  let Aresp19 = document.getElementById("appleTicket").value;
+  document.getElementById(
+    "Mresp19"
+  ).innerHTML = `- O cliente irá fazer o aplicativo da Apple? (Se sim, já criou a conta?) ${Aresp19}`; 
 
   let Aresp16 = document.getElementById("dispensaTicket").value;
   document.getElementById(
@@ -630,7 +634,8 @@ function copResp3() {
   let resp15 = document.getElementById("Mresp16").textContent;
   let resp18 = document.getElementById("Mresp17").textContent;
   let resp19 = document.getElementById("Mresp18").textContent;
-  const textToCopy = `************** Informações para Migração **************\n\n${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n\n${resp18}\n\n${resp19}`;
+  let resp20 = document.getElementById("Mresp19").textContent;
+  const textToCopy = `************** Informações para Migração **************\n\n${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n\n${resp18}\n\n${resp19}\n\n${resp20}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
@@ -792,6 +797,7 @@ function deleteRespMigra() {
   document.getElementById("dispensaTicket").value = "";
   document.getElementById("obscervacaoMigração").value = "";
   document.getElementById("relatorioMigração").value = "";
+  document.getElementById("appleTicket").value = "";
 }
 
 function deleteRespAcomp() {
