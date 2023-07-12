@@ -262,7 +262,7 @@ function copResp() {
           document.getElementById(`etapa1resp${i}`).innerHTML = ``;
         }
       } else {
-        textToCopy = `${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa12}\n${etapa11}\n${etapa13}`;
+        textToCopy = `**Etapa Configuração inicial**\n\n${etapa1}\n${etapa2}\n${etapa3}\n${etapa4}\n${etapa5}\n${etapa6}\n${etapa7}\n${etapa8}\n${etapa9}\n${etapa10}\n${etapa12}\n${etapa11}\n${etapa13}`;
       }
     }
   }
@@ -432,9 +432,9 @@ function copResp2() {
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informações para o Backup **\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
+        textToCopy = `**Etapa Consultoria**\n\n${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n** Informações para o Backup **\n\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp16}`;
       } else {
-        textToCopy = `${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}`;
+        textToCopy = `**Etapa Consultoria**\n\n${resp0}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp55}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}`;
       }
     }
   }
@@ -512,7 +512,7 @@ function copRespFalta() {
     "respFaltou5"
   ).innerHTML = `Informaçoes sobre a falta: ${falta}`;
 
-  const textToCopy = `${resp0}\n${respFaltou1}\n${respFaltou2}\n${respFaltou3}\n${respFaltou4}\n${respFaltou5}`;
+  const textToCopy = `${resp0}\n${respFaltou1}\n${respFaltou2}\n${respFaltou3}\n${respFaltou4}\n\n${respFaltou5}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
@@ -635,7 +635,7 @@ function copResp3() {
   let resp18 = document.getElementById("Mresp17").textContent;
   let resp19 = document.getElementById("Mresp18").textContent;
   let resp20 = document.getElementById("Mresp19").textContent;
-  const textToCopy = `************** Informações para Migração **************\n\n${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n\n${resp18}\n\n${resp19}\n\n${resp20}`;
+  const textToCopy = `************** Informações para Migração **************\n\n${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}\n${resp8}\n${resp9}\n${resp10}\n${resp11}\n${resp12}\n${resp13}\n${resp14}\n${resp15}\n${resp20}\n\n${resp18}\n\n${resp19}`;
   const textarea = document.createElement("textarea");
   textarea.value = textToCopy;
   document.body.appendChild(textarea);
@@ -721,9 +721,9 @@ function copResp4() {
   for (var radio of value) {
     if (radio.checked) {
       if (radio.value == "yes") {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n\n** Informações para o Backup **\n${resp7}\n${resp8}\n${resp9}`;
+        textToCopy = `************** Acompanhamento **************\n\n${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n\n** Informações para o Backup **\n\n${resp7}\n${resp8}\n${resp9}`;
       } else {
-        textToCopy = `${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}`;
+        textToCopy = `************** Acompanhamento **************\n\n${resp0}\n${resp1}\n${resp2}\n${resp3}\n${resp4}\n${resp5}\n${resp6}\n${resp7}`;
       }
     }
   }
